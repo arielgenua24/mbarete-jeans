@@ -1,11 +1,23 @@
-function Category({ jeans, filter }){
-    const jeansFiltered = filterJeans(jeans, filter)
+function Category({filter }){
+    const jeansFiltered = filterJeans(filter)
 
     return (
      <>
         <div className="carousel-container">
             <div className="carousel-slides">
-                {jeansData.map((jean, index) => (
+                
+            </div>
+        </div>
+        
+    </>
+    );
+
+}
+
+export default Category;
+
+
+/**{jeansData.map((jean, index) => (
                     <div
                         key={jean.id}
                         className={`carousel-item ${index === currentSlide ? 'active' : ''}`}
@@ -16,17 +28,4 @@ function Category({ jeans, filter }){
                         <p>${jean.precio.toLocaleString('es-AR')}</p>
                         <button className="btn-add-cart">Agregar al carrito</button>
                     </div>
-                ))}
-            </div>
-        </div>
-
-
-
-
-        
-    </>
-    );
-
-}
-
-export default Category;
+                ))} */
