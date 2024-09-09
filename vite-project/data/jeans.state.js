@@ -3,5 +3,6 @@ export const State = {
     SoldOut: "Sold Out",
     EnOferta: "En Oferta",
     Clásico: "Clásico",
-    ReIngreso: "ReIngreso" 
+    ReIngreso: "ReIngreso",
+    pocoStock: "quedan pocos"
 };

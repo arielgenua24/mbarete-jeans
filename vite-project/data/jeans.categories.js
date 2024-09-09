@@ -4,5 +4,7 @@ export const Category = {
     baggy: "baggy",
     Clásico: "Clásico",
     ReIngreso: "ReIngreso",
-    joggers: "joggers"
+    joggers: "joggers",
+    parachutte: "parachutte",
+    frisa: "frisa"
 };
