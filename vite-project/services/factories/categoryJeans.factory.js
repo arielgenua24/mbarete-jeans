@@ -1,11 +1,11 @@
 import { Category } from "../../data/jeans.categories";
-import { categoryComponents } from "../../data/UIconfig/UiCategory.componentes"
+import { categoryComponents } from "../../data/UIcomponents/UiCategory.componentes"
 
 class CategoryJeanFactory {
     constructor(){
     }
 
-    createCategoryComponente(jeansList, category) {
+    createCategoryComponent(category) {
         try {
             if(!categoryComponents[category]) {
                 return 'componente no encontrado'
@@ -13,7 +13,7 @@ class CategoryJeanFactory {
             if(!Category[category]) {
                 return 'categoria no encontrada'
             }
-            return categoryComponents[category](jeansList)
+            return categoryComponents[category]
         } catch(e) {
             console.error(e)
         }

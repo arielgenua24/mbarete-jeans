@@ -5,11 +5,9 @@ class Jeans {
         this.jeansList = jeansData
     }
 
-    addjean() {
+    addjean() {}
 
-    }
-
-    filterJeans(filter) {
+    static filterJeans(filter) {
         const filteredJeans = this.jeansList.filter((jean) => 
             jean.category === filter || jean.state === filter
         );
