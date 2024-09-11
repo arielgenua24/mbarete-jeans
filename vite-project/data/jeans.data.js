@@ -45,11 +45,11 @@ export const jeansData = [
      {
         id: 4,
         name: "JEAN LUMA GRIS",
-        category: Category.jean,
+        category: Category.baggy,
         images: {
-          img1: "url1.jpg",
-          img2: "url2.jpg",
-          img3: "url3.jpg",
+          img1: "../public/images/luma1.JPG",
+          img2: "../public/images/luma2.JPG",
+          img3: "../public/images/luma3.JPG",
         },
         price: 22500,
         state: '',
