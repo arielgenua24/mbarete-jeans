@@ -1,4 +1,4 @@
 export const categoryComponents = {
-    baggy: `<Category tipo="baggy" />`,
-    soldOut: `<Category tipo="Sold Out"/>`,
+    baggy: `<Category filter={"baggy"} />`,
+    soldOut: `<Category filter={"sold Out"}/>`,
 };

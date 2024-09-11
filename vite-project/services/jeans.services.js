@@ -22,4 +22,8 @@ class Jeans {
         
 }
 
+const baggys = Jeans.filterJeans("baggy")
+console.log(baggys)
+
+
 export default Jeans;

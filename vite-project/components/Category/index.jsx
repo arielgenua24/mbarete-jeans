@@ -1,6 +1,6 @@
 import Jeans from "../../services/jeans.services";
 
-function Category(filter){
+function Category({filter}){
     const filteredJeans = Jeans?.filterJeans(filter)
     // la aplicacion no funnciona porque jean.nombre y demas no existe, chequea la estructura de datos!
     return (
