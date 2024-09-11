@@ -431,7 +431,7 @@ export const jeansData = [
     talles: '38/39/40/41/42/43/44/45/46'
   },
   {
-    id: 30,
+    id: 51,
     name: "wideer baggy celeste",
     category: Category.baggy,
     specialTag: '',
@@ -487,7 +487,7 @@ export const jeansData = [
     talles: '40/42'
   },
   {
-    id: 33,
+    id: 50,
     name: "bermuda Def Gris Roto",
     category: Category.bermuda,
     specialTag: 'roto',

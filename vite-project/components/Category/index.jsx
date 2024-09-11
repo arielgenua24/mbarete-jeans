@@ -1,7 +1,9 @@
 import Jeans from "../../services/jeans.services";
 
 function Category({filter}){
-    const filteredJeans = Jeans?.filterJeans(filter)
+    const service = new Jeans();
+
+    const filteredJeans = service?.filterJeans(filter)
     // la aplicacion no funnciona porque jean.nombre y demas no existe, chequea la estructura de datos!
     return (
      <> 
@@ -11,9 +13,9 @@ function Category({filter}){
                     <div
                         key={jean.id}
                         >
-                        <img src={jean.img} alt={jean.nombre} />
-                        <p>{jean.nombre}</p>
-                        <p>${jean.precio.toLocaleString('es-AR')}</p>
+                        <img src={jean.images.img1} alt={jean.name} />
+                        <p>{jean.name}</p>
+                        <p>${jean.price.toLocaleString('es-AR')}</p>
                         <button className="btn-add-cart">Agregar al carrito</button>
                     </div>
                 ))}

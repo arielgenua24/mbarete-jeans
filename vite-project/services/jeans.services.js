@@ -7,7 +7,7 @@ class Jeans {
 
     addjean() {}
 
-    static filterJeans(filter) {
+    filterJeans(filter) {
         const filteredJeans = this.jeansList.filter((jean) => 
             jean.category === filter || jean.state === filter
         );
@@ -22,8 +22,8 @@ class Jeans {
         
 }
 
-const baggys = Jeans.filterJeans("baggy")
-console.log(baggys)
+//const baggys = Jeans.filterJeans("baggy")
+// console.log(baggys)
 
 
 export default Jeans;
