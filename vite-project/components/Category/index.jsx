@@ -1,13 +1,16 @@
 import Jeans from "../../services/jeans.services";
 import './styles.css'
 
-function Category({filter}){
+function Category({ filter }){
     const service = new Jeans();
 
     const filteredJeans = service?.filterJeans(filter)
     // la aplicacion no funnciona porque jean.nombre y demas no existe, chequea la estructura de datos!
     return (
      <> 
+      <div className="section-title">
+            <h2>{filter}</h2>
+        </div>
         <div className="carousel-container">
             <div className="carousel-slides">
             {filteredJeans.map((jean) => (
