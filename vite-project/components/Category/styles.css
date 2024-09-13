@@ -18,18 +18,15 @@
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 100%;
-    /* Asegura que las diapositivas ocupen toda la altura */
+    height: 90%;
     align-items: stretch;
 }
-
 .carousel-slides > div {
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
     text-align: center;
-    /* padding: 20px; */
-    /* width: 100%; */
     min-height: 400px;
     max-height: 400px;
     min-width: 302px;
@@ -70,4 +67,25 @@
 
 .btn-add-cart:hover {
     background-color: #0056b3;
+}
+
+
+/* Media Query para pantallas menores a 600px */
+@media (max-width: 600px) {
+    .carousel-container {
+        padding: 5px;
+        width: 100vw;
+    }
+
+    .carousel-slides > div {
+        min-width: 90%;
+        max-width: 200px;
+        min-height: 100%;
+        max-height: 350px;
+    }
+
+    .carousel-slides img {
+        min-height: 300px;
+        min-width: 200px;
+    }
 }
