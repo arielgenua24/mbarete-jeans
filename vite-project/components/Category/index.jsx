@@ -15,10 +15,12 @@ function Category({filter}){
                         className="carousel-jean"
                         key={jean.id}
                         >
-                        <img src={jean.images.img1} alt={jean.name} />
-                        <p>{jean.name}</p>
-                        <p>${jean.price.toLocaleString('es-AR')}</p>
-                        <button className="btn-add-cart">Agregar al carrito</button>
+                            <img src={jean.images.img1} alt={jean.name} />
+                            <div className="carousel-jean-data">
+                                <p>{jean.name}</p>
+                                <p>${jean.price.toLocaleString('es-AR')}</p>
+                            </div>
+                            <button className="btn-add-cart">Agregar al carrito</button>
                     </div>
                 ))}
             </div>
