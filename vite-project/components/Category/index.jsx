@@ -1,4 +1,5 @@
 import Jeans from "../../services/jeans.services";
+import './styles.css'
 
 function Category({filter}){
     const service = new Jeans();
@@ -11,6 +12,7 @@ function Category({filter}){
             <div className="carousel-slides">
             {filteredJeans.map((jean) => (
                     <div
+                        className="carousel-jean"
                         key={jean.id}
                         >
                         <img src={jean.images.img1} alt={jean.name} />
@@ -21,8 +23,7 @@ function Category({filter}){
                 ))}
             </div>
         </div>
-        
-    </>
+     </>
     );
 
 }
