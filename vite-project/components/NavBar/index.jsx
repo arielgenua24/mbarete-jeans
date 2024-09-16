@@ -1,15 +1,14 @@
-import handleNavigate from "../../../utils/navigation.utils";
-
-
+import useRefs from "../../hooks/useRefs";
 
 // eslint-disable-next-line react/prop-types
-const Navbar = ({ onNavigate }) => {
+const Navbar = (onNavigate) => {
+  
     return (
       <nav>
         <ul>
           <li> back </li>
-          <li><a href="#jeans" onClick={() => onNavigate('jeans')}>Jeans</a></li>
-          <li><a href="#latest" onClick={() => onNavigate('latest')}>Últimos en stock</a></li>
+          <li><a onClick={() => onNavigate('jeans')}>Jeans</a></li>
+          <li><a onClick={() => onNavigate('latest')}>Últimos en stock</a></li>
         </ul>
       </nav>
     );
