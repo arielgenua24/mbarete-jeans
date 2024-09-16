@@ -1,29 +1,12 @@
-let currentRef;
-const handleNavigate = (jeansRef) => {
-   
-  currentRef = jeansRef;
+function onNavigate(className) {
+  const element = document.querySelector(`.${className}`);
+  if (element) {
+      element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest'
+      });
+  }
+}
 
-    console.log(jeansRef)
-    
-
-
-  /*const { 
-    homeRef,
-    jeansRef,
-    latestRef } = useRefs()
-
-  const refMap = {
-    home: refs.homeRef,
-    jeans: refs.jeansRef,
-    latest: refs.latestRef,
-  };
-
-  const targetRef = refMap[section];
-  if (targetRef && targetRef.current) {
-    console.log('scrolling down')
-    console.log(targetRef)
-    targetRef.current.scrollIntoView({ behavior: 'smooth' });
-  } */
-};
-
-export default handleNavigate
+export default onNavigate;
