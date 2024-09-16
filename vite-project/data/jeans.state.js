@@ -1,6 +1,6 @@
 export const State = {
     nuevo: "nuevo",
-    SoldOut: "Sold Out",
+    SoldOut: "SoldOut",
     EnOferta: "En Oferta",
     Clásico: "Clásico",
     ReIngreso: "ReIngreso",
