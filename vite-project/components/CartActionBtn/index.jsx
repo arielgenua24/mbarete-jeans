@@ -34,16 +34,13 @@ const CartActionButton = ({ jean }) => {
     console.log(jean)
     
     // eslint-disable-next-line react/prop-types
-    /*if(jean.state === "SoldOut") {
-        // eslint-disable-next-line react/prop-types
-        return btnProps[SoldOut]
+    if(jean.state === "SoldOut") {
+        return btnProps.SoldOut
     } else if(findItem(jean)){
-        return btnProps[viewCart]
+        return btnProps.viewCart
     } else {
-        return btnProps[addToCart]
-    } */
-    return btnProps["addToCart"]
-
+        return btnProps.addToCart
+    }
   };
 
   const { text, action } = getButtonProps(jean);

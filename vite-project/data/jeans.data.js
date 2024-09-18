@@ -26,7 +26,7 @@ export const jeansData = [
           img3: "url3.jpg",
         },
         price: 19000,
-        state: 're ingresos',
+        state: State.SoldOut,
         talles: '38/39/40/41/42/43/44/45/46' 
      },
      {
