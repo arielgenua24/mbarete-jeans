@@ -1,4 +1,5 @@
 import Jeans from "../../services/jeans.services";
+import CartActionButton from "../CartActionBtn";
 import './styles.css'
 
 // eslint-disable-next-line react/prop-types
@@ -27,7 +28,8 @@ function Category({ filter}){
                                 <p>{jean.name}</p>
                                 <p>${jean.price.toLocaleString('es-AR')}</p>
                             </div>
-                            <button className="btn-add-cart">Agregar al carrito</button>
+                            <CartActionButton  jean={jean}/>
+                            
                     </div>
                 ))}
             </div>
