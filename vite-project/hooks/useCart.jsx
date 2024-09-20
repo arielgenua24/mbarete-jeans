@@ -4,17 +4,17 @@ function useCart(initialList = []) {
   const [cart, setCart] = useState(initialList);
 
   function findItem(item) {
-   
-    const foundIndex = cart.findIndex((item, index) => {
+    console.log('item individual', item)
+    const foundIndex = cart.findIndex((cartItem) => {
       console.log('inside the fun')
-      console.log(cart[index].product.id)
-      console.log(item.product.id === cart[index].product.id)
-      return item.product.id === cart[index].product.id
+      console.log('carrito', cartItem.product)
+      console.log('comprobacion', cartItem.product.id === item.id)
+      return cartItem.product.id === item.id
     });
-    console.log('buscando el item')
-      console.log(foundIndex)
+    //console.log('buscando el item')
+      //console.log(foundIndex)
     if (foundIndex !== -1) {
-      console.log('buscando el item')
+      //console.log('buscando el item')
       console.log(item)
       return { jean: cart[foundIndex], index: foundIndex };
     }
@@ -26,8 +26,12 @@ function useCart(initialList = []) {
     console.log('llamando a addItem')
     console.log(item)
     if (!findItem(item)) {
+      console.log(item)
+
       // Si el jean no se encuentra, entonces lo agregamos
       setCart((prevState) => [...prevState, { product: item, quantity }]); //asi se vera el array
+    } else {
+      console.log('el jean ya se encuentra agregado')
     }
   }
 

@@ -6,7 +6,6 @@ import './styles.css'
 function Category({ filter}){
     const service = new Jeans();
 
-
     const filteredJeans = service?.filterJeans(filter)
     // la aplicacion no funnciona porque jean.nombre y demas no existe, chequea la estructura de datos!
     return (
@@ -28,7 +27,7 @@ function Category({ filter}){
                                 <p>{jean.name}</p>
                                 <p>${jean.price.toLocaleString('es-AR')}</p>
                             </div>
-                            <CartActionButton  jean={jean}/>
+                            <CartActionButton  item={jean}/>
                             
                     </div>
                 ))}

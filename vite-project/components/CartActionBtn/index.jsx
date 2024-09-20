@@ -1,10 +1,11 @@
-import { useEffect, useState, useCallback } from "react";
+/* eslint-disable react/prop-types */
+import { useEffect, useState } from "react";
 import useCartContext from "../../hooks/useCartContext"; 
 import './styles.css' 
 
 
 // eslint-disable-next-line react/prop-types
-const CartActionButton = ({ jean }) => {
+const CartActionButton = ({ item }) => {
   const [buttonState, setButtonState] = useState({});
 
     const {
@@ -13,42 +14,52 @@ const CartActionButton = ({ jean }) => {
         cart
     } = useCartContext(); 
 
-    const addToCart = useCallback(() => {
-      console.log('añadir al carrito');
-      addItem(jean, 1);
-  }, [addItem, jean]);
+    const addToCart = (() => {
+      console.log('add to cart')
 
-  const viewCart = useCallback(() => {
+      addItem(item, 1);
+  });
+
+  const viewCart = (() => {
       console.log('viewCart');
       //aqui abririamos el modal de el carrito y finalizar la compra
-  }, []);
+  });
 
-  const reservation = useCallback(() => {
+  const reservation = (() => {
       console.log('reservation');
       // aqui lo llevariamos a un link de google.
-  }, []);
+  });
 
+    useEffect(() => {console.log('----------',cart)}, [cart])
 
 
     useEffect(() => {
+
+
         const updateButtonState = () => {
-            const jeanInCart = findItem(jean);
-            console.log('jeanInCart:', jeanInCart);
+            const jeanInCart = findItem(item);
+            console.log(jeanInCart)
             console.log('Cart:', cart);
 
             // eslint-disable-next-line react/prop-types
-            if (jean.state === "SoldOut") {
+            if (item.state === "SoldOut") {
                 setButtonState({ text: 'registrarme para preventa', action: reservation });
-            } else if (jeanInCart) {
+            } else if (item?.id === jeanInCart?.jean?.product?.id) {
+              console.log(item.id) // ya esta
+              //&& 
+              console.log('testeando la logica del jeanInCart')
+              console.log(jeanInCart.jean.product.id)
+              console.log(item)
                 setButtonState({ text: 'ver el carrito', action: viewCart });
             } else {
+                console.log('add to cart')
                 setButtonState({ text: 'añadir al carrito', action: addToCart });
             }
         };
 
         updateButtonState();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [cart, jean, findItem, addToCart, viewCart, reservation]);
+    }, [cart, item]);
 
 
   return (
