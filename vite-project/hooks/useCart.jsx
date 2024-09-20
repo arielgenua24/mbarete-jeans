@@ -4,10 +4,21 @@ function useCart(initialList = []) {
   const [cart, setCart] = useState(initialList);
 
   function findItem(item) {
-    const foundIndex = cart.findIndex((jean) => jean.id === item.id);
+   
+    const foundIndex = cart.findIndex((item, index) => {
+      console.log('inside the fun')
+      console.log(cart[index].product.id)
+      console.log(item.product.id === cart[index].product.id)
+      return item.product.id === cart[index].product.id
+    });
+    console.log('buscando el item')
+      console.log(foundIndex)
     if (foundIndex !== -1) {
+      console.log('buscando el item')
+      console.log(item)
       return { jean: cart[foundIndex], index: foundIndex };
     }
+    
     return null;
   }
 
