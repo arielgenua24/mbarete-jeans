@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import useCartContext from "../../hooks/useCartContext"; 
+import CartPortal from "../../portals/CartPortal";
+import Modal from "../addToCartModal";
 import './styles.css' 
 
 
@@ -11,13 +13,18 @@ const CartActionButton = ({ item }) => {
     const {
         findItem,
         addItem,
-        cart
+        cart,
+        setOpenModal,
+        openModal,
+        deleteItem
     } = useCartContext(); 
 
     const addToCart = (() => {
-      console.log('add to cart')
-
       addItem(item, 1);
+      setOpenModal(true)
+
+
+
   });
 
   const viewCart = (() => {
@@ -63,9 +70,19 @@ const CartActionButton = ({ item }) => {
 
 
   return (
+    <>
     <button  className="btn-add-cart" onClick={buttonState.action}>
       {buttonState.text}
     </button>
+
+    {openModal && (
+      <CartPortal>
+        <Modal setOpenModal={setOpenModal} cancelAct={() => deleteItem(item)}/>
+      </CartPortal>
+    )}
+    </>
+    
+    
   );
 };
 

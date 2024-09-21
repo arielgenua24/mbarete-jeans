@@ -7,7 +7,7 @@ const CartContext = React.createContext();
 
 // eslint-disable-next-line react/prop-types
 function CartProvider({children}) {
-    const { cart, addItem, addItemQuantity, findItem } = useCart([]);
+    const { cart, addItem, addItemQuantity, findItem, deleteItem, openModal, setOpenModal } = useCart([]);
     try {
 
     return (
@@ -16,7 +16,10 @@ function CartProvider({children}) {
                 cart,
                 addItemQuantity, 
                 findItem,
-                addItem
+                addItem,
+                deleteItem,
+                openModal,
+                setOpenModal
                 }}>
                 {children}
          </CartContext.Provider>

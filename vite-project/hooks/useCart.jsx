@@ -2,13 +2,11 @@ import { useState } from 'react';
 
 function useCart(initialList = []) {
   const [cart, setCart] = useState(initialList);
+  const [openModal, setOpenModal] = useState(false)
 
   function findItem(item) {
     console.log('item individual', item)
     const foundIndex = cart.findIndex((cartItem) => {
-      console.log('inside the fun')
-      console.log('carrito', cartItem.product)
-      console.log('comprobacion', cartItem.product.id === item.id)
       return cartItem.product.id === item.id
     });
     //console.log('buscando el item')
@@ -48,7 +46,16 @@ function useCart(initialList = []) {
     }
   }
 
-  return { cart, addItem, addItemQuantity, findItem };
+  function deleteItem(item) {
+    const foundItem = findItem(item);
+    if(foundItem) {
+      const newCart = [...cart];
+      newCart.splice(foundItem.index, 1)
+      setCart(newCart); 
+    }
+  }
+
+  return { cart, addItem, addItemQuantity, findItem, deleteItem, openModal, setOpenModal };
 }
 
 export default useCart;

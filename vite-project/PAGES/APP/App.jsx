@@ -18,7 +18,9 @@ function App() {
   return (
     <BrowserRouter>
       <CartProvider>
+        
         <AppRouter />
+
       </CartProvider>
     </BrowserRouter>
   )
