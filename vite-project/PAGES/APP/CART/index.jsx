@@ -3,7 +3,14 @@ import useCartContext from '../../../hooks/useCartContext';
 import './index.css'; // Estilos separados
 
 const Cart = () => {
-  const { cart } = useCartContext(); // Obtenemos los items del carrito
+  const { 
+    findItem,
+    addItem,
+    cart,
+    setOpenModal,
+    openModal,
+    deleteItem
+} = useCartContext() // Obtenemos los items del carrito
 
   return (
     <div>
@@ -17,9 +24,12 @@ const Cart = () => {
               <p>Price: ${item?.product.price}</p>
               <p>Quantity: {item?.quantity}</p>
             </div>
+            <button onClick={() => deleteItem(item.product)}>ELIMINAR</button>
           </div>
         ))}
       </div>
+      
+
     </div>
   );
 };
