@@ -1,8 +1,18 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function useCart(initialList = []) {
-  const [cart, setCart] = useState(initialList);
   const [openModal, setOpenModal] = useState(false)
+
+  // Inicializa el estado del carrito intentando recuperar los datos desde `localStorage` 
+ const [cart, setCart] = useState(() => {
+  const savedCart = localStorage.getItem('cart');
+  return savedCart ? JSON.parse(savedCart) : initialList;
+});
+
+// Efecto para guardar el carrito en `localStorage` cuando cambie el estado
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
 
   function findItem(item) {
     console.log('item individual', item)
@@ -25,8 +35,6 @@ function useCart(initialList = []) {
     console.log(item)
     if (!findItem(item)) {
       console.log(item)
-
-      // Si el jean no se encuentra, entonces lo agregamos
       setCart((prevState) => [...prevState, { product: item, quantity }]); //asi se vera el array
     } else {
       console.log('el jean ya se encuentra agregado')

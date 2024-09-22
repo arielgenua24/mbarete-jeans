@@ -20,11 +20,9 @@ const CartActionButton = ({ item }) => {
     } = useCartContext(); 
 
     const addToCart = (() => {
+      console.log('new cart', item)
       addItem(item, 1);
       setOpenModal(true)
-
-
-
   });
 
   const viewCart = (() => {
