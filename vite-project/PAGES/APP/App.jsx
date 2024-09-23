@@ -1,6 +1,7 @@
 import { useRoutes, BrowserRouter } from 'react-router-dom'
 import Jeans from '../../PAGES/APP/JEANS'
 import Cart from './CART';
+import Navbar from '../../components/NavBar';
 
 import { CartProvider } from '../../context/CartContext'; 
 
@@ -21,9 +22,8 @@ function App() {
   return (
     <BrowserRouter>
       <CartProvider>
-        
+        <Navbar/> 
         <AppRouter />
-
       </CartProvider>
     </BrowserRouter>
   )

@@ -1,1 +1,77 @@
 
+
+/* Estilos generales del navbar */
+nav {
+    width: 97%;
+    background-color: #f1f1f1;
+    border-radius: 16px;
+    padding: 10px;
+    margin: 10px auto; /* Centramos el navbar con margen */
+    display: flex;
+    justify-content: center; /* Centramos el contenido horizontalmente */
+  }
+  
+  .navbar {
+    margin: 10px 1px 30px 1px;
+    position: fixed; /* Fija el navbar en la parte superior */
+    top: 5px; /* Posiciona el navbar en la parte superior */
+    left: 0; /* Lo alinea a la izquierda */
+    right: 0; /* Lo alinea a la derecha */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  }
+
+
+  /* Lista dentro del navbar */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Separación entre los elementos del menú */
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  /* Estilos generales para los enlaces */
+  nav a {
+    text-decoration: none;
+    color: #333; /* Color del texto de los enlaces */
+    padding: 10px 20px;
+    border-radius: 8px; /* Suavizamos los bordes de los enlaces */
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+  
+  /* Efecto hover para los enlaces */
+  nav a:hover {
+    background-color: #ddd; /* Color de fondo al hacer hover */
+  }
+  
+  /* Estilos para el enlace activo (underline) */
+  .underline {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  
+  /* Icono del carrito 🛒 */
+  nav a.cart-icon {
+    font-size: 1.5rem; /* Hacemos el ícono del carrito más grande */
+  }
+  
+  /* Responsividad para dispositivos móviles */
+  @media (max-width: 768px) {
+    nav {
+      width: 100%;
+      border-radius: 8px;
+    }
+  
+        nav ul {
+            flex-direction: row;
+            /* align-items: center; */
+            justify-content: space-between;
+            gap: 15px;
+            width: 100%;
+        }
+}

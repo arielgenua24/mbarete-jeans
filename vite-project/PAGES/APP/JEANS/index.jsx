@@ -1,7 +1,8 @@
 import CategoryJeanFactory from "../../../services/factories/categoryJeans.factory";
 import Cart from '../../../components/Cart'
-import Navbar from "../../../components/NavBar";
+import JeansNavbar from "../../../components/JeansNavBar";
 import useRefs from '../../../hooks/useRefs';
+import './index.css'
 
 
 function Jeans() {
@@ -14,9 +15,9 @@ function Jeans() {
 
      
 
-      <div> 
+      <div className="jeans-home"> 
 
-        <Navbar/> 
+        <JeansNavbar/> 
         
         <h1> CART TEST</h1>
         <Cart/>
