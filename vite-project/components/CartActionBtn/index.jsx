@@ -1,31 +1,29 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import useCartContext from "../../hooks/useCartContext"; 
-import CartPortal from "../../portals/CartPortal";
-import Modal from "../addToCartModal";
 import './styles.css' 
 
+// eslint-disable-next-line no-unused-vars
 
 // eslint-disable-next-line react/prop-types
-const CartActionButton = ({ item }) => {
+const CartActionButton = ({ item, onAddToCart, onOpenModal }) => {
   const [buttonState, setButtonState] = useState({});
 
+  //console.log(item)
     const {
         findItem,
         addItem,
         cart,
-        setOpenModal,
-        openModal,
-        deleteItem
     } = useCartContext(); 
 
     const addToCart = (() => {
       console.log('new cart', item)
-      addItem(item, 1);
-      setOpenModal(true)
+      addItem(item, 1)
+      onAddToCart()
   });
 
   const viewCart = (() => {
+      onOpenModal()
       console.log('viewCart');
       //aqui abririamos el modal de el carrito y finalizar la compra
   });
@@ -34,6 +32,18 @@ const CartActionButton = ({ item }) => {
       console.log('reservation');
       // aqui lo llevariamos a un link de google.
   });
+
+    /*const onClose = () => {
+      deleteItem(item);
+      setOpenModal(false)
+    }
+
+    const submit = (() => {
+      updateQuantity(item, 4)
+      console.log('cantidad agregada')
+      setOpenModal(false)
+      }) */
+
 
     useEffect(() => {console.log('----------',cart)}, [cart])
 
@@ -64,20 +74,26 @@ const CartActionButton = ({ item }) => {
 
         updateButtonState();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [cart, item]);
+    }, [cart, item, findItem]);
 
 
   return (
     <>
+      {/* openModal && 
+      <Modal
+        selectedItem={selectedItem}           
+        cancelAct={onClose}
+        submit={submit}
+        quantity={quantity}
+        setQuantity={setQuantity}
+      /> */}
+
+
     <button  className="btn-add-cart" onClick={buttonState.action}>
       {buttonState.text}
     </button>
 
-    {openModal && (
-      <CartPortal>
-        <Modal setOpenModal={setOpenModal} cancelAct={() => deleteItem(item)}/>
-      </CartPortal>
-    )}
+    
     </>
     
     

@@ -1,21 +1,31 @@
 import { useState } from "react";
-import "./index.css"; // Para agregar estilos adicionales si es necesario
+import useCartContext from "../../hooks/useCartContext";
+import "./index.css";
+
 
 // eslint-disable-next-line react/prop-types
-const Modal = ({ setOpenModal, cancelAct }) => {
+const Modal = ({item, onClose}) => {
+  
   const [quantity, setQuantity] = useState(1);
 
-  const increment = () => setQuantity(quantity + 1);
+    const {
+      updateQuantity } = useCartContext(); 
+
+
+  const submit = (() => {
+    updateQuantity(item, quantity)
+    console.log('cantidad agregada')
+    onClose()
+    })
+
+ 
+  const increment = () => {
+    setQuantity(quantity + 1)
+    
+  }
   const decrement = () => {
     if (quantity > 1) setQuantity(quantity - 1);
   };
-
-  const onClose = () => {
-    cancelAct()
-    setOpenModal(false)
-  } 
-
-
 
 
   return (
@@ -41,7 +51,7 @@ const Modal = ({ setOpenModal, cancelAct }) => {
 
         <div className="modal-actions">
           <button className="modal-cancel" onClick={onClose}>Cancelar</button>
-          <button className="modal-add">Añadir</button>
+          <button className="modal-add" onClick={submit}>Añadir</button>
         </div>
       </div>
     </div>
