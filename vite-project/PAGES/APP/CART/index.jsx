@@ -1,31 +1,28 @@
 // components/Cart.js
+import { useState } from 'react';
 import useCartContext from '../../../hooks/useCartContext';
+import CartUi from './cartUi';
 import './index.css'; // Estilos separados
 
 const Cart = () => {
-  const { 
-    findItem,
-    addItem,
-    cart,
-    setOpenModal,
-    openModal,
-    deleteItem
-} = useCartContext() // Obtenemos los items del carrito
+    const { 
+      cart,
+  } = useCartContext() // Obtenemos los items del carrito
+
+  
+
+
 
   return (
     <div>
       <h2>ORDEN</h2>   
       <div className="cart-items">
         {cart.map((item) => (
-          <div key={item?.product.id} className="cart-item">
-            <img src={item?.product.images?.img1} alt={item?.product.name} className="item-image" />
-            <div className="item-details">
-              <h3>{item?.product.name}</h3>
-              <p>Price: ${item?.product.price}</p>
-              <p>Quantity: {item?.quantity}</p>
-            </div>
-            <button onClick={() => deleteItem(item.product)}>ELIMINAR</button>
-          </div>
+          <CartUi 
+            key={item?.product.id}
+            item={item}
+            />
+         
         ))}
       </div>
       

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import useCartContext from "../../hooks/useCartContext";
 import "./index.css";
@@ -5,7 +6,8 @@ import "./index.css";
 
 // eslint-disable-next-line react/prop-types
 const Modal = ({item, onClose}) => {
-  
+  console.log(item)
+
   const [quantity, setQuantity] = useState(1);
 
     const {
@@ -31,18 +33,29 @@ const Modal = ({item, onClose}) => {
   return (
     <div className="modal-container">
       <div className="modal-content">
-        <h2 className="modal-title">Carrito de Compras</h2>
-        
+        <h2 className="modal-title">
+          {item.name}
+        </h2>
+        <h3 className="category-title">
+          {item.category}
+        </h3>
+        <span> 
+            {item.talles}
+        </span>
+
         <div className="modal-images">
-          <img src="/img1.jpg" alt="Producto 1" />
-          <img src="/img2.jpg" alt="Producto 2" />
-          <img src="/img3.jpg" alt="Producto 3" />
+          <img src={item.images.img1} alt={item.name} />
+          <img src={item.images.img2} alt={item.name} />
+          <img src={item.images.img3} alt={item.name} />
         </div>
 
-        <div className="modal-price">Precio: $15.000</div>
+        <div className="modal-price">
+          ${(item.price * quantity).toLocaleString('es-AR')}
+        </div>
 
         <div className="modal-subtitle">Agregar cantidad</div>
-        
+        <span> al agregar la cantidad, vera la actualizacion del precio</span>
+
         <div className="modal-quantity">
           <button className="modal-btn" onClick={decrement}>-</button>
           <span>{quantity}</span>
@@ -53,6 +66,7 @@ const Modal = ({item, onClose}) => {
           <button className="modal-cancel" onClick={onClose}>Cancelar</button>
           <button className="modal-add" onClick={submit}>Añadir</button>
         </div>
+        
       </div>
     </div>
   );
