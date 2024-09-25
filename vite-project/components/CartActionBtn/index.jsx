@@ -1,13 +1,16 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import useCartContext from "../../hooks/useCartContext"; 
 import './styles.css' 
 
 // eslint-disable-next-line no-unused-vars
 
 // eslint-disable-next-line react/prop-types
-const CartActionButton = ({ item, onAddToCart, onOpenModal }) => {
+const CartActionButton = ({ item, onAddToCart}) => {
   const [buttonState, setButtonState] = useState({});
+  const navigate = useNavigate();
+
 
   //console.log(item)
     const {
@@ -23,7 +26,7 @@ const CartActionButton = ({ item, onAddToCart, onOpenModal }) => {
   });
 
   const viewCart = (() => {
-      onOpenModal()
+      navigate('/cart');
       console.log('viewCart');
       //aqui abririamos el modal de el carrito y finalizar la compra
   });
@@ -32,17 +35,6 @@ const CartActionButton = ({ item, onAddToCart, onOpenModal }) => {
       console.log('reservation');
       // aqui lo llevariamos a un link de google.
   });
-
-    /*const onClose = () => {
-      deleteItem(item);
-      setOpenModal(false)
-    }
-
-    const submit = (() => {
-      updateQuantity(item, 4)
-      console.log('cantidad agregada')
-      setOpenModal(false)
-      }) */
 
 
     useEffect(() => {console.log('----------',cart)}, [cart])
