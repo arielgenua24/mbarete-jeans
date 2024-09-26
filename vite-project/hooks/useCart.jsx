@@ -34,7 +34,7 @@ function useCart(initialList = []) {
 
   function addItem(item, quantity) {
     console.log('llamando a addItem')
-    console.log(item)
+    console.log(item.product)
     if (!findItem(item)) {
       console.log(item)
       setCart((prevState) => [...prevState, { product: item, quantity }]); //asi se vera el array
@@ -48,7 +48,7 @@ function useCart(initialList = []) {
     console.log(item, newQuantity) //hasta aca yo se que me llego el item, y la cantidad
 
     const foundItem = findItem(item);
-    console.log(item.name)
+    console.log(item.product)
     console.log(foundItem)
     if (foundItem) {
       console.log(item, newQuantity)
