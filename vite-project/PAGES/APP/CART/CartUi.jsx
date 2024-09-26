@@ -27,8 +27,10 @@ function CartUi({item, changeQuantity}) {
     const decrement = (quantity) => {
       if(newQuantity) {
         setQuantity(newQuantity-1)
+        changeQuantity(item.product, newQuantity-1)
       } else { 
         setQuantity(quantity - 1)
+        changeQuantity(item.product, quantity - 1)
       }
     };
 

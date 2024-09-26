@@ -28,6 +28,7 @@ const Cart = () => {
             />
         ))}
       </div>
+      <WhatsAppButton cart={cart}/>
       
 
     </div>
