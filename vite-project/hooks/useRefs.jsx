@@ -5,11 +5,13 @@ const useRefs = () => {
   const homeRef = useRef(null);
   const baggyRef = useRef(null);
   const latestRef = useRef(null);
+  const bermudaRef = useRef(null);
 
   return {
     homeRef,
     baggyRef,
     latestRef,
+    bermudaRef
   };
 };
 

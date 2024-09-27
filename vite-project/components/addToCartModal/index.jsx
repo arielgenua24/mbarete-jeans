@@ -5,7 +5,7 @@ import "./index.css";
 
 
 // eslint-disable-next-line react/prop-types
-const Modal = ({item, onCancel ,onClose}) => {
+const Modal = ({item ,onClose}) => {
   console.log(item)
 
   const [quantity, setQuantity] = useState(1);

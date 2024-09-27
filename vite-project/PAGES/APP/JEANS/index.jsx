@@ -7,7 +7,9 @@ import './index.css'
 
 function Jeans() {
     const baggyCategory = new CategoryJeanFactory()
-    const { baggyRef } = useRefs()
+    const bermudaCategory = new CategoryJeanFactory()
+
+    const { baggyRef, bermudaRef } = useRefs()
 
 
 
@@ -43,7 +45,14 @@ function Jeans() {
        
         <div className='div-baggy'  ref={baggyRef}>
           {baggyCategory.createCategoryComponent("baggy")}
+          
         </div>
+
+        <div className='div-bermuda'  ref={bermudaRef}>
+          {bermudaCategory.createCategoryComponent("bermuda")}          
+        </div>
+
+       
 
       </div>
     );

@@ -19,7 +19,7 @@ const WhatsAppButton = ({cart}) => {
     }
     console.log(cart)
 
-    let message = 'Hola! \n Quiero comprar los siguientes items:\n\n';
+    let message = config.versionMessage + '\n Hola! \n Quiero comprar los siguientes items:\n\n';
     cart.forEach((item, index) => {
       message += `${index + 1}. ${item?.product.name} - Cantidad: ${item?.quantity} 
       - Precio: $${item?.product.price} 

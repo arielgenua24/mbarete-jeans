@@ -37,16 +37,13 @@ const CartActionButton = ({ item, onAddToCart}) => {
   });
 
 
-    useEffect(() => {console.log('----------',cart)}, [cart])
-
-
     useEffect(() => {
 
 
         const updateButtonState = () => {
             const jeanInCart = findItem(item);
-            console.log(jeanInCart)
-            console.log('Cart:', cart);
+            //console.log(jeanInCart)
+            //console.log('Cart:', cart);
 
             // eslint-disable-next-line react/prop-types
             if (item.state === "SoldOut") {
@@ -54,12 +51,12 @@ const CartActionButton = ({ item, onAddToCart}) => {
             } else if (item?.id === jeanInCart?.jean?.product?.id) {
               console.log(item.id) // ya esta
               //&& 
-              console.log('testeando la logica del jeanInCart')
-              console.log(jeanInCart.jean.product.id)
-              console.log(item)
+              //console.log('testeando la logica del jeanInCart')
+              //console.log(jeanInCart.jean.product.id)
+              //console.log(item)
                 setButtonState({ text: 'ver el carrito', action: viewCart, class: 'jeanInCart' });
             } else {
-                console.log('add to cart')
+                //console.log('add to cart')
                 setButtonState({ text: 'añadir al carrito', action: addToCart, class: 'btn-add-cart' });
             }
         };

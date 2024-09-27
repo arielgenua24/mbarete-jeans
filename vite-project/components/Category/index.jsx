@@ -16,23 +16,14 @@ function Category({ filter}){
         selectedItem,
         setSelectedItem,
         cart,
-        deleteItem
     } = useCartContext(); 
 
     useEffect(() => {
-        console.log('useEffect', selectedItem)
-        console.log('useEffect-2', cart) // no funciona, a no ser que yo actualice la pagina
-        console.log('useEffect-3', openModal) // no funciona, siempre esta en false
+        //console.log('useEffect', selectedItem)
+        //console.log('useEffect-2', cart) // no funciona, a no ser que yo actualice la pagina
+        //console.log('useEffect-3', openModal) // no funciona, siempre esta en false
 
     }, [selectedItem, cart, openModal]) //el itemSeleccionado cambia
-
-    const onCancel = (selectedItem) => {
-        console.log('delete item:', selectedItem)
-        deleteItem(selectedItem)
-        setOpenModal(false)
-    }  
-
-
 
     const filteredJeans = service?.filterJeans(filter)
     // la aplicacion no funnciona porque jean.nombre y demas no existe, chequea la estructura de datos!
@@ -52,9 +43,10 @@ function Category({ filter}){
                             
                             <img src={jean.images.img1} alt={jean.name} />
                             <div className="carousel-jean-data">
-                                <p>{jean.name}</p>
-                                <p>${jean.price.toLocaleString('es-AR')}</p>
-                                <p>Talles disponibles: {jean.talles} </p>
+                                <span>{jean.name}</span>
+                                <span>${jean.price.toLocaleString('es-AR')}</span>
+                                <span>Talles disponibles: </span>
+                                <span> {jean.talles}</span>
                             </div>
                             <CartActionButton   
                                 item={jean}
@@ -72,7 +64,6 @@ function Category({ filter}){
                         <Modal 
                         item={selectedItem}
                         onClose={() => setOpenModal(false)}
-                        onCancel={() => onCancel(selectedItem)}
                         />
                     </CartPortal>
                 }
