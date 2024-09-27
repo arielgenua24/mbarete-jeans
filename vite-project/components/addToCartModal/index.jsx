@@ -5,13 +5,13 @@ import "./index.css";
 
 
 // eslint-disable-next-line react/prop-types
-const Modal = ({item, onClose}) => {
+const Modal = ({item, onCancel ,onClose}) => {
   console.log(item)
 
   const [quantity, setQuantity] = useState(1);
 
     const {
-      updateQuantity } = useCartContext(); 
+      updateQuantity, deleteItem } = useCartContext(); 
 
 
   const submit = (() => {
@@ -20,7 +20,11 @@ const Modal = ({item, onClose}) => {
     onClose()
     })
 
- 
+  const onDelete = (() => {
+    deleteItem(item)
+    onClose()
+  })
+
   const increment = () => {
     setQuantity(quantity + 1)
     
@@ -63,7 +67,7 @@ const Modal = ({item, onClose}) => {
         </div>
 
         <div className="modal-actions">
-          <button className="modal-cancel" onClick={onClose}>Cancelar</button>
+          <button className="modal-cancel" onClick={onDelete}>Cancelar</button>
           <button className="modal-add" onClick={submit}>Añadir</button>
         </div>
         

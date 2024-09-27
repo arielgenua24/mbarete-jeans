@@ -50,17 +50,17 @@ const CartActionButton = ({ item, onAddToCart}) => {
 
             // eslint-disable-next-line react/prop-types
             if (item.state === "SoldOut") {
-                setButtonState({ text: 'registrarme para preventa', action: reservation });
+                setButtonState({ text: 'registrarme para preventa', action: reservation, class: 'soldOut' });
             } else if (item?.id === jeanInCart?.jean?.product?.id) {
               console.log(item.id) // ya esta
               //&& 
               console.log('testeando la logica del jeanInCart')
               console.log(jeanInCart.jean.product.id)
               console.log(item)
-                setButtonState({ text: 'ver el carrito', action: viewCart });
+                setButtonState({ text: 'ver el carrito', action: viewCart, class: 'jeanInCart' });
             } else {
                 console.log('add to cart')
-                setButtonState({ text: 'añadir al carrito', action: addToCart });
+                setButtonState({ text: 'añadir al carrito', action: addToCart, class: 'btn-add-cart' });
             }
         };
 
@@ -71,17 +71,7 @@ const CartActionButton = ({ item, onAddToCart}) => {
 
   return (
     <>
-      {/* openModal && 
-      <Modal
-        selectedItem={selectedItem}           
-        cancelAct={onClose}
-        submit={submit}
-        quantity={quantity}
-        setQuantity={setQuantity}
-      /> */}
-
-
-    <button  className="btn-add-cart" onClick={buttonState.action}>
+    <button  className={`btn-cart ${buttonState.class || ''}`} onClick={buttonState.action}>
       {buttonState.text}
     </button>
 
