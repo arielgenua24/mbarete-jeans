@@ -8,6 +8,8 @@ function Navbar() {
     const [isAnimating, setIsAnimating] = useState(false);
     const { cart } = useCartContext();
     let activeStyle = 'underline underline-offset-4'
+    const backgroundColor = cart.length > 0 ? '#75b9e135' : 'transparent';
+
     console.log('estamos animando', cart.length)
 
 
@@ -49,21 +51,23 @@ function Navbar() {
                     > 
                        <motion.div 
                         className="cart-container"
+                        style={{ backgroundColor }}
                         animate={isAnimating ? { 
-                        scale: 1.4, 
-                        backgroundColor: '#E6F3FF'  // Celeste claro
+                        scale: 1.6, 
                         } : {}}
                         transition={{ duration: 0.5 }}
-                    >
-                        <motion.span
-                        className="cart-icon"
-                        animate={isAnimating ? { scale: [1, 1.2, 1] } : {}}
-                        transition={{ duration: 0.5 }}
                         >
-                        🛒
-                        </motion.span>
+                        <motion.div
+                        className="cart-icon"
+                        animate={isAnimating ? { scale: [1.1, 1.2, 1.1] } : {}}
+                        transition={{ duration: 0.9 }}
+                        >
+                        <div>
+                            🛒 
+                        </div>
+                        </motion.div>
                         {cart.length > 0 && (
-                        <span className="cart-count">{cart.length + 1}</span>
+                        <span className="cart-count">{cart.length}</span>
                         )}
                         <span className="cart-text">Carrito</span>
                     </motion.div>
