@@ -58,7 +58,7 @@
     border-top: 1px solid #D1CECE;
     font-size: 13px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
 }
 .carousel-slides img {
     width: 90%;

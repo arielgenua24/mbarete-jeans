@@ -1,5 +1,4 @@
 // components/Cart.js
-import { useState } from 'react';
 import useCartContext from '../../../hooks/useCartContext';
 import CartUi from './cartUi';
 import WhatsAppButton from '../../../components/WppButton';
