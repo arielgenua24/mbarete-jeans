@@ -44,7 +44,8 @@ function CartUi({item, changeQuantity}) {
         <img src={item?.product.images?.img1} alt={item?.product.name} className="item-image" />
         <div className="item-details">
           <h3>{item?.product.name}</h3>
-          <p>Precio: ${(item?.product.price*item?.quantity)}</p>
+          <p>Precio unitario: ${item?.product.price}</p>
+          <p>Precio total: ${(item?.product.price*item?.quantity)}</p>
           <p>Cantidad: { newQuantity || item?.quantity}</p>
         </div>
         <button onClick={() => deleteItem(item.product)}>ELIMINAR</button>

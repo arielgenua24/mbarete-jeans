@@ -1,6 +1,17 @@
 /* eslint-disable react/prop-types */
-
+import config from "../../config/config";
 const WhatsAppButton = ({cart}) => {
+
+  const sendMessage = (message) => {
+    const phoneNumber = config.phoneNumber; // Número de WhatsApp al que se enviará el mensaje
+    const encodedMessage = encodeURIComponent(message); // Codifica el mensaje para usar en la URL
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    // Redirige a la URL de WhatsApp
+    window.open(whatsappURL, '_blank');
+  };
+
+
 
   const generateMessage = () => {
     if (cart.length === 0) {
@@ -8,9 +19,11 @@ const WhatsAppButton = ({cart}) => {
     }
     console.log(cart)
 
-    let message = 'Quiero comprar los siguientes items:\n\n';
+    let message = 'Hola! \n Quiero comprar los siguientes items:\n\n';
     cart.forEach((item, index) => {
-      message += `${index + 1}. ${item?.product.name} - Cantidad: ${item?.quantity} - Precio: $${item?.product.price}\n`;
+      message += `${index + 1}. ${item?.product.name} - Cantidad: ${item?.quantity} 
+      - Precio: $${item?.product.price} 
+      - Precio Total: ${(item?.product.price * item?.quantity)}\n `;
     });
 
     const total = cart.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
@@ -20,20 +33,8 @@ const WhatsAppButton = ({cart}) => {
 
     //return message
 
-    //sendMessage(message)
+    sendMessage(message)
 
-  };
-
-
-
-
-  const sendMessage = (message) => {
-    const phoneNumber = '1137839767'; // Número de WhatsApp al que se enviará el mensaje
-    const encodedMessage = encodeURIComponent(message); // Codifica el mensaje para usar en la URL
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    
-    // Redirige a la URL de WhatsApp
-    window.open(whatsappURL, '_blank');
   };
 
   return (
