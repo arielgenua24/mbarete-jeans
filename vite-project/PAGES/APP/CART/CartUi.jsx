@@ -41,7 +41,7 @@ function CartUi({item, changeQuantity}) {
     return ( 
     
       <div key={item?.product.id} className="cart-item">
-        <img src={item?.product.images?.img1} alt={item?.product.name} className="item-image" />
+        <img src={item?.product.images?.img1} alt={item?.product.name} className="item-image" loading="lazy"/>
         <div className="item-details">
           <h3>{item?.product.name}</h3>
           <p>Precio unitario: ${item?.product.price}</p>

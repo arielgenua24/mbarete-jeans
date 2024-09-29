@@ -48,9 +48,9 @@ const Modal = ({item ,onClose}) => {
         </span>
 
         <div className="modal-images">
-          <img src={item.images.img1} alt={item.name} />
-          <img src={item.images.img2} alt={item.name} />
-          <img src={item.images.img3} alt={item.name} />
+          <img src={item.images.img1} alt={item.name} loading="lazy"/>
+          <img src={item.images.img2} alt={item.name} loading="lazy"/>
+          <img src={item.images.img3} alt={item.name} loading="lazy"/>
         </div>
 
         <div className="modal-price">

@@ -1,23 +1,20 @@
 
 
 /* Estilos generales del navbar */
-nav {
-    width: 97%;
-    background-color: #f1f1f1;
-    border-radius: 16px;
-    padding: 10px;
-    margin: 10px auto; /* Centramos el navbar con margen */
-    display: flex;
-    justify-content: center; /* Centramos el contenido horizontalmente */
-  }
+navbar {
+  margin: 0; /* Elimina márgenes para evitar desplazamiento no deseado */
+  padding: 0;
+  position: fixed;
+  top: 0; /* Siempre estará anclado en la parte superior */
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+  background-color: transparent; /* No fondo, ya que el fondo está en 'nav' */
+}
+
   
   .navbar {
-    margin: 10px 1px 30px 1px;
-    position: fixed; /* Fija el navbar en la parte superior */
-    top: 5px; /* Posiciona el navbar en la parte superior */
-    left: 0; /* Lo alinea a la izquierda */
-    right: 0; /* Lo alinea a la derecha */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    
   }
 
 
@@ -62,18 +59,7 @@ nav {
   
   /* Responsividad para dispositivos móviles */
   @media (max-width: 768px) {
-    nav {
-      width: 100%;
-      border-radius: 8px;
-    }
-  
-        nav ul {
-            flex-direction: row;
-            /* align-items: center; */
-            justify-content: space-between;
-            gap: 15px;
-            width: 100%;
-        }
+
 }
 
 

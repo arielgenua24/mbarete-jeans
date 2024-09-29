@@ -1,9 +1,5 @@
 .Jean_nav_bar {
-    margin-top: 20px;
 }
 
 @media (max-width: 768px) {
-    .Jean_nav_bar {
-        margin-top: 20px;
-    }
 }

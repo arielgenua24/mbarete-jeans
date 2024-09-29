@@ -41,7 +41,7 @@ function Category({ filter}){
                         key={jean.id}
                         >
                             
-                            <img src={jean.images.img1} alt={jean.name} />
+                            <img src={jean.images.img1} alt={jean.name} loading="lazy"/>
                             <div className="carousel-jean-data">
                                 <span>{jean.name}</span>
                                 <span>${jean.price.toLocaleString('es-AR')}</span>
