@@ -14,6 +14,8 @@ class Jeans {
     
         if (filteredJeans.length === 0) {
             console.log('No se pudieron encontrar jeans que coincidan con el filtro.');
+            console.log(filter)
+
         }
     
         return filteredJeans;

@@ -39,7 +39,7 @@ export const jeansData = [
           img3: "url3.jpg",
         },
         price: 12000,
-        state: 'nuevo',
+        state: State.nuevo,
         talles: '38/39/40/41/42/43/44/45/46' 
      },
      {
@@ -92,7 +92,7 @@ export const jeansData = [
           img3: "url3.jpg",
         },
         price: 20500,
-        state: 'nuevo',
+        state: State.nuevo,
         talles: '38/44/48' 
      },
      {
@@ -119,7 +119,7 @@ export const jeansData = [
           img3: "url3.jpg",
         },
         price: 11000,
-        state: 'nuevo',
+        state: State.ReIngreso,
         talles: '38/39/40/41/42/43/44/45/46/47/48' 
      },
      {
@@ -147,7 +147,7 @@ export const jeansData = [
         img3: "url3.jpg",
       },
       price: 8000,
-      state: 'nuevo',
+      state: State.nuevo,
       talles: '38/40/46/48' 
    },
    {
@@ -175,7 +175,7 @@ export const jeansData = [
       img3: "url3.jpg",
     },
     price: 8000,
-    state: '',
+    state: State.EnOferta,
     talles: '40/42' 
   },
   {
@@ -203,7 +203,7 @@ export const jeansData = [
       img3: "url3.jpg",
     },
     price: 8000,
-    state: '',
+    state: State.nuevo,
     talles: '38/40/44/46'  
   },
   {
@@ -217,7 +217,7 @@ export const jeansData = [
       img3: "url3.jpg",
     },
     price: 8000,
-    state: '',
+    state: State.nuevo,
     talles: '44/46/48'  
   },
   {

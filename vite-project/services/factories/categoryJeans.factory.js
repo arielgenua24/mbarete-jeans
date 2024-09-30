@@ -1,4 +1,4 @@
-import { Category } from "../../data/jeans.categories";
+
 import { categoryComponents } from "../../data/UIcomponents/UiCategory.componentes"
 
 class CategoryJeanFactory {
@@ -10,9 +10,6 @@ class CategoryJeanFactory {
             if(!categoryComponents[category]) {
                 return 'componente no encontrado'
             } 
-            if(!Category[category]) {
-                return 'categoria no encontrada'
-            }
             return categoryComponents[category]
         } catch(e) {
             console.error(e)
