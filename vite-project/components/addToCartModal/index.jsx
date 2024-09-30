@@ -37,12 +37,15 @@ const Modal = ({item ,onClose}) => {
   return (
     <div className="modal-container">
       <div className="modal-content">
-        <h2 className="modal-title">
-          {item.name}
-        </h2>
-        <h3 className="category-title">
-          {item.category}
-        </h3>
+        <div className="modal-jean-data">
+          <h2 className="modal-title">
+            {item.name}
+          </h2>
+          <h3 className="category-title">
+            {item.category}
+          </h3>
+        </div>
+        
         <span> 
             {item.talles}
         </span>

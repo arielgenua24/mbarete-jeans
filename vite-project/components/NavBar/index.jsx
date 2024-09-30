@@ -31,14 +31,18 @@ function Navbar() {
             <ul className=''>
                 <li>
                     <NavLink
-                        className='' 
+                         className={({ isActive }) => 
+                            isActive ? activeStyle : undefined
+                        }
                         to='/home/index.html'> 
                         HOME 
                     </NavLink>
                 </li>
                 <li>
                     <NavLink 
-                        className='' 
+                        className={({ isActive }) => 
+                            isActive ? activeStyle : undefined
+                        }
                         to='/jeans'> 
                         JEANS 
                     </NavLink>

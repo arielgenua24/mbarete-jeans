@@ -17,15 +17,15 @@ function Jeans() {
 
      
 
-      <div className="jeans-home"> 
+      <div className="jeans-home">
 
         <JeansNavbar/> 
         
-        <h1> CART TEST</h1>
-        <Cart/>
+        {/*<h1> CART TEST</h1>
+        <Cart/>*/}
 
         <div>
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat iaculis sollicitudin. Ut consectetur lorem ac ullamcorper auctor. Vivamus ut tellus posuere, mollis metus feugiat, efficitur odio. Nulla facilisi. In imperdiet mauris sed quam sollicitudin ullamcorper. Praesent ultricies urna eget facilisis vulputate. Vivamus orci leo, euismod vitae neque id, dictum accumsan lectus. Duis auctor consectetur mauris, eu feugiat dolor auctor vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis metus vitae nunc pharetra aliquam sit amet eget mauris. Vestibulum nec pharetra massa, nec accumsan velit. Etiam ultricies ultricies nunc, bibendum vulputate lacus maximus vel. Nullam dictum massa magna, vel gravida mi luctus non.
+            {/*<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat iaculis sollicitudin. Ut consectetur lorem ac ullamcorper auctor. Vivamus ut tellus posuere, mollis metus feugiat, efficitur odio. Nulla facilisi. In imperdiet mauris sed quam sollicitudin ullamcorper. Praesent ultricies urna eget facilisis vulputate. Vivamus orci leo, euismod vitae neque id, dictum accumsan lectus. Duis auctor consectetur mauris, eu feugiat dolor auctor vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis metus vitae nunc pharetra aliquam sit amet eget mauris. Vestibulum nec pharetra massa, nec accumsan velit. Etiam ultricies ultricies nunc, bibendum vulputate lacus maximus vel. Nullam dictum massa magna, vel gravida mi luctus non.
 
                 Donec euismod placerat velit nec vehicula. Sed gravida enim velit, nec mollis velit consectetur in. Morbi ullamcorper porttitor molestie. Fusce bibendum ipsum eget purus sodales molestie. Maecenas venenatis justo id elit tincidunt, a gravida diam convallis. Nullam pellentesque id nisi vitae molestie. Sed porttitor mattis felis eget vehicula. In maximus erat eros, a bibendum justo sollicitudin at. Maecenas ornare convallis elementum. Quisque elementum volutpat erat, nec auctor orci mollis sit amet. Sed velit felis, pellentesque eget tellus in, auctor sollicitudin arcu.
 
@@ -39,7 +39,7 @@ function Jeans() {
 
                 Nulla eu turpis hendr
 
-            </span>            
+            </span>*/}            
         </div>
          
        

@@ -1,21 +1,17 @@
 
-
-/* Estilos generales del navbar */
-navbar {
-  margin: 0; /* Elimina márgenes para evitar desplazamiento no deseado */
-  padding: 0;
-  position: fixed;
-  top: 0; /* Siempre estará anclado en la parte superior */
-  left: 0;
-  right: 0;
-  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-  background-color: transparent; /* No fondo, ya que el fondo está en 'nav' */
-}
-
   
   .navbar {
-    
-  }
+    margin: 6px;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #d7e9ff;
+    position: fixed;
+    border-radius: 18px;
+    border: 1px solid #0476ff;
+}
 
 
   /* Lista dentro del navbar */
@@ -39,6 +35,7 @@ navbar {
     padding: 10px 20px;
     border-radius: 8px; /* Suavizamos los bordes de los enlaces */
     transition: background-color 0.3s ease; /* Transición suave */
+    font-weight: 600;
   }
   
   /* Efecto hover para los enlaces */
@@ -46,6 +43,12 @@ navbar {
     background-color: #ddd; /* Color de fondo al hacer hover */
   }
   
+  ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   /* Estilos para el enlace activo (underline) */
   .underline {
     text-decoration: underline;

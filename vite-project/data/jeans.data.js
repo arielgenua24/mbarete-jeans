@@ -604,8 +604,8 @@ export const jeansData = [
     category: Category.baggy,
     specialTag: '',
     images: {
-      img1: "/public/images/pantalon_baggy_oxido_1.JPG",
-      img2: "/public/images/pantalon_baggy_oxido_2.JPG",
+      img1: "/public/images/pantalon_baggy_oxido_2.JPG",
+      img2: "/public/images/pantalon_baggy_oxido_1.JPG",
       img3: "/public/images/pantalon_baggy_oxido_3.JPG",
     },
     price: 19000,
