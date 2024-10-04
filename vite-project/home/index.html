@@ -28,9 +28,9 @@
     </header>
 
     <!-- Carrusel de imágenes -->
-    <section class="wpp-btn">
+    <section id='wpp-btn' class="wpp-btn">
         <div class="whatsapp">
-            <p>wpp</p>
+            <button onclick="enviarMensaje()">wpp</button>
      </div></section>
     
 
@@ -41,7 +41,6 @@
             <p>ETC ETC</p>
             <div class="buttons">
                 <a href="/jeans" class="button jeans-button">VER JEANS</a>
-                <a href="/contacto" class="button contact-button">CONTACTANOS</a>
             </div>
         </div>
         <!-- Aquí podrías agregar más elementos del carrusel si fuera necesario -->
@@ -61,7 +60,6 @@
         <p>ETC ETC</p>
         <div class="buttons">
             <a href="/jeans" class="button jeans-button">VER JEANS</a>
-            <a href="/contacto" class="button contact-button">CONTACTANOS</a>
         </div>
     </section>
 
@@ -71,7 +69,6 @@
         <p>MODA QUE MULTIPLICA TUS GANANCIAS, PRECIOS Y BLA BLA</p>
         <div class="buttons">
             <a href="/jeans" class="button jeans-button">VER JEANS</a>
-            <a href="/contacto" class="button contact-button">CONTACTANOS</a>
         </div>
     </section>
 
@@ -80,7 +77,6 @@
         <p>CARD ABOUT STOCK→STOCK SIEMPRE, BLA BLA</p>
         <div class="buttons">
             <a href="/jeans" class="button jeans-button">VER JEANS</a>
-            <a href="/contacto" class="button contact-button">CONTACTANOS</a>
         </div>
     </section>
 
@@ -88,6 +84,15 @@
     <section class="coming-soon">
         <p>PROXIMAMENTE</p>
     </section>
+
+    <script>
+        function enviarMensaje() {
+          var numero = "1137839767"; // Número de teléfono sin el '+' ni '00'
+          var mensaje = "Hola MBARETE JEANS. he visitado su web y quiero hablar con un asesor"; // Mensaje que quieres enviar
+          var url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+          window.open(url, '_blank');
+        }
+      </script>
 
 </body>
 </html>
