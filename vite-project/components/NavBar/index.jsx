@@ -30,13 +30,12 @@ function Navbar() {
         <nav className='navbar'>
             <ul className=''>
                 <li>
-                    <NavLink
-                         className={({ isActive }) => 
-                            isActive ? activeStyle : undefined
-                        }
-                        to='/home/index.html'> 
-                        HOME 
-                    </NavLink>
+                <a href="/home/" onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = '/home/';
+                    }}>
+                    Home
+                </a>
                 </li>
                 <li>
                     <NavLink 
