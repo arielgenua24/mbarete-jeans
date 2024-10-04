@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mbarete - Home</title>
+    <title>Jeans al por mayor - Calidad garantizada y envíos a todo el país | MBARETE</title>
+
+    <!-- Meta Descripción -->
+    <meta name="description" content="Compra jeans de hombre al por mayor en MBARETE. Calidad garantizada, envíos a todo el país y atención los 7 días de la semana. Garantía de devolución de dinero.">
+    
+    <!-- Palabras Clave -->
+    <meta name="keywords" content="jeans por mayor, jeans hombre, calidad garantizada, envíos a todo el país, moda masculina, jeans económicos, moda mayorista">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.tusitio.com/home">
+
+    <!-- Archivo CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,9 +24,8 @@
         <nav>
             <div class="nav-contacts">
                 <a href="/home">MBARETE</a>
-                <a href="/contacto">CONTACTANOS</a>
+                <a href="/contacto">CONTÁCTANOS</a>
             </div>
-
 
             <div class="nav-container">
                 <ul class="nav-links">
@@ -28,17 +38,16 @@
     </header>
 
     <!-- Carrusel de imágenes -->
-    <section id='wpp-btn' class="wpp-btn">
+    <section id="wpp-btn" class="wpp-btn">
         <div class="whatsapp">
             <button onclick="enviarMensaje()">wpp</button>
-     </div></section>
-    
+        </div>
+    </section>
 
     <section class="carousel">
         <div class="carousel-item">
-            <p>FOTO DE NUEVOS PRODUCTOS</p>
-            <p>ANUNCIOS DE PRIMAVERA</p>
-            <p>ETC ETC</p>
+            <p>Descubre nuestra nueva colección de jeans de hombre</p>
+            <p>Ofertas especiales de primavera</p>
             <div class="buttons">
                 <a href="/jeans" class="button jeans-button">VER JEANS</a>
             </div>
@@ -56,8 +65,8 @@
 
     <!-- Sección de calidad -->
     <section class="quality-section">
-        <p>CALIDAD GARANTIZADA, SIN RIESGOS, SIN EXCEPCIONES.</p>
-        <p>ETC ETC</p>
+        <h2>Calidad garantizada</h2>
+        <p>Nuestros jeans ofrecen calidad sin riesgos y sin excepciones.</p>
         <div class="buttons">
             <a href="/jeans" class="button jeans-button">VER JEANS</a>
         </div>
@@ -65,8 +74,8 @@
 
     <!-- Sección de ganancias -->
     <section class="earnings-section">
-        <p>GANANCIAS?</p>
-        <p>MODA QUE MULTIPLICA TUS GANANCIAS, PRECIOS Y BLA BLA</p>
+        <h2>Multiplica tus ganancias</h2>
+        <p>Con nuestros jeans de moda, puedes aumentar tus ingresos. Precios mayoristas.</p>
         <div class="buttons">
             <a href="/jeans" class="button jeans-button">VER JEANS</a>
         </div>
@@ -74,7 +83,8 @@
 
     <!-- Sección de stock -->
     <section class="stock-section">
-        <p>CARD ABOUT STOCK→STOCK SIEMPRE, BLA BLA</p>
+        <h2>Últimos productos en stock</h2>
+        <p>Encuentra los jeans más demandados antes de que se agoten.</p>
         <div class="buttons">
             <a href="/jeans" class="button jeans-button">VER JEANS</a>
         </div>
@@ -82,17 +92,18 @@
 
     <!-- Sección de próximamente -->
     <section class="coming-soon">
-        <p>PROXIMAMENTE</p>
+        <h2>Próximamente</h2>
     </section>
 
+    <!-- Script para WhatsApp -->
     <script>
         function enviarMensaje() {
-          var numero = "1137839767"; // Número de teléfono sin el '+' ni '00'
-          var mensaje = "Hola MBARETE JEANS. he visitado su web y quiero hablar con un asesor"; // Mensaje que quieres enviar
-          var url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-          window.open(url, '_blank');
+            var numero = "1137839767"; // Número de teléfono sin el '+' ni '00'
+            var mensaje = "Hola MBARETE JEANS. he visitado su web y quiero hablar con un asesor"; // Mensaje que quieres enviar
+            var url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
         }
-      </script>
+    </script>
 
 </body>
 </html>

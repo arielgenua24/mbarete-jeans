@@ -39,3 +39,5 @@ dist-ssr
 # Misc
 *.cache
 .temp
+
+/home/index.html

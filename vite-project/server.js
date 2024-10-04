@@ -14,10 +14,19 @@ app.use(express.json()); // Parse incoming JSON payloads
 app.use(express.static('dist')); // Asumiendo que 'dist' es tu directorio de archivos estáticos
 
 app.use('/images', express.static(path.join(__dirname, 'images')));
+
+
+
+app.get("/jeans", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
+});
+
+app.get("/cart", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
+});
+
 app.use('/home', express.static(path.join(__dirname, 'home')));
-
-
-app.get('/home', async (req, res) => {
+app.get('*', async (req, res) => {
   try {
     const filePath = path.join(__dirname, 'home', 'index.html');
     const content = await fs.readFile(filePath, 'utf-8');
@@ -28,11 +37,6 @@ app.get('/home', async (req, res) => {
   }
 });
 
-
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
-});
 
 app.listen(3000, () => {
   console.log(`Servidor corriendo en el puerto ${3000}`);
