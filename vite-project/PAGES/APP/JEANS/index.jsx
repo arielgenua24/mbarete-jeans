@@ -33,6 +33,9 @@ function Jeans() {
       <div className="jeans-home">
         <JeansNavbar/>                     
        
+        <div className='div-parachutte'  ref={parachutteRef}>
+          {parachutteCategory.createCategoryComponent("parachutte")}          
+        </div>
 
         <div className='div-latest'  ref={latestRef}>
           {latestCategory.createCategoryComponent("pocoStock")}
@@ -63,9 +66,6 @@ function Jeans() {
           {joggersCategory.createCategoryComponent("joggers")}          
         </div>
 
-        <div className='div-parachutte'  ref={parachutteRef}>
-          {parachutteCategory.createCategoryComponent("parachutte")}          
-        </div>
 
         <div className='div-frisa'  ref={frisaRef}>
           {frisaCategory.createCategoryComponent("frisa")}          
