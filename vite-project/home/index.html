@@ -24,16 +24,17 @@
         <nav>
             <div class="nav-contacts">
                 <a href="/home">MBARETE</a>
-                <a href="/contacto">CONTÁCTANOS</a>
+                <a onclick="enviarMensaje()">CONTÁCTANOS</a>
             </div>
 
-            <div class="nav-container">
+            <div class="navbar nav-container">
                 <ul class="nav-links">
-                    <li><a href="/home" class="active">Inicio</a></li>
+                    <li><a href="/home" class="active underline">Inicio</a></li>
                     <li><a href="/jeans">Jeans</a></li>
-                    <li><a href="/stock">Últimos en Stock🔥</a></li>
+                    <li><a href="/cart" class="cart-icon">🛒</a></li>
                 </ul>
             </div>
+            
         </nav>
     </header>
 
@@ -46,41 +47,64 @@
 
     <section class="carousel">
         <div class="carousel-item">
-            <p>Descubre nuestra nueva colección de jeans de hombre</p>
-            <p>Ofertas especiales de primavera</p>
-            <div class="buttons">
+            <img class="main-photo" src="../images//Ganancias de pelicula (1).png"> </img>
+            <div class="buttons main-photo-btn">
                 <a href="/jeans" class="button jeans-button">VER JEANS</a>
             </div>
         </div>
         <!-- Aquí podrías agregar más elementos del carrusel si fuera necesario -->
-        <div class="carousel-controls">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <button class="carousel-prev">◀</button>
-            <button class="carousel-next">▶</button>
-        </div>
     </section>
 
     <!-- Sección de calidad -->
-    <section class="quality-section">
-        <h2>Calidad garantizada</h2>
-        <p>Nuestros jeans ofrecen calidad sin riesgos y sin excepciones.</p>
-        <div class="buttons">
+    <section class="carousel quality-section">
+        <h2>Calidad garantizada, sin riesgos, sin excepciones.</h2>
+        <span>Cambios fáciles, reembolsos del 100% y un control de calidad inigualable.</span>
+       
+        <div class="text-description">
+            <img src="/images/home-photos/formato-de-texto.png" alt="Logo" class="logo">
+            <p> Desde la primera puntada hasta el último botón, nuestros jeans pasan por un riguroso control.
+                 Si algo no está a la altura, 
+                 lo cambiamos o devolvemos tu dinero. 
+                 Porque la confianza se construye con calidad.
+                </p>
+        </div>
+        
+
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <img class="quality-section-photo" src="../images/home-photos/quality-photo-1.jpg" alt="Jeans de calidad">
+                <img class="quality-section-photo" src="../images/home-photos/quality-photo-2.jpg" alt="Jeans de calidad">
+
+                <!-- Puedes agregar más imágenes aquí -->
+            </div>
+        </div>
+       
+        <div class="buttons quality-section-btn">
             <a href="/jeans" class="button jeans-button">VER JEANS</a>
         </div>
     </section>
+    
 
-    <!-- Sección de ganancias -->
-    <section class="earnings-section">
-        <h2>Multiplica tus ganancias</h2>
-        <p>Con nuestros jeans de moda, puedes aumentar tus ingresos. Precios mayoristas.</p>
-        <div class="buttons">
+    <!-- Sección de stock -->
+    <section class="carousel quality-section">
+        <h2>Siempre disponibles, siempre puntuales</h2>
+        <span>Tu éxito es nuestra prioridad: Stock constante y entregas a tiempo.</span>
+
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <img class="quality-section-photo" src="../images/home-photos/stock-image-4.jpg" alt="stock de jeans">
+                <img class="quality-section-photo jeans-stock-photo" src="../images/home-photos/stock-image-5.jpg" alt="stock de jeans">
+                <img class="quality-section-photo jeans-stock-photo-3" src="../images/home-photos/stock-image-6.jpg" alt="stock de jeans">
+
+                <!-- Puedes agregar más imágenes aquí -->
+            </div>
+        </div>
+       
+        <div class="buttons quality-section-btn">
             <a href="/jeans" class="button jeans-button">VER JEANS</a>
         </div>
     </section>
-
+    
     <!-- Sección de stock -->
     <section class="stock-section">
         <h2>Últimos productos en stock</h2>

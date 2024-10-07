@@ -26,9 +26,12 @@ app.get("/cart", (req, res) => {
 });
 
 app.use('/home', express.static(path.join(__dirname, 'home')));
+
 app.get('*', async (req, res) => {
   try {
-    const filePath = path.join(__dirname, 'home', 'index.html');
+    app.use('/home', express.static(path.join(__dirname, 'home')));
+
+    const filePath = path.join(__dirname, 'home', "index.html");
     const content = await fs.readFile(filePath, 'utf-8');
     res.send(content);
   } catch (error) {
@@ -36,6 +39,7 @@ app.get('*', async (req, res) => {
     res.status(500).send('Error interno del servidor');
   }
 });
+
 
 
 app.listen(3000, () => {
