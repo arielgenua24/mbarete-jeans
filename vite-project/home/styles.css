@@ -100,22 +100,27 @@ nav {
 }
 
 .carousel {
-    /* background-color: #625c62; */
-    /* padding: 20px; */
     text-align: center;
     position: relative;
-    max-width: 100vw;
+    max-width: 100vw; /* Máximo tamaño de la pantalla */
 }
 
 .carousel-item {
-    /* margin: 20px 0; */
     display: flex;
     flex-direction: column;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;
     width: 100%;
+    background-color: #000;
 }
 
 .main-photo {
     width: 100%;
+    max-width: 800px; /* Limita el ancho de la imagen */
+    max-height: 500px;
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Asegura que la imagen no se recorte */
+    margin: 0 auto; /* Centra la imagen */
 }
 
 
@@ -133,7 +138,7 @@ nav {
     /* margin-top: 10px; */
     flex-wrap: wrap;
     padding: 10px 10px 30px 10px;
-    background-color: #000000;
+    max-width: 800px;
 }
 
 .button {
@@ -219,6 +224,10 @@ nav {
     align-items: center;
 }
 
+.jean-carousel {
+    height: 500px;
+}
+
 /* Estilos para las imágenes dentro del carrusel */
 .quality-section-photo {
     margin-right: 20px;
@@ -237,6 +246,11 @@ nav {
     margin-top: 10px;
 }
 
+.jean-section-photo {
+    height: 400px;
+    width: 260px;
+    border: 1px solid #ff9785;
+}
 /* Botones de la sección */
 .buttons {
     position: relative;
