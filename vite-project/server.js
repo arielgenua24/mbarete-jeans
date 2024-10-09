@@ -11,26 +11,35 @@ const app = express();
 
 app.use(cors());
 app.use(express.json()); // Parse incoming JSON payloads
-app.use(express.static('dist')); // Asumiendo que 'dist' es tu directorio de archivos estáticos
 
+
+// Redirección de la raíz a /home
+app.get('/', (req, res) => {
+  res.redirect('/home');
+});
+
+// Servir archivos estáticos de la aplicación React
+app.use(express.static('dist')); //middleware que toma todos los estaticos de react 
+
+// Servir archivos estáticos para /home
+app.use('/home', express.static(path.join(__dirname, 'home')));
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
 
+// Rutas específicas para la aplicación React
+app.get(["/jeans", "/cart"], (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
+}); 
 
-app.get("/jeans", (req, res) => {
+
+// Manejar otras rutas de la aplicación React
+app.get('/react-app/*', (req, res) => {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
-app.get("/cart", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
-});
-
-app.use('/home', express.static(path.join(__dirname, 'home')));
-
-app.get('*', async (req, res) => {
+// Manejar rutas para la aplicación home
+app.get('/home/*', async (req, res) => {
   try {
-    app.use('/home', express.static(path.join(__dirname, 'home')));
-
     const filePath = path.join(__dirname, 'home', "index.html");
     const content = await fs.readFile(filePath, 'utf-8');
     res.send(content);
@@ -40,7 +49,10 @@ app.get('*', async (req, res) => {
   }
 });
 
-
+// Ruta de fallback
+app.get('*', (req, res) => {
+  res.status(404).send('Página no encontrada');
+});
 
 app.listen(3000, () => {
   console.log(`Servidor corriendo en el puerto ${3000}`);
