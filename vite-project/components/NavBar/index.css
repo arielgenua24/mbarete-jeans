@@ -1,16 +1,21 @@
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding: 6px;
+  width: 100vw;
+}
 
-  
-  .navbar {
-    margin: 6px;
-    padding: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background-color: #d7e9ff;
-    position: fixed;
-    border-radius: 18px;
-    border: 1px solid #0476ff;
+.navbar {
+  width: 80%;
+  padding: 0;
+  background-color: #d7e9ff;
+  border-radius: 18px;
+  border: 1px solid #0476ff;
 }
 
 
@@ -24,7 +29,7 @@
     flex-direction: row;
     /* align-items: center; */
     justify-content: space-between;
-    gap: 15px;
+    gap: 3px;
     width: 100%;
   }
   

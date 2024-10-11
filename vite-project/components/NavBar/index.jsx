@@ -27,7 +27,8 @@ function Navbar() {
 
 
     return ( 
-        <nav className='navbar'>
+        <div className='navbar-container'> 
+             <nav className='navbar'>
             <ul className=''>
                 <li>
                 <a href="/home/" onClick={(e) => {
@@ -78,7 +79,9 @@ function Navbar() {
                 </li>
 
             </ul>
-        </nav>
+            </nav>
+        </div>
+       
     )
 }
 
