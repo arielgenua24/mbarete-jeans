@@ -7,9 +7,24 @@ const JeansNavbar = () => {
     return (
       <nav className="jean_nav_bar">
           <ul>
-            <li><a onClick={() => onNavigate('div-baggy')}>Baggys</a></li>
-            <li><a onClick={() => onNavigate('div-bermuda')}>Bermudas</a></li>
-            <li><a onClick={() => onNavigate('latest')}>Últimos en stock</a></li>
+          <li>
+        <a className="jean-nav-a" onClick={() => onNavigate('div-baggy')}>
+          <img src="/images/logos/baggy.png" alt="Icono Baggy" style={{ width: '23px', marginRight: '8px' }} />
+          Baggys
+        </a>
+      </li>
+      <li>
+        <a  className="jean-nav-a"  onClick={() => onNavigate('div-bermuda')}>
+          <img src="/images/logos/baggy (1).png" alt="Icono Bermuda" style={{ width: '29px', marginRight: '8px' }} />
+          Bermudas
+        </a>
+      </li>
+      <li>
+        <a className="jean-nav-a"  onClick={() => onNavigate('latest')}>
+          <img src="/images/logos/jogger icon.png" alt="Icono Stock" style={{ width: '18px', marginRight: '8px' }} />
+          Últimos en stock
+        </a>
+      </li>
           </ul>
         </nav>
     );
