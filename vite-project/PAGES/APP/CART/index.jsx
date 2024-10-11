@@ -16,7 +16,7 @@ const Cart = () => {
  // <WhatsAppButton message={message}/>
 
   return (
-    <div>
+    <div className='cart-menu'>
       <h2>ORDEN</h2>   
       <div className="cart-items">
         {cart.map((item) => (

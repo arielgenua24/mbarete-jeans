@@ -41,17 +41,24 @@ function CartUi({item, changeQuantity}) {
     return ( 
     
       <div key={item?.product.id} className="cart-item">
-        <img src={item?.product.images?.img1} alt={item?.product.name} className="item-image" loading="lazy"/>
-        <div className="item-details">
-          <h3>{item?.product.name}</h3>
-          <p>Precio unitario: ${item?.product.price}</p>
-          <p>Precio total: ${(item?.product.price*item?.quantity)}</p>
-          <p>Cantidad: { newQuantity || item?.quantity}</p>
+        <div className='cart-img-container'>
+           <img src={item?.product.images?.img1} alt={item?.product.name} className="item-image" loading="lazy"/>  
         </div>
-        <button onClick={() => deleteItem(item.product)}>ELIMINAR</button>
-        <div className="cart-items-quantity">
-          <button className="cart-items-btn" onClick={()=> decrement(item?.quantity)}>-</button>
-          <button className="cart-items-btn" onClick={()=> increment(item?.quantity)}>+</button>
+       
+       
+        <div className="item-details">
+        <h3>{item?.product.name}</h3>
+          <p>Precio unitario: ${item?.product.price}</p>
+          <div className="cart-items-quantity">
+            <button className="cart-items-btn" onClick={()=> decrement(item?.quantity)}>-</button>
+            <p>Cantidad: { newQuantity || item?.quantity}</p>
+            <button className="cart-items-btn" onClick={()=> increment(item?.quantity)}>+</button>
+          </div>
+
+          <p className='item-total_price'> <b>Precio total: ${(item?.product.price*item?.quantity)}</b></p>
+
+          <button className='delete-item' onClick={() => deleteItem(item.product)}>ELIMINAR</button>
+
         </div>
       </div>
   
