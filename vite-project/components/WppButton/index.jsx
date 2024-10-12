@@ -39,9 +39,8 @@ const WhatsAppButton = ({cart}) => {
 
   return (
     <div>
-      <h3>Enviar mensaje por WhatsApp</h3>
       <br />
-      <button onClick={generateMessage}>
+      <button  className="buy-item" onClick={generateMessage}>
         finalizar compra por whatsapp
       </button>
     </div>

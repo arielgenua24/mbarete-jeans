@@ -331,6 +331,13 @@ nav {
     height: 50px;
 }
 
+
+footer {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
 

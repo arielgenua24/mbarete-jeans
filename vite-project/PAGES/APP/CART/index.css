@@ -64,8 +64,9 @@
   
   .item-details p:nth-child(2) {
     font-size: 14px;
-    color: #555;
-  }
+    color: #106ad6;
+    font-size: 14px;
+}
 
   .delete-item {
     margin-top: 20px;
