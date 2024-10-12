@@ -16,12 +16,11 @@ app.use(express.json()); // Parse incoming JSON payloads
 
 // Redirección de la raíz a /home
 app.get('/', (req, res) => {
-  res.redirect('/home');
+  res.redirect('https://mbarete-jeans.web.app/home');
 });
 
 // Servir archivos estáticos de la aplicación React
 app.use(express.static('dist')); //middleware que toma todos los estaticos de react 
-
 // Servir archivos estáticos para /home
 app.use('/home', express.static(path.join(__dirname, 'home')));
 app.use('/images', express.static(path.join(__dirname, 'images')));
