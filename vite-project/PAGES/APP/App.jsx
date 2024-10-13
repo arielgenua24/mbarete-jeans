@@ -11,6 +11,7 @@ import './App.css'
 function AppRouter() {
   let router = useRoutes([
     { path: '/', element: <Home />},
+    { path: '/home', element: <Home />},
     { path:'/jeans' , element: <Jeans /> }, 
     { path:'/cart' , element: <Cart /> }, 
 ])
@@ -24,7 +25,9 @@ function App() {
   return (
     <BrowserRouter>
       <CartProvider>
-        <Navbar/> 
+        <header>
+          <Navbar />
+        </header>
         <AppRouter />
       </CartProvider>
     </BrowserRouter>

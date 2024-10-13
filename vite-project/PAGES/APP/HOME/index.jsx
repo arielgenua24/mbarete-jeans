@@ -1,5 +1,6 @@
 import './styles.css'; // Asegúrate de que el CSS esté correctamente vinculado
 import Navbar from '../../../components/NavBar';
+import { Link } from 'react-router-dom'
 
 
 function Home() {
@@ -29,7 +30,9 @@ function Home() {
         <div className="carousel-item">
           <img className="main-photo" src="../images/home-photos/home-photo.png" alt="Foto principal" />
           <div className="buttons main-photo-btn">
-            <a href="/jeans" className="button jeans-button">VER JEANS</a>
+          <a className="button jeans-button"> 
+            <Link  className='button jeans-button' to="/jeans">VER JEANS</Link>
+          </a>
           </div>
         </div>
       </section>
@@ -54,7 +57,9 @@ function Home() {
           </div>
         </div>
         <div className="buttons quality-section-btn">
-          <a href="/jeans" className="button jeans-button">VER JEANS</a>
+          <a className="button jeans-button"> 
+            <Link className='button jeans-button' to="/jeans">VER JEANS</Link>
+          </a>
         </div>
       </section>
 
@@ -67,6 +72,9 @@ function Home() {
             <img className="quality-section-photo" src="../images/home-photos/quality-photo-1.jpg" alt="Calidad 1" />
             <img className="quality-section-photo" src="../images/home-photos/quality-photo-2.jpg" alt="Calidad 2" />
           </div>
+          <a className="button jeans-button"> 
+            <Link className='button jeans-button'  to="/jeans">VER JEANS</Link>
+          </a>
         </div>
       </section>
 
@@ -79,6 +87,9 @@ function Home() {
             <img className="quality-section-photo" src="../images/home-photos/stock-image-5.jpg" alt="Stock 2" />
             <img className="quality-section-photo" src="../images/home-photos/stock-image-6.jpg" alt="Stock 3" />
           </div>
+          <a className="button jeans-button"> 
+            <Link className='button jeans-button' to="/jeans">VER JEANS</Link>
+          </a>
         </div>
       </section>
 
@@ -89,6 +100,9 @@ function Home() {
           <div className="carousel-track">
             <img className="quality-section-photo" src="../images/home-photos/delivery.png" alt="Delivery" />
           </div>
+          <a className="button jeans-button"> 
+            <Link className='button jeans-button' to="/jeans">VER JEANS</Link>
+          </a>
         </div>
       </section>
 
