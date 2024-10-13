@@ -27,16 +27,17 @@ function Navbar() {
 
 
     return ( 
-        <div className='navbar-container'> 
+        <div className='navbar-container navbar-hidden'> 
              <nav className='navbar'>
             <ul className=''>
-                <li>
-                <a href="/home/" onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href = '/home/';
-                    }}>
-                    Home
-                </a>
+            <li>
+                <NavLink 
+                    className={({ isActive }) => 
+                        isActive ? activeStyle : undefined
+                    }
+                    to='/home'> 
+                    HOME 
+                </NavLink>
                 </li>
                 <li>
                     <NavLink 

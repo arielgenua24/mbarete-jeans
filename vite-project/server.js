@@ -1,4 +1,4 @@
-import express from 'express';
+/*import express from 'express';
 import path from 'path';
 import cors from 'cors';
 import { fileURLToPath } from 'url';
@@ -56,4 +56,4 @@ app.get('*', (req, res) => {
 
 app.listen(3000, () => {
   console.log(`Servidor corriendo en el puerto ${3000}`);
-});
+});*/
