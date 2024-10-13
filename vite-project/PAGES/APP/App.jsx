@@ -19,8 +19,6 @@ function AppRouter() {
 
 function App() {
 
-  window.location.href = 'https://mbarete-jeans.web.app/home/';
-
   return (
     <BrowserRouter>
       <CartProvider>
