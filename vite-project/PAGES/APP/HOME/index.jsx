@@ -1,5 +1,4 @@
 import './styles.css'; // Asegúrate de que el CSS esté correctamente vinculado
-import Navbar from '../../../components/NavBar';
 import { Link } from 'react-router-dom'
 
 
@@ -12,12 +11,7 @@ function Home() {
   };
 
   return (
-    <div>
-      {/* Navbar */}
-      <header>
-        <Navbar />
-      </header>
-
+    <div className='home'>
       {/* Botón de WhatsApp */}
       <section id="wpp-btn" className="wpp-btn">
         <div className="whatsapp">
@@ -37,6 +31,21 @@ function Home() {
         </div>
       </section>
 
+      <section className="carousel quality-section">
+        <h2>Envíos a todo el país 🇦🇷, siempre disponibles, siempre puntuales.</h2>
+        <span>Tu éxito es nuestra prioridad: Stock constante y entregas a tiempo.</span>
+        <div className="carousel-home-container">
+          <div className="carousel-track">
+            <img className="quality-section-photo" src="../images/home-photos/stock-image-4.jpg" alt="Stock 1" />
+            <img className="quality-section-photo" src="../images/home-photos/stock-image-5.jpg" alt="Stock 2" />
+            <img className="quality-section-photo" src="../images/home-photos/stock-image-6.jpg" alt="Stock 3" />
+          </div>
+          <a className="button jeans-button"> 
+            <Link className='button jeans-button' to="/jeans">VER JEANS</Link>
+          </a>
+        </div>
+      </section>
+
       {/* Sección de calidad */}
       <section className="carousel quality-section">
         <h2>Moda que multiplica tus ganancias.</h2>
@@ -49,7 +58,7 @@ function Home() {
             mientras que la claridad en descripciones y colores te permite destacar en el mercado.
           </p>
         </div>
-        <div className="carousel-container jean-carousel">
+        <div className="carousel-home-container jean-carousel">
           <div className="carousel-track">
             <img className="quality-section-photo" src="../images/home-photos/earning_1.png" alt="Jeans de calidad" />
             <img className="quality-section-photo" src="../images/home-photos/earning_3.png" alt="Jeans de calidad" />
@@ -67,7 +76,7 @@ function Home() {
       <section className="carousel quality-section">
         <h2>Calidad garantizada, sin riesgos, sin excepciones.</h2>
         <span>Cambios fáciles, reembolsos del 100% y un control de calidad inigualable.</span>
-        <div className="carousel-container">
+        <div className="carousel-home-container">
           <div className="carousel-track">
             <img className="quality-section-photo" src="../images/home-photos/quality-photo-1.jpg" alt="Calidad 1" />
             <img className="quality-section-photo" src="../images/home-photos/quality-photo-2.jpg" alt="Calidad 2" />
@@ -78,25 +87,11 @@ function Home() {
         </div>
       </section>
 
-      <section className="carousel quality-section">
-        <h2>Envíos a todo el país 🇦🇷, siempre disponibles, siempre puntuales.</h2>
-        <span>Tu éxito es nuestra prioridad: Stock constante y entregas a tiempo.</span>
-        <div className="carousel-container">
-          <div className="carousel-track">
-            <img className="quality-section-photo" src="../images/home-photos/stock-image-4.jpg" alt="Stock 1" />
-            <img className="quality-section-photo" src="../images/home-photos/stock-image-5.jpg" alt="Stock 2" />
-            <img className="quality-section-photo" src="../images/home-photos/stock-image-6.jpg" alt="Stock 3" />
-          </div>
-          <a className="button jeans-button"> 
-            <Link className='button jeans-button' to="/jeans">VER JEANS</Link>
-          </a>
-        </div>
-      </section>
 
       <section className="carousel quality-section">
         <h2>Compra fácil, entrega segura.</h2>
         <span>Siempre tenemos lo que necesitas, cuando lo necesitas, donde lo necesitas.</span>
-        <div className="carousel-container">
+        <div className="carousel-home-container">
           <div className="carousel-track">
             <img className="quality-section-photo" src="../images/home-photos/delivery.png" alt="Delivery" />
           </div>

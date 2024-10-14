@@ -46,22 +46,29 @@ const Modal = ({item ,onClose}) => {
           </h3>
         </div>
         
-        <span> 
-            {item.talles}
+        <span className="modal-container-sizes"> 
+            TALLES DISPONIBLES: {item.talles}
         </span>
 
         <div className="modal-images">
-          <img src={item.images.img1} alt={item.name} loading="lazy"/>
-          <img src={item.images.img2} alt={item.name} loading="lazy"/>
-          <img src={item.images.img3} alt={item.name} loading="lazy"/>
+          <img className="modal-image-1" src={item.images.img1} alt={item.name} loading="lazy"/>
+          <img className="modal-image-2" src={item.images.img2} alt={item.name} loading="lazy"/>
+          <img className="modal-image-3" src={item.images.img3} alt={item.name} loading="lazy"/>
         </div>
 
         <div className="modal-price">
-          ${(item.price * quantity).toLocaleString('es-AR')}
+          Valor unitario - ${(item.price).toLocaleString('es-AR')}
         </div>
 
-        <div className="modal-subtitle">Agregar cantidad</div>
-        <span> al agregar la cantidad, vera la actualizacion del precio</span>
+        <div className="modal-price">
+          Cantidad: {quantity} - ${(item.price * quantity).toLocaleString('es-AR')}
+        </div>
+
+        <div className="modal-span">
+          <span className="modal-span-title">Agregar cantidad </span>
+          <span> Al agregar la cantidad, vera la actualizacion del precio</span>          
+        </div>
+       
 
         <div className="modal-quantity">
           <button className="modal-btn" onClick={decrement}>-</button>
