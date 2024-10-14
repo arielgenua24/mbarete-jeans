@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #ffffff;
 }
 
 header {
@@ -349,7 +350,9 @@ footer {
 }
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
-
+    body {
+        background-color: #ffffff;
+    }
     .carousel {
         max-width: 100vw;
     }

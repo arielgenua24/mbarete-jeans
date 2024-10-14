@@ -7,8 +7,9 @@ function Home() {
   const enviarMensaje = () => {
     const phoneNumber = config.phoneNumber;
     const message = "Hola MBARETE JEANS. He visitado su web y quiero hablar con un asesor.";
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;    
+    window.open(whatsappURL, '_blank');
   };
 
   return (

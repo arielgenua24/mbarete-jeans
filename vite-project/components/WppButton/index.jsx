@@ -5,7 +5,7 @@ const WhatsAppButton = ({cart}) => {
   const sendMessage = (message) => {
     const phoneNumber = config.phoneNumber; // Número de WhatsApp al que se enviará el mensaje
     const encodedMessage = encodeURIComponent(message); // Codifica el mensaje para usar en la URL
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
     
     // Redirige a la URL de WhatsApp
     window.open(whatsappURL, '_blank');
@@ -19,7 +19,7 @@ const WhatsAppButton = ({cart}) => {
     }
     console.log(cart)
 
-    let message = config.versionMessage + '\n Hola! \n Quiero comprar los siguientes items:\n\n';
+    let message = '\n Hola MBARETE JEANS! \n he visitado su web,\n quiero comprar los siguientes items:\n\n';
     cart.forEach((item, index) => {
       message += `${index + 1}. ${item?.product.name} - Cantidad: ${item?.quantity} 
       - Precio: $${item?.product.price} 

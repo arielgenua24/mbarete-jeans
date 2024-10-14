@@ -3,6 +3,46 @@ import { Category } from "./jeans.categories";
 
 
 export const jeansData = [
+  {
+    id: 43,
+    name: "pantalon baggy oxido",
+    category: Category.baggy,
+    specialTag: '',
+    images: {
+      img1: "/images/pantalon_baggy_oxido_2.JPG",
+      img2: "/images/pantalon_baggy_oxido_1.JPG",
+      img3: "/images/pantalon_baggy_oxido_3.JPG",
+    },
+    price: 19000,
+    state: '',
+    talles: '38/39/40/41/42/43/44/45/46'
+  },
+  {
+    id: 5,
+    name: "Parachutte Baggy negro",
+    category: Category.baggy,
+    images: {
+      img1: "/images/BagyDesmontableNegro.png",
+      img2: "/images/BagyDesmontableNegro.png",
+      img3: "/images/BagyDesmontableNegro.png",
+    },
+    price: 20500,
+    state: '',
+    talles: '38/40/42' 
+ },
+ {
+  id: 6,
+  name: "Parachutte Baggy militar",
+  category: Category.baggy,
+  images: {
+    img1: "/images/parachute_verde_militar_1.JPG",
+    img2: "/images/parachute_verde_militar_2.JPG",
+    img3: "/images/parachute_verde_militar_3.JPG",
+  },
+  price: 22000,
+  state: '',
+  talles: '38/40/42/44' 
+},
     {
       id: 1,
       name: "Louis antonio",
@@ -16,6 +56,20 @@ export const jeansData = [
       state: State.SoldOut,
       talles: '38/40/42/44' 
     },
+    {
+      id: 7,
+      name: "Bermuda Doha trueno gris",
+      category: Category.bermuda,
+      specialTag: 'truenos grises',
+      images: {
+        img1: "/images/bermuda_doha_trueno_gris.png",
+        img2: "/images/bermuda_doha_gris_2.png",
+        img3: "url3.jpg",
+      },
+      price: 20500,
+      state: State.nuevo,
+      talles: '38/44/48' 
+   },
     {
         id: 2,
         name: "Pantalon baggy Gris",
@@ -31,16 +85,16 @@ export const jeansData = [
      },
      {
         id: 3,
-        name: "bermuda 48H",
+        name: "bermuda bull",
         category: Category.bermuda,
         images: {
-          img1: "url1.jpg",
+          img1: "/images/bermuda_bull.png",
           img2: "url2.jpg",
           img3: "url3.jpg",
         },
         price: 12000,
         state: State.nuevo,
-        talles: '38/39/40/41/42/43/44/45/46' 
+        talles: '38/40/42' 
      },
      {
         id: 4,
@@ -55,46 +109,7 @@ export const jeansData = [
         state: '',
         talles: '38/40/42/46' 
      },
-     {
-        id: 5,
-        name: "Parachutte Baggy negro",
-        category: Category.baggy,
-        images: {
-          img1: "/images/BagyDesmontableNegro.png",
-          img2: "/images/BagyDesmontableNegro.png",
-          img3: "/images/BagyDesmontableNegro.png",
-        },
-        price: 20500,
-        state: '',
-        talles: '38/40/42' 
-     },
-     {
-        id: 6,
-        name: "Parachutte Baggy militar",
-        category: Category.baggy,
-        images: {
-          img1: "/images/parachute_verde_militar_1.JPG",
-          img2: "/images/parachute_verde_militar_2.JPG",
-          img3: "/images/parachute_verde_militar_3.JPG",
-        },
-        price: 22000,
-        state: '',
-        talles: '38/40/42/44' 
-     },
-     {
-        id: 7,
-        name: "Bermuda Doha trueno gris",
-        category: Category.bermuda,
-        specialTag: 'truenos grises',
-        images: {
-          img1: "/images/bermuda_doha_gris.png",
-          img2: "/images/bermuda_doha_gris_2.png",
-          img3: "url3.jpg",
-        },
-        price: 20500,
-        state: State.nuevo,
-        talles: '38/44/48' 
-     },
+     
      {
         id: 8,
         name: "ICON MAX AZUL ROTO",
@@ -114,7 +129,7 @@ export const jeansData = [
         category: Category.bermuda,
         specialTag: 'clasico',
         images: {
-          img1: "url1.jpg",
+          img1: "/images/bermuda_mom_cargo_areandos.png",
           img2: "url2.jpg",
           img3: "url3.jpg",
         },
@@ -165,20 +180,6 @@ export const jeansData = [
     talles: '38/39/40/41/42/43/44/45/46' 
  },
   {
-    id: 13,
-    name: "bermuda mom Cargo",
-    category: Category.bermuda,
-    specialTag: '',
-    images: {
-      img1: "BermudaMomCargoCeleste.png",
-      img2: "url2.jpg",
-      img3: "url3.jpg",
-    },
-    price: 8000,
-    state: State.EnOferta,
-    talles: '40/42' 
-  },
-  {
     id: 14,
     name: "baggy cargo desmontable negro",
     category: Category.baggy,
@@ -198,13 +199,13 @@ export const jeansData = [
     category: Category.bermuda,
     specialTag: '',
     images: {
-      img1: "url1.jpg",
+      img1: "/images/bermuda_celeste_lisa.png",
       img2: "url2.jpg",
       img3: "url3.jpg",
     },
     price: 8000,
     state: State.nuevo,
-    talles: '38/40/44/46'  
+    talles: '/40/44/46'  
   },
   {
     id: 16,
@@ -212,7 +213,7 @@ export const jeansData = [
     category: Category.bermuda,
     specialTag: 'celeste roto laser',
     images: {
-      img1: "url1.jpg",
+      img1: "/images/bermuda_roto_celeste.png",
       img2: "url2.jpg",
       img3: "url3.jpg",
     },
@@ -222,17 +223,17 @@ export const jeansData = [
   },
   {
     id: 17,
-    name: "bermuda cargo deflecado negro liso",
+    name: "bermuda baggy gris claro",
     category: Category.bermuda,
     specialTag: 'deflecado',
     images: {
-      img1: "url1.jpg",
-      img2: "url2.jpg",
+      img1: "/images/bermuda_baggy_gris.png",
+      img2: "/images/bermuda_baggy_gris.png",
       img3: "url3.jpg",
     },
-    price: 11000,
+    price: 1850,
     state: '',
-    talles: '38/39/40/41/42/43/44/45/46'   
+    talles: '38/40/42/44/'   
   },
   {
     id: 18,
@@ -240,7 +241,7 @@ export const jeansData = [
     category: Category.bermuda,
     specialTag: 'mas anchos',
     images: {
-      img1: "url1.jpg",
+      img1: "/images/bermuda_mom_cargo_celeste_roto.png",
       img2: "url2.jpg",
       img3: "url3.jpg",
     },
@@ -296,7 +297,7 @@ export const jeansData = [
     category: Category.jean,
     specialTag: 'parches',
     images: {
-      img1: "/images/tied_1.JPG",
+      img1: "/images/tied.png",
       img2: "/images/tied_2.JPG",
       img3: "/images/tied_3.JPG",
     },
@@ -418,12 +419,12 @@ export const jeansData = [
   },
   {
     id: 31,
-    name: "bermuda Outsider",
+    name: "bermuda baggy carp",
     category: Category.bermuda,
-    specialTag: 'Outsider',
+    specialTag: 'baggy carp',
     images: {
-      img1: "url1.jpg",
-      img2: "url2.jpg",
+      img1: "/images/bermuda_baggy_carp.png",
+      img2: "/images/bermuda_baggy_carp_2.png",
       img3: "url3.jpg",
     },
     price: 11000,
@@ -446,17 +447,17 @@ export const jeansData = [
   },
   {
     id: 33,
-    name: "bermuda Def Gris Roto",
+    name: "Bermuda Baggy Louis Gris",
     category: Category.bermuda,
     specialTag: 'roto',
     images: {
-      img1: "url1.jpg",
-      img2: "url2.jpg",
+      img1: "images/bermuda_louis_gris.png",
+      img2: "images/bermuda_louis_gris_2.png",
       img3: "url3.jpg",
     },
     price: 8000,
     state: State.pocoStock,
-    talles: '40/42'
+    talles: '38/39/40/41/42/43/44/45/46'
   },
   {
     id: 50,
@@ -475,7 +476,7 @@ export const jeansData = [
   {
     id: 34,
     name: "frisa clasico",
-    category: Category.frisa,
+    category: '',
     specialTag: '',
     images: {
       img1: "url1.jpg",
@@ -483,13 +484,13 @@ export const jeansData = [
       img3: "url3.jpg",
     },
     price: 17000,
-    state: State.pocoStock,
+    state: '',
     talles: '38/40/42'
   },
   {
     id: 35,
     name: "frisa celeste",
-    category: Category.frisa,
+    category: '',
     specialTag: '',
     images: {
       img1: "url1.jpg",
@@ -497,13 +498,13 @@ export const jeansData = [
       img3: "url3.jpg",
     },
     price: 17000,
-    state: State.pocoStock,
+    state: '',
     talles: '38/40/42'
   },
   {
     id: 36,
     name: "frisa verde",
-    category: Category.frisa,
+    category: '',
     specialTag: '',
     images: {
       img1: "url1.jpg",
@@ -511,7 +512,7 @@ export const jeansData = [
       img3: "url3.jpg",
     },
     price: 17000,
-    state: State.pocoStock,
+    state: '',
     talles: '38/40/42'
   },
   {
@@ -548,9 +549,9 @@ export const jeansData = [
     category: Category.jean,
     specialTag: '',
     images: {
-      img1: "/images/oxido_1.JPG",
+      img1: "/images/oxido_3.JPG",
       img2: "/images/oxido_2.JPG",
-      img3: "/images/oxido_3.JPG",
+      img3: "/images/oxido_1.JPG",
     },
     price: 17500,
     state: State.nuevo,
@@ -595,20 +596,6 @@ export const jeansData = [
       img3: "/images/bermudaBaggyCarpNegro_2.png",
     },
     price: 12000,
-    state: '',
-    talles: '38/39/40/41/42/43/44/45/46'
-  },
-  {
-    id: 43,
-    name: "pantalon baggy oxido",
-    category: Category.baggy,
-    specialTag: '',
-    images: {
-      img1: "/images/pantalon_baggy_oxido_2.JPG",
-      img2: "/images/pantalon_baggy_oxido_1.JPG",
-      img3: "/images/pantalon_baggy_oxido_3.JPG",
-    },
-    price: 19000,
     state: '',
     talles: '38/39/40/41/42/43/44/45/46'
   },

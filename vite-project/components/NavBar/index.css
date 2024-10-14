@@ -65,10 +65,7 @@
     font-size: 1.5rem; /* Hacemos el ícono del carrito más grande */
   }
   
-  /* Responsividad para dispositivos móviles */
-  @media (max-width: 768px) {
-
-}
+ 
 
 
 .cart-link {
@@ -112,4 +109,11 @@
 
 .cart-text {
   margin-left: 4px;
+}
+
+ /* Responsividad para dispositivos móviles */
+ @media (max-width: 768px) {
+  .navbar {
+    width: 92%;
+  }
 }
