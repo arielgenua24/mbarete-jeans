@@ -38,8 +38,7 @@ const CartActionButton = ({ item, onAddToCart}) => {
       console.log('reservation');
         const phoneNumber = config.phoneNumber; // Número de WhatsApp al que se enviará el mensaje
         const encodedMessage = encodeURIComponent(message); // Codifica el mensaje para usar en la URL
-        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-        
+        const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;            
         // Redirige a la URL de WhatsApp
         window.open(whatsappURL, '_blank');
       // aqui lo llevariamos a un link de google.
