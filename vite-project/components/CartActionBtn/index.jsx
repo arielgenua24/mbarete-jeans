@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import config from "../../config/config";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useCartContext from "../../hooks/useCartContext"; 
@@ -32,7 +33,15 @@ const CartActionButton = ({ item, onAddToCart}) => {
   });
 
   const reservation = (() => {
+    let message = '\n Hola! \n Quiero reservar :\n\n' + (item?.name);
+    console.log(message)
       console.log('reservation');
+        const phoneNumber = config.phoneNumber; // Número de WhatsApp al que se enviará el mensaje
+        const encodedMessage = encodeURIComponent(message); // Codifica el mensaje para usar en la URL
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        
+        // Redirige a la URL de WhatsApp
+        window.open(whatsappURL, '_blank');
       // aqui lo llevariamos a un link de google.
   });
 

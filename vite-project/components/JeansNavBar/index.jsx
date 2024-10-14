@@ -20,9 +20,9 @@ const JeansNavbar = () => {
         </nav>
       </li>
       <li>
-        <a className="jean-nav-a"  onClick={() => onNavigate('latest')}>
+        <a className="jean-nav-a"  onClick={() => onNavigate('div-latest')}>
           <img src="/images/logos/jogger icon.png" alt="Icono Stock" style={{ width: '18px', marginRight: '8px' }} />
-          Últimos en stock
+          🔥Últimos en stock
         </a>
       </li>
           </ul>
