@@ -1,12 +1,13 @@
+import config from '../../../config/config'
 import './styles.css'; // Asegúrate de que el CSS esté correctamente vinculado
 import { Link } from 'react-router-dom'
 
 
 function Home() {
   const enviarMensaje = () => {
-    const numero = "1137839767"; 
-    const mensaje = "Hola MBARETE JEANS. He visitado su web y quiero hablar con un asesor.";
-    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+    const phoneNumber = config.phoneNumber;
+    const message = "Hola MBARETE JEANS. He visitado su web y quiero hablar con un asesor.";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
 
@@ -15,7 +16,9 @@ function Home() {
       {/* Botón de WhatsApp */}
       <section id="wpp-btn" className="wpp-btn">
         <div className="whatsapp">
-          <button onClick={enviarMensaje}>wpp</button>
+          <button  className="wtp-icon-btn" onClick={enviarMensaje}>
+            <img  className="whatsapp-icon" src="/images/logos/social.png" alt="whatsapp icon"></img>
+          </button>
         </div>
       </section>
 

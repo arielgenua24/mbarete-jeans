@@ -295,16 +295,22 @@ nav {
 
 
 .wpp-btn {
-    background-color: #00ff00;
-    padding: 10px;
-    border-radius: 5px;
     display: inline-block;
-    right: 3%;
-    bottom: 32%;
-    color: white;
-    font-weight: bold;
+    right: 7%;
+    bottom: 32%; 
     position: fixed;
     z-index: 10;
+    width: 30px;
+}
+
+.wtp-icon-btn {
+    width: 100%;
+    background-color: transparent;
+}
+
+.whatsapp-icon {
+    max-width: 50px;
+
 }
 
 .text-description {
