@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import WarningMessage from "../WaningMessages/WarningItemQuantity";
 import useCartContext from "../../hooks/useCartContext";
 import "./index.css";
 
@@ -9,6 +10,8 @@ const Modal = ({item ,onClose}) => {
   console.log(item)
 
   const [quantity, setQuantity] = useState(15);
+  const [showWarning, setShowWarning] = useState(false);
+
 
     const {
       updateQuantity, deleteItem } = useCartContext(); 
@@ -30,8 +33,17 @@ const Modal = ({item ,onClose}) => {
     
   }
   const decrement = () => {
-    if (quantity > 15) setQuantity(quantity - 1);
+    if (quantity > 15) {
+      setQuantity(quantity - 1);
+    } else if(quantity===15) {
+      console.log('15')
+      setShowWarning(true)
+    } 
+    else {
+      setShowWarning(true);
+    }
   };
+
 
 
   return (
@@ -81,6 +93,8 @@ const Modal = ({item ,onClose}) => {
           <button className="modal-add" onClick={submit}>Añadir</button>
         </div>
         
+        {showWarning && <WarningMessage onClose={() => setShowWarning(false)} />}
+
       </div>
     </div>
   );
