@@ -27,6 +27,7 @@
   border: 1px 1px 1px 1px black;
   stroke: 1px;
   border: 1px solid #0096ff;
+  overflow-y: auto;
 }
 
 .modal-jean-data {
@@ -118,6 +119,7 @@
   .modal-actions {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 30px;
   }
   
   .modal-cancel, .modal-add {
