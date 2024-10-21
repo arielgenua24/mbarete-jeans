@@ -8,7 +8,7 @@ import "./index.css";
 const Modal = ({item ,onClose}) => {
   console.log(item)
 
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(15);
 
     const {
       updateQuantity, deleteItem } = useCartContext(); 
@@ -30,7 +30,7 @@ const Modal = ({item ,onClose}) => {
     
   }
   const decrement = () => {
-    if (quantity > 1) setQuantity(quantity - 1);
+    if (quantity > 15) setQuantity(quantity - 1);
   };
 
 

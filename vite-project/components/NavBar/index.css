@@ -115,5 +115,17 @@
  @media (max-width: 768px) {
   .navbar {
     width: 92%;
+    position: fixed;
+  }
+  .navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 6px;
+    width: 100vw;
   }
 }

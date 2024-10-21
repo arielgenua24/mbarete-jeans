@@ -57,11 +57,6 @@ function Jeans() {
           {jeanCategory.createCategoryComponent("jean")}          
         </div>
 
-
-        <div className='div-clasico'  ref={clasicoRef}>
-          {clasicoCategory.createCategoryComponent("clasico")}          
-        </div>
-
         <div className='div-joggers'  ref={joggersRef}>
           {joggersCategory.createCategoryComponent("joggers")}          
         </div>

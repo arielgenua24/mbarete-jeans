@@ -6,7 +6,7 @@ import './index.css'; // Estilos separados
 
 /* eslint-disable react/prop-types */
 function CartUi({item, changeQuantity}) {
-    const [newQuantity, setQuantity] = useState(false);
+    const [newQuantity, setQuantity] = useState(false); //procedo a setear una cantidad si no la hay
 
     const { 
       deleteItem,
@@ -18,19 +18,22 @@ function CartUi({item, changeQuantity}) {
         setQuantity(newQuantity+1)
         changeQuantity(item.product, newQuantity+1)
       } else { 
-        setQuantity(quantity + 1)
+        setQuantity(quantity + 1) //se setea una cantidad si no la hay
         changeQuantity(item.product, quantity +1)
       }
         
 
     }
     const decrement = (quantity) => {
-      if(newQuantity) {
+      if(newQuantity && quantity > 15) {
+        console.log('cambiando la cantidad a 15')
         setQuantity(newQuantity-1)
         changeQuantity(item.product, newQuantity-1)
       } else { 
-        setQuantity(quantity - 1)
-        changeQuantity(item.product, quantity - 1)
+        if (quantity > 15){
+          setQuantity(quantity - 1);
+          changeQuantity(item.product, quantity - 1)
+        }        
       }
     };
 

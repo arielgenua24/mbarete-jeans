@@ -9,7 +9,7 @@ function Cart() {
     addItem
     } = useCartContext();  // Accedemos al carrito y a la función para actualizarlo
   const [newItem, setNewItem] = useState('');  // Estado para el nuevo ítem a agregar
-  const [quantity, setQuantity] = useState(1); // Estado para la cantidad
+  const [quantity, setQuantity] = useState(15); // Estado para la cantidad
 
   // Función para agregar un ítem al carrito
   const addItemToCart = () => {
