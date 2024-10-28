@@ -15,7 +15,7 @@ export const jeansData = [
     },
     price: 19000,
     state: '',
-    talles: '38/39/40/41/42/43/44/45/46'
+    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
   },
   {
     id: 5,
@@ -28,144 +28,143 @@ export const jeansData = [
     },
     price: 20500,
     state: '',
-    talles: '38/40/42' 
- },
- {
-  id: 6,
-  name: "Parachutte Baggy militar",
-  category: Category.baggy,
-  images: {
-    img1: "/images/parachute_verde_militar_1.JPG",
-    img2: "/images/parachute_verde_militar_2.JPG",
-    img3: "/images/parachute_verde_militar_3.JPG",
+    sizes: [38, 40, 42]
   },
-  price: 22000,
-  state: '',
-  talles: '38/40/42/44' 
-},
-    {
-      id: 1,
-      name: "Louis antonio",
-      category: Category.jean,
-      images: {
-        img1: "/images/louis_antonio_1.jpg",
-        img2: "/images/louis_antonio_2.jpg",
-        img3: "/images/louis_antonio_3.jpg",
-      },
-      price: 17500,
-      state: State.SoldOut,
-      talles: '38/40/42/44' 
+  {
+    id: 6,
+    name: "Parachutte Baggy militar",
+    category: Category.baggy,
+    images: {
+      img1: "/images/parachute_verde_militar_1.JPG",
+      img2: "/images/parachute_verde_militar_2.JPG",
+      img3: "/images/parachute_verde_militar_3.JPG",
     },
-    {
-      id: 7,
-      name: "Bermuda Doha trueno gris",
-      category: Category.bermuda,
-      specialTag: 'truenos grises',
-      images: {
-        img1: "/images/bermuda_doha_trueno_gris.png",
-        img2: "/images/bermuda_doha_gris_2.png",
-        img3: "url3.jpg",
-      },
-      price: 20500,
-      state: State.nuevo,
-      talles: '38/44/48' 
-   },
-    {
-        id: 2,
-        name: "Pantalon baggy Gris",
-        category: Category.baggy,
-        images: {
-          img1: "",
-          img2: "url2.jpg",
-          img3: "url3.jpg",
-        },
-        price: 19000,
-        state: State.SoldOut,
-        talles: '38/39/40/41/42/43/44/45/46' 
-     },
-     {
-        id: 3,
-        name: "bermuda bull",
-        category: Category.bermuda,
-        images: {
-          img1: "/images/bermuda_bull.png",
-          img2: "url2.jpg",
-          img3: "url3.jpg",
-        },
-        price: 12000,
-        state: State.nuevo,
-        talles: '38/40/42' 
-     },
-     {
-        id: 4,
-        name: "JEAN LUMA GRIS",
-        category: Category.baggy,
-        images: {
-          img1: "../images/luma1.JPG",
-          img2: "../images/luma2.JPG",
-          img3: "../images/luma3.JPG",
-        },
-        price: 22500,
-        state: '',
-        talles: '38/40/42/46' 
-     },
-     
-     {
-        id: 8,
-        name: "ICON MAX AZUL ROTO",
-        category: Category.baggy,
-        images: {
-          img1: "/images/icon_maxx_1.JPG",
-          img2: "/images/icon_maxx_2.JPG",
-          img3: "/images/icon_maxx_3.JPG",
-        },
-        price: 21000,
-        state: '',
-        talles: '38/40/42/44' 
-     },
-     {
-        id: 9,
-        name: "Bermuda Azul mom cargo arenados",
-        category: Category.bermuda,
-        specialTag: 'clasico',
-        images: {
-          img1: "/images/bermuda_mom_cargo_areandos.png",
-          img2: "url2.jpg",
-          img3: "url3.jpg",
-        },
-        price: 11000,
-        state: State.ReIngreso,
-        talles: '38/39/40/41/42/43/44/45/46/47/48' 
-     },
-     {
-        id: 10,
-        name: "Louis super baggy",
-        category: Category.baggy,
-        specialTag: 'mas anchos',
-        images: {
-          img1: "/images/louis_super_baggy_1.JPG",
-          img2: "/images/louis_super_baggy_2.JPG",
-          img3: "/images/louis_super_baggy_3.JPG",
-        },
-        price: 19500,
-        state: '',
-        talles: '38/42/44' 
-     },
-     {
-      id: 11,
-      name: "Bermuda baggy ",
-      category: Category.bermuda,
-      specialTag: '',
-      images: {
-        img1: "/images/BermudaBaggy.png",
-        img2: "/images/BermudaBaggy_2.png",
-        img3: "/images/BermudaBaggy_3.png",
-      },
-      price: 8000,
-      state: State.nuevo,
-      talles: '38/40/46/48' 
-   },
-   {
+    price: 22000,
+    state: '',
+    sizes: [38, 40, 42, 44]
+  },
+  {
+    id: 1,
+    name: "Louis antonio",
+    category: Category.jean,
+    images: {
+      img1: "/images/louis_antonio_1.jpg",
+      img2: "/images/louis_antonio_2.jpg",
+      img3: "/images/louis_antonio_3.jpg",
+    },
+    price: 17500,
+    state: State.SoldOut,
+    sizes: [38, 40, 42, 44]
+  },
+  {
+    id: 7,
+    name: "Bermuda Doha trueno gris",
+    category: Category.bermuda,
+    specialTag: 'truenos grises',
+    images: {
+      img1: "/images/bermuda_doha_trueno_gris.png",
+      img2: "/images/bermuda_doha_gris_2.png",
+      img3: "url3.jpg",
+    },
+    price: 20500,
+    state: State.nuevo,
+    sizes: [38, 44, 48]
+  },
+  {
+    id: 2,
+    name: "Pantalon baggy Gris",
+    category: Category.baggy,
+    images: {
+      img1: "",
+      img2: "url2.jpg",
+      img3: "url3.jpg",
+    },
+    price: 19000,
+    state: State.SoldOut,
+    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+  },
+  {
+    id: 3,
+    name: "bermuda bull",
+    category: Category.bermuda,
+    images: {
+      img1: "/images/bermuda_bull.png",
+      img2: "url2.jpg",
+      img3: "url3.jpg",
+    },
+    price: 12000,
+    state: State.nuevo,
+    sizes: [38, 40, 42]
+  },
+  {
+    id: 4,
+    name: "JEAN LUMA GRIS",
+    category: Category.baggy,
+    images: {
+      img1: "../images/luma1.JPG",
+      img2: "../images/luma2.JPG",
+      img3: "../images/luma3.JPG",
+    },
+    price: 22500,
+    state: '',
+    sizes: [38, 40, 42, 46]
+  },
+  {
+    id: 8,
+    name: "ICON MAX AZUL ROTO",
+    category: Category.baggy,
+    images: {
+      img1: "/images/icon_maxx_1.JPG",
+      img2: "/images/icon_maxx_2.JPG",
+      img3: "/images/icon_maxx_3.JPG",
+    },
+    price: 21000,
+    state: '',
+    sizes: [38, 40, 42, 44]
+  },
+  {
+    id: 9,
+    name: "Bermuda Azul mom cargo arenados",
+    category: Category.bermuda,
+    specialTag: 'clasico',
+    images: {
+      img1: "/images/bermuda_mom_cargo_areandos.png",
+      img2: "url2.jpg",
+      img3: "url3.jpg",
+    },
+    price: 11000,
+    state: State.ReIngreso,
+    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
+  },
+  {
+    id: 10,
+    name: "Louis super baggy",
+    category: Category.baggy,
+    specialTag: 'mas anchos',
+    images: {
+      img1: "/images/louis_super_baggy_1.JPG",
+      img2: "/images/louis_super_baggy_2.JPG",
+      img3: "/images/louis_super_baggy_3.JPG",
+    },
+    price: 19500,
+    state: '',
+    sizes: [38, 42, 44]
+  },
+  {
+    id: 11,
+    name: "Bermuda baggy ",
+    category: Category.bermuda,
+    specialTag: '',
+    images: {
+      img1: "/images/BermudaBaggy.png",
+      img2: "/images/BermudaBaggy_2.png",
+      img3: "/images/BermudaBaggy_3.png",
+    },
+    price: 8000,
+    state: State.nuevo,
+    sizes: [38, 40, 46, 48]
+  },
+  {
     id: 12,
     name: "jean esencia",
     category: Category.jean,
@@ -177,8 +176,8 @@ export const jeansData = [
     },
     price: 17500,
     state: '',
-    talles: '38/39/40/41/42/43/44/45/46' 
- },
+    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+  },
   {
     id: 14,
     name: "baggy cargo desmontable negro",
@@ -191,7 +190,7 @@ export const jeansData = [
     },
     price: 29000,
     state: '',
-    talles: '38/40/42/44'  
+    sizes: [38, 40, 42, 44]
   },
   {
     id: 15,
@@ -205,7 +204,7 @@ export const jeansData = [
     },
     price: 8000,
     state: State.nuevo,
-    talles: '/40/44/46'  
+    sizes: [40, 44, 46]
   },
   {
     id: 16,
@@ -219,7 +218,7 @@ export const jeansData = [
     },
     price: 8000,
     state: State.nuevo,
-    talles: '44/46/48'  
+    sizes: [44, 46, 48]  
   },
   {
     id: 17,
@@ -233,7 +232,7 @@ export const jeansData = [
     },
     price: 1850,
     state: '',
-    talles: '38/40/42/44/'   
+    sizes: [38, 40, 42, 44]   
   },
   {
     id: 18,
@@ -247,7 +246,7 @@ export const jeansData = [
     },
     price: 11000,
     state: '',
-    talles: '38/39/40/41/42/43/44/45/46/47/48'   
+    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]   
   },
   {
     id: 19,
@@ -261,7 +260,7 @@ export const jeansData = [
     },
     price: 8000,
     state: '',
-    talles: '38/46'   
+    sizes: [38, 46]   
   },
   {
     id: 20,
@@ -275,7 +274,7 @@ export const jeansData = [
     },
     price: 17500,
     state: '',
-    talles: '38/39/40/41/42/43/44/45/46'   
+    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]   
   },
   {
     id: 21,
@@ -289,7 +288,7 @@ export const jeansData = [
     },
     price: 16000,
     state: '',
-    talles: '38/40/42'   
+    sizes: [38, 40, 42]   
   },
   {
     id: 22,
@@ -303,7 +302,7 @@ export const jeansData = [
     },
     price: 18000,
     state: '',
-    talles: '38/39/40/41/42/43/44/45/46'
+    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]   
   },
   {
     id: 23,
@@ -317,7 +316,7 @@ export const jeansData = [
     },
     price: 20500,
     state: '',
-    talles: '38/40/42'
+    talles: [38, 40, 42]
   },
   {
     id: 24,
@@ -331,7 +330,7 @@ export const jeansData = [
     },
     price: 18000,
     state: '',
-    talles: '38/39/40/41/42/43/44/45/46'
+    talles: [38, 39, 40, 41, 42, 43, 44, 45, 46]
   },
   {
     id: 25,
@@ -345,7 +344,7 @@ export const jeansData = [
     },
     price: 20500,
     state: '',
-    talles: '38/40/42'
+    talles: [38, 40, 42]
   },
   {
     id: 26,
@@ -359,7 +358,7 @@ export const jeansData = [
     },
     price: 20500,
     state: '',
-    talles: '38/40/42'
+    talles: [38, 40, 42]
   },
   {
     id: 27,
@@ -373,7 +372,7 @@ export const jeansData = [
     },
     price: 17500,
     state: '',
-    talles: '38/39/40/41/42/43/44/45/46'
+    talles: [38, 39, 40, 41, 42, 43, 44, 45, 46]
   },
   {
     id: 28,
@@ -387,7 +386,7 @@ export const jeansData = [
     },
     price: 20000,
     state: '',
-    talles: '38/40/42/44'
+    talles: [38, 40, 42, 44]
   },
   {
     id: 29,
@@ -401,7 +400,7 @@ export const jeansData = [
     },
     price: 18500,
     state: '',
-    talles: '44/46'
+    talles: [44, 46]
   },
   {
     id: 30,
@@ -415,7 +414,7 @@ export const jeansData = [
     },
     price: 16500,
     state: '',
-    talles: '38/39/40/41/42/43/44/45/46'
+    talles: [38, 39, 40, 41, 42, 43, 44, 45, 46]
   },
   {
     id: 31,
@@ -429,7 +428,7 @@ export const jeansData = [
     },
     price: 11000,
     state: '',
-    talles: '38/39/40/41/42/43/44/45/46'
+    talles: [38, 39, 40, 41, 42, 43, 44, 45, 46]
   },
   {
     id: 32,
@@ -443,7 +442,7 @@ export const jeansData = [
     },
     price: 17500,
     state: State.pocoStock,
-    talles: '38/42/44'
+    talles: [38, 40, 42]
   },
   {
     id: 33,
@@ -457,7 +456,7 @@ export const jeansData = [
     },
     price: 8000,
     state: State.pocoStock,
-    talles: '38/39/40/41/42/43/44/45/46'
+    talles: [38, 39, 40, 41, 42, 43, 44, 45, 46]
   },
   {
     id: 50,
@@ -471,7 +470,7 @@ export const jeansData = [
     },
     price: 8000,
     state: State.pocoStock,
-    talles: '40/42'
+    talles: [40, 42]
   },
   {
     id: 34,
@@ -485,7 +484,7 @@ export const jeansData = [
     },
     price: 17000,
     state: '',
-    talles: '38/40/42'
+    talles: [38, 40, 42]
   },
   {
     id: 35,
@@ -499,7 +498,7 @@ export const jeansData = [
     },
     price: 17000,
     state: '',
-    talles: '38/40/42'
+    talles: [38, 40, 42]
   },
   {
     id: 36,
@@ -513,7 +512,7 @@ export const jeansData = [
     },
     price: 17000,
     state: '',
-    talles: '38/40/42'
+    talles: [38, 40, 42]
   },
   {
     id: 37,
@@ -527,7 +526,7 @@ export const jeansData = [
     },
     price: 16000,
     state: '',
-    talles: '38/39/40/41/42/43/44/45/46'
+    talles: [38, 39, 40, 41, 42, 43, 44, 45, 46]
   },
   {
     id: 38,
@@ -541,7 +540,7 @@ export const jeansData = [
     },
     price: 19500,
     state: '',
-    talles: '38/40/42'
+    talles: [38, 40, 42]
   },
   {
     id: 39,
@@ -555,7 +554,7 @@ export const jeansData = [
     },
     price: 17500,
     state: State.nuevo,
-    talles: '38/39/40/41/42/43/44/45/46'
+    talles: [38, 39, 40, 41, 42, 43, 44, 45, 46]
   },
   {
     id: 40,
@@ -569,7 +568,7 @@ export const jeansData = [
     },
     price: 22000,
     state: '',
-    talles: '38/40/42'
+    talles: [38, 40, 42]
   },
   {
     id: 41,
@@ -583,7 +582,7 @@ export const jeansData = [
     },
     price: 17000,
     state: '',
-    talles: '38/39/40/41/42/43/44/45/46'
+    talles: [38, 39, 40, 41, 42, 43, 44, 45, 46]
   },
   {
     id: 42,
@@ -597,7 +596,7 @@ export const jeansData = [
     },
     price: 12000,
     state: '',
-    talles: '38/39/40/41/42/43/44/45/46'
+    talles: [38, 39, 40, 41, 42, 43, 44, 45, 46]
   },
   {
     id: 44,
@@ -611,7 +610,7 @@ export const jeansData = [
     },
     price: 18500,
     state: '',
-    talles: '40'
+    talles: [40]
   },
   {
     id: 45,
@@ -625,7 +624,7 @@ export const jeansData = [
     },
     price: 16500,
     state: '',
-    talles: '40/42'
+    talles: [40, 42]
   },
   {
     id: 46,
@@ -639,7 +638,6 @@ export const jeansData = [
     },
     price: 16500,
     state: '',
-    talles: '40/42'
+    talles:[40, 42]
   },
 ];
-  
