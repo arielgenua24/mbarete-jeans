@@ -14,27 +14,21 @@ function useCart(initialList = []) {
   // Efecto para guardar el carrito en `localStorage` cuando cambie el estado
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
+    console.log(cart)
   }, [cart]);
 
   function findItem(item) {
-    //console.log('item individual', item) //hasta aca llega la data
     const foundIndex = cart.findIndex((cartItem) => {
-      //console.log('carrito items:', cartItem.product.id)
-      //console.log('jean item:', item.id)
       return cartItem.product.id === item.id
     });
-    //console.log(foundIndex)
     if (foundIndex !== -1) {
       console.log(item)
       return { jean: cart[foundIndex], index: foundIndex };
     }
-    //console.log('elemento no encontrado')
     return null;
   }
 
   function addItem(item, quantity) {
-    //console.log('llamando a addItem')
-    //console.log(item.product)
     if (!findItem(item)) {
       console.log(item)
       setCart((prevState) => [...prevState, { product: item, quantity }]); //asi se vera el array

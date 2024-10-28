@@ -15,7 +15,17 @@ export const jeansData = [
     },
     price: 19000,
     state: '',
-    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [
+      { size: 38, quantity: 0 },
+      { size: 39, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 41, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 43, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 45, quantity: 0 },
+      { size: 46, quantity: 0 }
+    ]
   },
   {
     id: 5,
@@ -28,7 +38,11 @@ export const jeansData = [
     },
     price: 20500,
     state: '',
-    sizes: [38, 40, 42]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 42, quantity: 0 }
+]
   },
   {
     id: 6,
@@ -41,7 +55,12 @@ export const jeansData = [
     },
     price: 22000,
     state: '',
-    sizes: [38, 40, 42, 44]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 42, quantity: 0 },
+  { size: 44, quantity: 0 }
+]
   },
   {
     id: 1,
@@ -54,7 +73,12 @@ export const jeansData = [
     },
     price: 17500,
     state: State.SoldOut,
-    sizes: [38, 40, 42, 44]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 42, quantity: 0 },
+  { size: 44, quantity: 0 }
+]
   },
   {
     id: 7,
@@ -68,7 +92,11 @@ export const jeansData = [
     },
     price: 20500,
     state: State.nuevo,
-    sizes: [38, 44, 48]
+    sizes: [
+      { size: 38, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 48, quantity: 0 },
+    ]
   },
   {
     id: 2,
@@ -81,7 +109,17 @@ export const jeansData = [
     },
     price: 19000,
     state: State.SoldOut,
-    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 39, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 41, quantity: 0 },
+  { size: 42, quantity: 0 },
+  { size: 43, quantity: 0 },
+  { size: 44, quantity: 0 },
+  { size: 45, quantity: 0 },
+  { size: 46, quantity: 0 }
+]
   },
   {
     id: 3,
@@ -94,7 +132,11 @@ export const jeansData = [
     },
     price: 12000,
     state: State.nuevo,
-    sizes: [38, 40, 42]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 42, quantity: 0 }
+]
   },
   {
     id: 4,
@@ -120,7 +162,12 @@ export const jeansData = [
     },
     price: 21000,
     state: '',
-    sizes: [38, 40, 42, 44]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 42, quantity: 0 },
+{ size: 44, quantity: 0 }
+]
   },
   {
     id: 9,
@@ -134,7 +181,18 @@ export const jeansData = [
     },
     price: 11000,
     state: State.ReIngreso,
-    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 39, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 41, quantity: 0 },
+  { size: 42, quantity: 0 },
+  { size: 43, quantity: 0 },
+  { size: 44, quantity: 0 },
+  { size: 45, quantity: 0 },
+  { size: 46, quantity: 0 },
+  { size: 48, quantity: 0 }
+]
   },
   {
     id: 10,
@@ -148,7 +206,9 @@ export const jeansData = [
     },
     price: 19500,
     state: '',
-    sizes: [38, 42, 44]
+    sizes: [{ size: 38, quantity: 0 },
+      { size: 42, quantity: 0 },
+    { size: 44, quantity: 0 }]
   },
   {
     id: 11,
@@ -162,7 +222,11 @@ export const jeansData = [
     },
     price: 8000,
     state: State.nuevo,
-    sizes: [38, 40, 46, 48]
+    sizes: [{ size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+    { size: 46, quantity: 0 },
+    { size: 48, quantity: 0 }
+  ]
   },
   {
     id: 12,
@@ -176,7 +240,17 @@ export const jeansData = [
     },
     price: 17500,
     state: '',
-    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 39, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 41, quantity: 0 },
+  { size: 42, quantity: 0 },
+  { size: 43, quantity: 0 },
+  { size: 44, quantity: 0 },
+  { size: 45, quantity: 0 },
+  { size: 46, quantity: 0 }
+]
   },
   {
     id: 14,
@@ -190,7 +264,12 @@ export const jeansData = [
     },
     price: 29000,
     state: '',
-    sizes: [38, 40, 42, 44]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 42, quantity: 0 },
+{ size: 44, quantity: 0 }
+]
   },
   {
     id: 15,
@@ -232,7 +311,12 @@ export const jeansData = [
     },
     price: 1850,
     state: '',
-    sizes: [38, 40, 42, 44]   
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 42, quantity: 0 },
+{ size: 44, quantity: 0 }
+]   
   },
   {
     id: 18,
@@ -246,7 +330,18 @@ export const jeansData = [
     },
     price: 11000,
     state: '',
-    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]   
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 39, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 41, quantity: 0 },
+  { size: 42, quantity: 0 },
+  { size: 43, quantity: 0 },
+  { size: 44, quantity: 0 },
+  { size: 45, quantity: 0 },
+  { size: 46, quantity: 0 },
+  { size: 48, quantity: 0 }
+]   
   },
   {
     id: 19,
@@ -274,7 +369,17 @@ export const jeansData = [
     },
     price: 17500,
     state: '',
-    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]   
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 39, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 41, quantity: 0 },
+  { size: 42, quantity: 0 },
+  { size: 43, quantity: 0 },
+  { size: 44, quantity: 0 },
+  { size: 45, quantity: 0 },
+  { size: 46, quantity: 0 }
+]   
   },
   {
     id: 21,
@@ -288,7 +393,11 @@ export const jeansData = [
     },
     price: 16000,
     state: '',
-    sizes: [38, 40, 42]   
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 42, quantity: 0 }
+]   
   },
   {
     id: 22,
@@ -302,7 +411,17 @@ export const jeansData = [
     },
     price: 18000,
     state: '',
-    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]   
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 39, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 41, quantity: 0 },
+  { size: 42, quantity: 0 },
+  { size: 43, quantity: 0 },
+  { size: 44, quantity: 0 },
+  { size: 45, quantity: 0 },
+  { size: 46, quantity: 0 }
+]   
   },
   {
     id: 23,
@@ -316,7 +435,11 @@ export const jeansData = [
     },
     price: 20500,
     state: '',
-    sizes: [38, 40, 42]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 42, quantity: 0 }
+]
   },
   {
     id: 24,
@@ -330,7 +453,17 @@ export const jeansData = [
     },
     price: 18000,
     state: '',
-    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 39, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 41, quantity: 0 },
+  { size: 42, quantity: 0 },
+  { size: 43, quantity: 0 },
+  { size: 44, quantity: 0 },
+  { size: 45, quantity: 0 },
+  { size: 46, quantity: 0 }
+]
   },
   {
     id: 25,
@@ -344,7 +477,11 @@ export const jeansData = [
     },
     price: 20500,
     state: '',
-    sizes: [38, 40, 42]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 42, quantity: 0 }
+]
   },
   {
     id: 26,
@@ -358,7 +495,11 @@ export const jeansData = [
     },
     price: 20500,
     state: '',
-    sizes: [38, 40, 42]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 42, quantity: 0 }
+]
   },
   {
     id: 27,
@@ -372,7 +513,17 @@ export const jeansData = [
     },
     price: 17500,
     state: '',
-    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 39, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 41, quantity: 0 },
+  { size: 42, quantity: 0 },
+  { size: 43, quantity: 0 },
+  { size: 44, quantity: 0 },
+  { size: 45, quantity: 0 },
+  { size: 46, quantity: 0 }
+]
   },
   {
     id: 28,
@@ -386,7 +537,12 @@ export const jeansData = [
     },
     price: 20000,
     state: '',
-    sizes: [38, 40, 42, 44]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 42, quantity: 0 },
+{ size: 44, quantity: 0 }
+]
   },
   {
     id: 29,
@@ -400,7 +556,10 @@ export const jeansData = [
     },
     price: 18500,
     state: '',
-    sizes: [44, 46]
+    sizes: [
+      { size: 44, quantity: 0 },
+      { size: 46, quantity: 0 }
+    ]
   },
   {
     id: 30,
@@ -414,7 +573,17 @@ export const jeansData = [
     },
     price: 16500,
     state: '',
-    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 39, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 41, quantity: 0 },
+  { size: 42, quantity: 0 },
+  { size: 43, quantity: 0 },
+  { size: 44, quantity: 0 },
+  { size: 45, quantity: 0 },
+  { size: 46, quantity: 0 }
+]
   },
   {
     id: 31,
@@ -428,7 +597,17 @@ export const jeansData = [
     },
     price: 11000,
     state: '',
-    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 39, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 41, quantity: 0 },
+  { size: 42, quantity: 0 },
+  { size: 43, quantity: 0 },
+  { size: 44, quantity: 0 },
+  { size: 45, quantity: 0 },
+  { size: 46, quantity: 0 }
+]
   },
   {
     id: 32,
@@ -442,7 +621,11 @@ export const jeansData = [
     },
     price: 17500,
     state: State.pocoStock,
-    sizes: [38, 40, 42]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 42, quantity: 0 }
+]
   },
   {
     id: 33,
@@ -456,7 +639,17 @@ export const jeansData = [
     },
     price: 8000,
     state: State.pocoStock,
-    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 39, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 41, quantity: 0 },
+  { size: 42, quantity: 0 },
+  { size: 43, quantity: 0 },
+  { size: 44, quantity: 0 },
+  { size: 45, quantity: 0 },
+  { size: 46, quantity: 0 }
+]
   },
   {
     id: 50,
@@ -470,7 +663,10 @@ export const jeansData = [
     },
     price: 8000,
     state: State.pocoStock,
-    sizes: [40, 42]
+    sizes: [
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+    ]
   },
   {
     id: 34,
@@ -484,7 +680,11 @@ export const jeansData = [
     },
     price: 17000,
     state: '',
-    sizes: [38, 40, 42]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 42, quantity: 0 }
+]
   },
   {
     id: 35,
@@ -498,7 +698,11 @@ export const jeansData = [
     },
     price: 17000,
     state: '',
-    sizes: [38, 40, 42]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 42, quantity: 0 }
+]
   },
   {
     id: 36,
@@ -512,7 +716,11 @@ export const jeansData = [
     },
     price: 17000,
     state: '',
-    sizes: [38, 40, 42]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 42, quantity: 0 }
+]
   },
   {
     id: 37,
@@ -526,7 +734,17 @@ export const jeansData = [
     },
     price: 16000,
     state: '',
-    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 39, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 41, quantity: 0 },
+  { size: 42, quantity: 0 },
+  { size: 43, quantity: 0 },
+  { size: 44, quantity: 0 },
+  { size: 45, quantity: 0 },
+  { size: 46, quantity: 0 }
+]
   },
   {
     id: 38,
@@ -540,7 +758,11 @@ export const jeansData = [
     },
     price: 19500,
     state: '',
-    sizes: [38, 40, 42]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 42, quantity: 0 }
+]
   },
   {
     id: 39,
@@ -554,7 +776,17 @@ export const jeansData = [
     },
     price: 17500,
     state: State.nuevo,
-    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 39, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 41, quantity: 0 },
+  { size: 42, quantity: 0 },
+  { size: 43, quantity: 0 },
+  { size: 44, quantity: 0 },
+  { size: 45, quantity: 0 },
+  { size: 46, quantity: 0 }
+]
   },
   {
     id: 40,
@@ -568,7 +800,11 @@ export const jeansData = [
     },
     price: 22000,
     state: '',
-    sizes: [38, 40, 42]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 42, quantity: 0 }
+]
   },
   {
     id: 41,
@@ -582,7 +818,17 @@ export const jeansData = [
     },
     price: 17000,
     state: '',
-    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 39, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 41, quantity: 0 },
+  { size: 42, quantity: 0 },
+  { size: 43, quantity: 0 },
+  { size: 44, quantity: 0 },
+  { size: 45, quantity: 0 },
+  { size: 46, quantity: 0 }
+]
   },
   {
     id: 42,
@@ -596,7 +842,17 @@ export const jeansData = [
     },
     price: 12000,
     state: '',
-    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [
+  { size: 38, quantity: 0 },
+  { size: 39, quantity: 0 },
+  { size: 40, quantity: 0 },
+  { size: 41, quantity: 0 },
+  { size: 42, quantity: 0 },
+  { size: 43, quantity: 0 },
+  { size: 44, quantity: 0 },
+  { size: 45, quantity: 0 },
+  { size: 46, quantity: 0 }
+]
   },
   {
     id: 44,
@@ -610,7 +866,7 @@ export const jeansData = [
     },
     price: 18500,
     state: '',
-    sizes: [40]
+    sizes: [{ size: 40, quantity: 0 },]
   },
   {
     id: 45,
@@ -624,7 +880,10 @@ export const jeansData = [
     },
     price: 16500,
     state: '',
-    sizes: [40, 42]
+    sizes: [
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+    ]
   },
   {
     id: 46,
@@ -638,6 +897,9 @@ export const jeansData = [
     },
     price: 16500,
     state: '',
-    sizes:[40, 42]
+    sizes: [
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+    ]
   },
 ];
