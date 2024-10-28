@@ -316,7 +316,7 @@ export const jeansData = [
     },
     price: 20500,
     state: '',
-    talles: [38, 40, 42]
+    sizes: [38, 40, 42]
   },
   {
     id: 24,
@@ -330,7 +330,7 @@ export const jeansData = [
     },
     price: 18000,
     state: '',
-    talles: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
   },
   {
     id: 25,
@@ -344,7 +344,7 @@ export const jeansData = [
     },
     price: 20500,
     state: '',
-    talles: [38, 40, 42]
+    sizes: [38, 40, 42]
   },
   {
     id: 26,
@@ -358,7 +358,7 @@ export const jeansData = [
     },
     price: 20500,
     state: '',
-    talles: [38, 40, 42]
+    sizes: [38, 40, 42]
   },
   {
     id: 27,
@@ -372,7 +372,7 @@ export const jeansData = [
     },
     price: 17500,
     state: '',
-    talles: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
   },
   {
     id: 28,
@@ -386,7 +386,7 @@ export const jeansData = [
     },
     price: 20000,
     state: '',
-    talles: [38, 40, 42, 44]
+    sizes: [38, 40, 42, 44]
   },
   {
     id: 29,
@@ -400,7 +400,7 @@ export const jeansData = [
     },
     price: 18500,
     state: '',
-    talles: [44, 46]
+    sizes: [44, 46]
   },
   {
     id: 30,
@@ -414,7 +414,7 @@ export const jeansData = [
     },
     price: 16500,
     state: '',
-    talles: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
   },
   {
     id: 31,
@@ -428,7 +428,7 @@ export const jeansData = [
     },
     price: 11000,
     state: '',
-    talles: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
   },
   {
     id: 32,
@@ -442,7 +442,7 @@ export const jeansData = [
     },
     price: 17500,
     state: State.pocoStock,
-    talles: [38, 40, 42]
+    sizes: [38, 40, 42]
   },
   {
     id: 33,
@@ -456,7 +456,7 @@ export const jeansData = [
     },
     price: 8000,
     state: State.pocoStock,
-    talles: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
   },
   {
     id: 50,
@@ -470,7 +470,7 @@ export const jeansData = [
     },
     price: 8000,
     state: State.pocoStock,
-    talles: [40, 42]
+    sizes: [40, 42]
   },
   {
     id: 34,
@@ -484,7 +484,7 @@ export const jeansData = [
     },
     price: 17000,
     state: '',
-    talles: [38, 40, 42]
+    sizes: [38, 40, 42]
   },
   {
     id: 35,
@@ -498,7 +498,7 @@ export const jeansData = [
     },
     price: 17000,
     state: '',
-    talles: [38, 40, 42]
+    sizes: [38, 40, 42]
   },
   {
     id: 36,
@@ -512,7 +512,7 @@ export const jeansData = [
     },
     price: 17000,
     state: '',
-    talles: [38, 40, 42]
+    sizes: [38, 40, 42]
   },
   {
     id: 37,
@@ -526,7 +526,7 @@ export const jeansData = [
     },
     price: 16000,
     state: '',
-    talles: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
   },
   {
     id: 38,
@@ -540,7 +540,7 @@ export const jeansData = [
     },
     price: 19500,
     state: '',
-    talles: [38, 40, 42]
+    sizes: [38, 40, 42]
   },
   {
     id: 39,
@@ -554,7 +554,7 @@ export const jeansData = [
     },
     price: 17500,
     state: State.nuevo,
-    talles: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
   },
   {
     id: 40,
@@ -568,7 +568,7 @@ export const jeansData = [
     },
     price: 22000,
     state: '',
-    talles: [38, 40, 42]
+    sizes: [38, 40, 42]
   },
   {
     id: 41,
@@ -582,7 +582,7 @@ export const jeansData = [
     },
     price: 17000,
     state: '',
-    talles: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
   },
   {
     id: 42,
@@ -596,7 +596,7 @@ export const jeansData = [
     },
     price: 12000,
     state: '',
-    talles: [38, 39, 40, 41, 42, 43, 44, 45, 46]
+    sizes: [38, 39, 40, 41, 42, 43, 44, 45, 46]
   },
   {
     id: 44,
@@ -610,7 +610,7 @@ export const jeansData = [
     },
     price: 18500,
     state: '',
-    talles: [40]
+    sizes: [40]
   },
   {
     id: 45,
@@ -624,7 +624,7 @@ export const jeansData = [
     },
     price: 16500,
     state: '',
-    talles: [40, 42]
+    sizes: [40, 42]
   },
   {
     id: 46,
@@ -638,6 +638,6 @@ export const jeansData = [
     },
     price: 16500,
     state: '',
-    talles:[40, 42]
+    sizes:[40, 42]
   },
 ];

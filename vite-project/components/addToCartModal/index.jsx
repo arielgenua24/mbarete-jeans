@@ -59,7 +59,7 @@ const Modal = ({item ,onClose}) => {
         </div>
         
         <span className="modal-container-sizes"> 
-            TALLES DISPONIBLES: {item.talles}
+            sizes DISPONIBLES: {item.sizes}
         </span>
 
         <div className="modal-images">

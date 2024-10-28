@@ -45,8 +45,8 @@ function Category({ filter}){
                             <div className="carousel-jean-data">
                                 <span>{jean.name}</span>
                                 <span>${jean.price.toLocaleString('es-AR')}</span>
-                                <span>Talles disponibles: </span>
-                                <span> {jean.talles}</span>
+                                <span>sizes disponibles: </span>
+                                <span> {jean.sizes}</span>
                             </div>
                             <CartActionButton   
                                 item={jean}
