@@ -2,6 +2,7 @@
 import { useState } from "react";
 import WarningMessage from "../WaningMessages/WarningItemQuantity";
 import useCartContext from "../../hooks/useCartContext";
+import JeanSizes from "../JeanSizes";
 import "./index.css";
 
 
@@ -59,7 +60,7 @@ const Modal = ({item ,onClose}) => {
         </div>
         
         <span className="modal-container-sizes"> 
-            sizes DISPONIBLES: {item.sizes}
+            <JeanSizes item={item}/>
         </span>
 
         <div className="modal-images">

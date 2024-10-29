@@ -4,6 +4,7 @@ import useCartContext from "../../hooks/useCart";
 import Jeans from "../../services/jeans.services";
 import CartActionButton from "../CartActionBtn";
 import Modal from "../addToCartModal";
+import JeanSizes from "../JeanSizes";
 import './styles.css'
 
 // eslint-disable-next-line react/prop-types
@@ -45,8 +46,7 @@ function Category({ filter}){
                             <div className="carousel-jean-data">
                                 <span>{jean.name}</span>
                                 <span>${jean.price.toLocaleString('es-AR')}</span>
-                                <span>sizes disponibles: </span>
-                                <span> {jean.sizes}</span>
+                                <JeanSizes item={jean}/>
                             </div>
                             <CartActionButton   
                                 item={jean}
