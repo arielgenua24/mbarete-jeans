@@ -1,4 +1,4 @@
-import { useRoutes, BrowserRouter} from 'react-router-dom'
+import { useRoutes, HashRouter} from 'react-router-dom'
 import Jeans from '../../PAGES/APP/JEANS'
 import Cart from './CART';
 import Home from './HOME'
@@ -23,14 +23,14 @@ function AppRouter() {
 function App() {
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <CartProvider>
         <header>
           <Navbar />
         </header>
         <AppRouter />
       </CartProvider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
