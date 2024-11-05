@@ -1,13 +1,22 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import {useParams, useNavigate} from 'react-router-dom'
 import WarningMessage from "../WaningMessages/WarningItemQuantity";
 import useCartContext from "../../hooks/useCartContext";
 import JeanSizes from "../JeanSizes";
+import Jeans from "../../services/jeans.services";
+
 import "./index.css";
 
 
 // eslint-disable-next-line react/prop-types
-const Modal = ({item ,onClose}) => {
+const Modal = () => {
+  const navigate = useNavigate()
+  const { id } = useParams()
+  const productIdInt = parseInt(id, 10);
+  const service = new Jeans();
+
+  const item = service?.filterJeans(productIdInt)[0] //ya poseo el jean
   console.log(item)
 
   const [quantity, setQuantity] = useState(15);
@@ -21,12 +30,12 @@ const Modal = ({item ,onClose}) => {
   const submit = (() => {
     updateQuantity(item, quantity)
     console.log('cantidad agregada')
-    onClose()
+    navigate('/jeans')
     })
 
   const onDelete = (() => {
     deleteItem(item)
-    onClose()
+    navigate('/jeans')
   })
 
   const increment = () => {

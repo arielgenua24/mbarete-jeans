@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import config from "../../config/config";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import useCartContext from "../../hooks/useCartContext"; 
 import './styles.css' 
 
@@ -20,11 +20,12 @@ const CartActionButton = ({ item, onAddToCart}) => {
         cart,
     } = useCartContext(); 
 
-    const addToCart = (() => {
-      console.log('new cart', item)
-      addItem(item, 1)
-      onAddToCart()
-  });
+    const addToCart = () => {
+      console.log('new cart', item);
+      addItem(item, 1);
+      onAddToCart();
+      navigate(`/product/${item.id}`); // Navega a la página del producto con su ID
+  };
 
   const viewCart = (() => {
       navigate('/cart');

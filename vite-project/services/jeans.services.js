@@ -8,8 +8,12 @@ class Jeans {
     addjean() {}
 
     filterJeans(filter) {
-        const filteredJeans = this.jeansList.filter((jean) => 
-            jean.category === filter || jean.state === filter
+        const filteredJeans = this.jeansList.filter((jean) => {
+            console.log(jean.id)
+            console.log(filter)
+            console.log(jean.id == filter)
+            return jean.category === filter || jean.state === filter || jean.id === filter }
+            
         );
     
         if (filteredJeans.length === 0) {

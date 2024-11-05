@@ -52,7 +52,7 @@ function Category({ filter}){
                                 item={jean}
                                 onAddToCart={()=>{
                                     setSelectedItem(jean)
-                                    setOpenModal(true)
+                                    //setOpenModal(true)
                                 }}
                                 onOpenModal={()=> setOpenModal(true)}
                             />
