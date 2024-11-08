@@ -9,16 +9,14 @@ class Jeans {
 
     filterJeans(filter) {
         const filteredJeans = this.jeansList.filter((jean) => {
-            console.log(jean.id)
-            console.log(filter)
-            console.log(jean.id == filter)
+            
             return jean.category === filter || jean.state === filter || jean.id === filter }
             
         );
     
         if (filteredJeans.length === 0) {
             console.log('No se pudieron encontrar jeans que coincidan con el filtro.');
-            console.log(filter)
+            
 
         }
     

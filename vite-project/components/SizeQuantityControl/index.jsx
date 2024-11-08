@@ -1,18 +1,25 @@
 import { useState } from "react";
 
+
 // eslint-disable-next-line react/prop-types
-function SizeQuantityControl({size, original_quantity, setShowWarning, setNewSizeList, newSizeList}) {
+function SizeQuantityControl({size, original_quantity, setShowWarning, setNewSizeList}) {
     const [quantity, setQuantity] = useState(original_quantity);
     
 
     const increment = () => {
-        setQuantity(quantity + 1);
-        setNewSizeList((prevState) => ({
-            ...prevState,
-            size: size,  // Actualizar solo el tamaño específico
-            quantity: quantity + 1 
-        }));
-        console.log(newSizeList)
+        setQuantity(quantity + 1); //aca esta el problema a solucionar
+        
+        setNewSizeList((prevState) => {
+            let newSizeList = [...prevState];
+            let index = prevState.findIndex((item) => (item.size === size));
+            if (index !== -1) { //encontre el objeto
+              newSizeList[index].quantity = quantity + 1;
+            } else { //no lo encontre
+              newSizeList.push({ size: size, quantity: quantity + 1 });
+            }
+            return newSizeList;
+          });
+        
     };
     const decrement = () => {
         if (quantity > 1) {

@@ -22,13 +22,7 @@ const Modal = () => {
   console.log(item)
 
   const [showWarning, setShowWarning] = useState(false);
-  const [newSizeList, setNewSizeList] = useState(
-    sizesList.reduce((acc, item) => ({ 
-      ...acc, 
-      size: item.size, 
-      quantity: item.quantity 
-    }), {})
-);
+  const [newSizeList, setNewSizeList] = useState([]);
 
   const {
     updateQuantity, deleteItem } = useCartContext(); 
@@ -45,8 +39,10 @@ const Modal = () => {
     navigate('/jeans')
   })
 
+  console.log(Object.values(newSizeList))
 
 
+  //const totalQuantity = Object.values(newSizeList).reduce((total, qty) => total + qty, 0);
 
   return (
     <div className="modal-container">
