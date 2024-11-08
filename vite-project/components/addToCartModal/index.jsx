@@ -5,6 +5,7 @@ import WarningMessage from "../WaningMessages/WarningItemQuantity";
 import useCartContext from "../../hooks/useCartContext";
 import JeanSizes from "../JeanSizes";
 import Jeans from "../../services/jeans.services";
+import SizeQuantityControl from "../SizeQuantityControl";
 
 import "./index.css";
 
@@ -17,14 +18,20 @@ const Modal = () => {
   const service = new Jeans();
 
   const item = service?.filterJeans(productIdInt)[0] //ya poseo el jean
+  const sizesList = item.sizes;
   console.log(item)
 
-  const [quantity, setQuantity] = useState(15);
   const [showWarning, setShowWarning] = useState(false);
+  const [newSizeList, setNewSizeList] = useState(
+    sizesList.reduce((acc, item) => ({ 
+      ...acc, 
+      size: item.size, 
+      quantity: item.quantity 
+    }), {})
+);
 
-
-    const {
-      updateQuantity, deleteItem } = useCartContext(); 
+  const {
+    updateQuantity, deleteItem } = useCartContext(); 
 
 
   const submit = (() => {
@@ -38,21 +45,6 @@ const Modal = () => {
     navigate('/jeans')
   })
 
-  const increment = () => {
-    setQuantity(quantity + 1)
-    
-  }
-  const decrement = () => {
-    if (quantity > 15) {
-      setQuantity(quantity - 1);
-    } else if(quantity===15) {
-      console.log('15')
-      setShowWarning(true)
-    } 
-    else {
-      setShowWarning(true);
-    }
-  };
 
 
 
@@ -82,21 +74,24 @@ const Modal = () => {
           Valor unitario - ${(item.price).toLocaleString('es-AR')}
         </div>
 
-        <div className="modal-price">
-          Cantidad: {quantity} - ${(item.price * quantity).toLocaleString('es-AR')}
-        </div>
 
         <div className="modal-span">
           <span className="modal-span-title">Agregar cantidad </span>
           <span> Al agregar la cantidad, vera la actualizacion del precio</span>          
         </div>
        
-
-        <div className="modal-quantity">
-          <button className="modal-btn" onClick={decrement}>-</button>
-          <span>{quantity}</span>
-          <button className="modal-btn" onClick={increment}>+</button>
-        </div>
+        {sizesList.map((item, index) => {
+          return (
+              <SizeQuantityControl 
+                key={index} 
+                size={item.size} 
+                original_quantity={item.quantity}  
+                setShowWarning={setShowWarning}
+                setNewSizeList={setNewSizeList}
+                newSizeList={newSizeList}
+                />
+          );
+        })}
 
         <div className="modal-actions">
           <button className="modal-cancel" onClick={onDelete}>Cancelar</button>
