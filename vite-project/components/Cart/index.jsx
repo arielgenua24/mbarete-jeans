@@ -27,7 +27,7 @@ function Cart() {
       <ul>
         {cart?.map((item, index) => (
           <li key={index}>
-            {item.product.name} - Cantidad: {item.quantity}
+            {item?.product?.name} - Cantidad: {item?.quantity}
           </li>
         ))}
       </ul>

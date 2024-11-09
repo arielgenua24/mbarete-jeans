@@ -29,7 +29,7 @@ const Modal = () => {
 
 
   const submit = (() => {
-    updateQuantity(item, quantity)
+    updateQuantity(item, newSizeList)
     console.log('cantidad agregada')
     navigate('/jeans')
     })
@@ -39,8 +39,9 @@ const Modal = () => {
     navigate('/jeans')
   })
 
-  console.log(Object.values(newSizeList))
-
+  const totalQuantity = newSizeList.reduce((acc, item) => acc + item.quantity, 0);
+  console.log('totalQuantity', totalQuantity);
+  
 
   //const totalQuantity = Object.values(newSizeList).reduce((total, qty) => total + qty, 0);
 
@@ -88,6 +89,10 @@ const Modal = () => {
                 />
           );
         })}
+
+        <div className="modal-total-price">
+          Precio total - ${((item.price)*totalQuantity).toLocaleString('es-AR')}
+        </div>
 
         <div className="modal-actions">
           <button className="modal-cancel" onClick={onDelete}>Cancelar</button>

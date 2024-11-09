@@ -21,7 +21,7 @@ const Cart = () => {
       <div className="cart-items">
         {cart.map((item) => (
           <CartUi 
-            key={item?.product.id}
+            key={item?.product?.id}
             item={item}
             changeQuantity={updateQuantity}
             />

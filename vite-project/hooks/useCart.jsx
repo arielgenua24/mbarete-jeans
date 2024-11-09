@@ -14,12 +14,11 @@ function useCart(initialList = []) {
   // Efecto para guardar el carrito en `localStorage` cuando cambie el estado
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
-    console.log(cart)
   }, [cart]);
 
   function findItem(item) {
     const foundIndex = cart.findIndex((cartItem) => {
-      return cartItem.product.id === item.id
+      return cartItem?.product?.id === item?.id
     });
     if (foundIndex !== -1) {
       console.log(item)
@@ -30,6 +29,7 @@ function useCart(initialList = []) {
 
   function addItem(item, quantity) {
     if (!findItem(item)) {
+      console.log('añadiendo items al carrito en el localStorage')
       console.log(item)
       setCart((prevState) => [...prevState, { product: item, quantity }]); //asi se vera el array
     } else {
@@ -37,23 +37,25 @@ function useCart(initialList = []) {
     }
   }
 
-  function updateQuantity(item, newQuantity) {
+  function updateQuantity(item, sizesList) {
     console.log('ejecutando la funcion updateQuantity')
-    console.log(item, newQuantity) //hasta aca yo se que me llego el item, y la cantidad
+    //console.log(item, newQuantity) //hasta aca yo se que me llego el item, y la cantidad
 
     const foundItem = findItem(item);
     console.log(item.product)
     console.log(foundItem)
     if (foundItem) {
-      console.log(item, newQuantity)
-
+      console.log(item, sizesList)
       const newCart = [...cart];
       const updatedItem = {
-        ...foundItem.jean,
-        quantity: newQuantity, // Incrementa la cantidad
+        ...foundItem.jean,  // Incrementa la cantidad
+        sizes: sizesList
       };
-      newCart[foundItem.index] = updatedItem;
+      
+      newCart[foundItem.index] = updatedItem; //esto funciona, pero primero se inicializan y luego se hace el console.log
       setCart(newCart); 
+      console.log('primero me imprimo yo, newCart sin actualizar')
+      console.log(newCart)
     }
   }
 

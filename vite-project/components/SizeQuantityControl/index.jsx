@@ -22,11 +22,16 @@ function SizeQuantityControl({size, original_quantity, setShowWarning, setNewSiz
         
     };
     const decrement = () => {
-        if (quantity > 1) {
+        if (quantity > 0) {
             setQuantity(quantity - 1);
-        } else {
-            console.log('cuidado con la cantidad')
-            setShowWarning(true)
+            setNewSizeList((prevState) => {
+                let newSizeList = [...prevState];
+                let index = prevState.findIndex((item) => (item.size === size));
+                if (index !== -1) { //encontre el objeto
+                  newSizeList[index].quantity = quantity - 1;
+                } 
+                return newSizeList;
+              });
         }
     };
 

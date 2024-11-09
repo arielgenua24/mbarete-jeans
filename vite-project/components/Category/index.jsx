@@ -19,12 +19,6 @@ function Category({ filter}){
         cart,
     } = useCartContext(); 
 
-    useEffect(() => {
-        //console.log('useEffect', selectedItem)
-        //console.log('useEffect-2', cart) // no funciona, a no ser que yo actualice la pagina
-        //console.log('useEffect-3', openModal) // no funciona, siempre esta en false
-
-    }, [selectedItem, cart, openModal]) //el itemSeleccionado cambia
 
     const filteredJeans = service?.filterJeans(filter)
     // la aplicacion no funnciona porque jean.nombre y demas no existe, chequea la estructura de datos!
@@ -58,17 +52,7 @@ function Category({ filter}){
                             />
 
                     </div>
-                ))}
-                {openModal &&  
-                    <CartPortal>
-                        <Modal 
-                        item={selectedItem}
-                        onClose={() => setOpenModal(false)}
-                        />
-                    </CartPortal>
-                }
-                    
-                    
+                ))} 
             </div>
         </div>
      </>
