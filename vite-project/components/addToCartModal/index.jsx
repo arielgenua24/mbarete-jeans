@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import {useParams, useNavigate} from 'react-router-dom'
+import {useParams, useNavigate, Navigate} from 'react-router-dom'
 import WarningMessage from "../WaningMessages/WarningItemQuantity";
 import useCartContext from "../../hooks/useCartContext";
 import JeanSizes from "../JeanSizes";

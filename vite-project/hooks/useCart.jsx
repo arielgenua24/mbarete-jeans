@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function useCart(initialList = []) {
+function useCart(initialList = [{}]) {
   const [openModal, setOpenModal] = useState(false)
   const [selectedItem, setSelectedItem] = useState(null);
 
@@ -12,9 +12,11 @@ function useCart(initialList = []) {
   });
 
   // Efecto para guardar el carrito en `localStorage` cuando cambie el estado
-  useEffect(() => {
+ /* useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
-  }, [cart]);
+  }, [cart]); */
+
+
 
   function findItem(item) {
     const foundIndex = cart.findIndex((cartItem) => {
@@ -54,6 +56,11 @@ function useCart(initialList = []) {
       
       newCart[foundItem.index] = updatedItem; //esto funciona, pero primero se inicializan y luego se hace el console.log
       setCart(newCart); 
+      console.log(newCart)
+      console.log(cart)
+
+
+      localStorage.setItem('cart', JSON.stringify(newCart))
       console.log('primero me imprimo yo, newCart sin actualizar')
       console.log(newCart)
     }
