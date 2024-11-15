@@ -28,14 +28,8 @@ const Modal = () => {
   const originalSizesList = item.sizes;
  
   const sizeIndex = cart.findIndex((item) => (item.product.id === productIdInt))
-  console.log('index', sizeIndex)
   const updatedSizesList = cart[sizeIndex]?.sizes; 
  
-
-
-  console.log(cart)
-  console.log(updatedSizesList)
-
   const [showWarning, setShowWarning] = useState(false);
   const [newSizeList, setNewSizeList] = useState([]);
 
@@ -44,7 +38,6 @@ const Modal = () => {
     setNewSizeList(sizesList)
   }, [])
   
-  console.log(newSizeList)
 
   const submit = (() => {
     if(totalQuantity === 0){
@@ -62,7 +55,6 @@ const Modal = () => {
   })
 
   const totalQuantity = newSizeList.reduce((acc, item) => acc + item.quantity, 0);
-  console.log('totalQuantity', totalQuantity);
 
   //const totalQuantity = Object.values(newSizeList).reduce((total, qty) => total + qty, 0);
 

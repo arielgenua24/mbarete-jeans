@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import config from "../../config/config";
 import { useEffect, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import useCartContext from "../../hooks/useCartContext"; 
+import EditSizesBtn from '../EditSizesBtn'
 import './styles.css' 
 
 // eslint-disable-next-line no-unused-vars
@@ -12,6 +13,7 @@ const CartActionButton = ({ item, onAddToCart}) => {
   const [buttonState, setButtonState] = useState({});
   const navigate = useNavigate();
 
+  const url = `/product/${item.id}`;
 
   //console.log(item)
     const {
@@ -24,7 +26,7 @@ const CartActionButton = ({ item, onAddToCart}) => {
       console.log('new cart', item);
       addItem(item, 1);
       onAddToCart();
-      navigate(`/product/${item.id}`); // Navega a la página del producto con su ID
+      navigate(url); // Navega a la página del producto con su ID
   };
 
   const viewCart = (() => {
@@ -77,10 +79,14 @@ const CartActionButton = ({ item, onAddToCart}) => {
 
   return (
     <>
-    <button  className={`btn-cart ${buttonState.class || ''}`} onClick={buttonState.action}>
-      {buttonState.text}
-    </button>
+      <button  className={`btn-cart ${buttonState.class || ''}`} onClick={buttonState.action}>
+        {buttonState.text}
+      </button>
 
+      <EditSizesBtn 
+        text={buttonState.text} 
+        url={url} 
+        />
     
     </>
     
