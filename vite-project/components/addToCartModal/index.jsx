@@ -29,7 +29,7 @@ const Modal = () => {
  
   const sizeIndex = cart.findIndex((item) => (item.product.id === productIdInt))
   console.log('index', sizeIndex)
-  const updatedSizesList = cart[sizeIndex].sizes; 
+  const updatedSizesList = cart[sizeIndex]?.sizes; 
  
 
 
@@ -47,6 +47,10 @@ const Modal = () => {
   console.log(newSizeList)
 
   const submit = (() => {
+    if(totalQuantity === 0){
+      alert('para agregar un item, debes agregar al menos 1 jean')
+      return false
+    }
     updateQuantity(item, newSizeList)
     console.log('cantidad agregada')
     navigate('/jeans')
