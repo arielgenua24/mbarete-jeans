@@ -2,7 +2,7 @@ import { useState } from "react";
 
 
 // eslint-disable-next-line react/prop-types
-function SizeQuantityControl({size, original_quantity, setShowWarning, setNewSizeList}) {
+function SizeQuantityControl({size, original_quantity, setNewSizeList}) {
     const [quantity, setQuantity] = useState(original_quantity);
     
 

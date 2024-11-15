@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
-import {useParams, useNavigate, Navigate} from 'react-router-dom'
+import { useEffect, useState } from "react";
+import {useParams, useNavigate} from 'react-router-dom'
+import combineSizeList from "../../utils/combineSizeLists";
 import WarningMessage from "../WaningMessages/WarningItemQuantity";
 import useCartContext from "../../hooks/useCartContext";
 import JeanSizes from "../JeanSizes";
@@ -17,16 +18,33 @@ const Modal = () => {
   const productIdInt = parseInt(id, 10);
   const service = new Jeans();
 
+  const {
+    updateQuantity,
+    deleteItem,
+    cart
+  } = useCartContext(); 
+
   const item = service?.filterJeans(productIdInt)[0] //ya poseo el jean
-  const sizesList = item.sizes;
-  console.log(item)
+  const originalSizesList = item.sizes;
+ 
+  const sizeIndex = cart.findIndex((item) => (item.product.id === productIdInt))
+  console.log('index', sizeIndex)
+  const updatedSizesList = cart[sizeIndex].sizes; 
+ 
+
+
+  console.log(cart)
+  console.log(updatedSizesList)
 
   const [showWarning, setShowWarning] = useState(false);
   const [newSizeList, setNewSizeList] = useState([]);
 
-  const {
-    updateQuantity, deleteItem } = useCartContext(); 
-
+  let sizesList = combineSizeList(originalSizesList, updatedSizesList)
+    useEffect(() => {
+    setNewSizeList(sizesList)
+  }, [])
+  
+  console.log(newSizeList)
 
   const submit = (() => {
     updateQuantity(item, newSizeList)
@@ -41,7 +59,6 @@ const Modal = () => {
 
   const totalQuantity = newSizeList.reduce((acc, item) => acc + item.quantity, 0);
   console.log('totalQuantity', totalQuantity);
-  
 
   //const totalQuantity = Object.values(newSizeList).reduce((total, qty) => total + qty, 0);
 
@@ -85,7 +102,6 @@ const Modal = () => {
                 original_quantity={item.quantity}  
                 setShowWarning={setShowWarning}
                 setNewSizeList={setNewSizeList}
-                newSizeList={newSizeList}
                 />
           );
         })}
