@@ -67,11 +67,12 @@ function useCart(initialList = [{}]) {
   }
 
   function deleteItem(item) {
-    console.log('delete item', item)
     const foundItem = findItem(item);
     if(foundItem) {
+      console.log('delete item', item)
       const newCart = [...cart];
       newCart.splice(foundItem.index, 1)
+      localStorage.setItem('cart', JSON.stringify(newCart))
       setCart(newCart); 
     }
   }
