@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import './styles.css'
 
 
 // eslint-disable-next-line react/prop-types
-function SizeQuantityControl({size, original_quantity, setNewSizeList}) {
+function SizeQuantityControl({size, original_quantity, setNewSizeList, showButtonsState}) {
     const [quantity, setQuantity] = useState(original_quantity);
-    
+    const [showButtons, setShowButtons] = useState(showButtonsState)
+    const location = useLocation().pathname;
+    console.log(location)
+
 
     const increment = () => {
         setQuantity(quantity + 1); //aca esta el problema a solucionar
@@ -35,16 +40,23 @@ function SizeQuantityControl({size, original_quantity, setNewSizeList}) {
         }
     };
 
+
+
     return(
         <div className="modal-quantity">
             <div className="size-info">
                 <span>TALLE: {size}</span>
             </div>
             <div className="quantity-controls">
-                <button className="modal-btn" onClick={decrement}>-</button>
-                <span>{quantity}</span>
-                <button className="modal-btn" onClick={increment}>+</button>
-            </div>
+              <span> CANTIDAD:  {quantity}</span>
+              {showButtons && (
+                <>
+                  <button className="modal-btn" onClick={decrement}>-</button>
+                  <button className="modal-btn" onClick={increment}>+</button>
+                </>
+               
+            )}
+            </div> 
     </div>)
 }
 

@@ -98,6 +98,7 @@ const Modal = () => {
                 original_quantity={item.quantity}  
                 setShowWarning={setShowWarning}
                 setNewSizeList={setNewSizeList}
+                showButtonsState={true}
                 />
           );
         })}
