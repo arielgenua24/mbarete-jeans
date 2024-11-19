@@ -1,4 +1,4 @@
-import { useState } from 'react';
+//import { useState } from 'react';
 import useCartContext from '../../../hooks/useCartContext';
 import SizeQuantityControl from '../../../components/SizeQuantityControl';
 import EditSizesBtn from '../../../components/EditSizesBtn';
@@ -9,17 +9,22 @@ import './index.css'; // Estilos separados
 
 /* eslint-disable react/prop-types */
 function CartUi({item}) {
-    const [newSizeList, setNewSizeList] = useState([]);
-    const { deleteItem } = useCartContext()
+    //const [newSizeList, setNewSizeList] = useState([]);
+    const { 
+      deleteItem, 
+      newSizeList, 
+      setNewSizeList } = useCartContext()
+
+
     let sizesList = item?.sizes;
     console.log(sizesList)
 
     const url = `/product/${item.product.id}`;
 
 
-    const totalQuantity = newSizeList.reduce((acc, item) => acc + item.quantity, 0);
-    console.log('totalQuantity', totalQuantity);
-
+    //let totalQuantity = newSizeList.reduce((acc, item) => acc + item.quantity, 0);
+    //console.log('totalQuantity', totalQuantity);
+    let totalQuantity = 0;
    
 
     return ( 
@@ -35,6 +40,10 @@ function CartUi({item}) {
           <p>Precio unitario: ${item?.product?.price}</p>
           <div className="cart-items-quantity">
             {sizesList?.map((item, index) => {
+              //aca me quede, tengo que seguir metiendo elementos si es un array, porque sino solo metemos una sola vez
+              
+                totalQuantity += item.quantity 
+              
             return (
                 <SizeQuantityControl 
                   key={index} 
@@ -48,13 +57,15 @@ function CartUi({item}) {
           })}
           </div>
 
-          <p className='item-total_price'> <b>Precio total: ${(item?.product?.price*item?.quantity)}</b></p>
+            <div className="modal-total-price">
+              Precio total - ${((item.product.price)*totalQuantity).toLocaleString('es-AR')}
+            </div>
 
-          <button className='delete-item' onClick={() => deleteItem(item?.product)}>ELIMINAR</button>
-          <EditSizesBtn 
-            url={url} 
-            text={'ver el carrito'}
-            />
+            <button className='delete-item' onClick={() => deleteItem(item?.product)}>ELIMINAR</button>
+            <EditSizesBtn 
+              url={url} 
+              text={'ver el carrito'}
+              />
 
         </div>
       </div>

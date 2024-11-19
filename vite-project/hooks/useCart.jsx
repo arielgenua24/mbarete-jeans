@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 function useCart(initialList = [{}]) {
   const [openModal, setOpenModal] = useState(false)
   const [selectedItem, setSelectedItem] = useState(null);
+  const [newSizeList, setNewSizeList] = useState([]);
 
 
   // Inicializa el estado del carrito intentando recuperar los datos desde `localStorage` 
@@ -77,7 +78,7 @@ function useCart(initialList = [{}]) {
     }
   }
 
-  return { cart, addItem, updateQuantity, findItem, deleteItem, openModal, setOpenModal, selectedItem, setSelectedItem };
+  return { cart, addItem, updateQuantity, findItem, deleteItem, openModal, setOpenModal, selectedItem, setSelectedItem, newSizeList, setNewSizeList };
 }
 
 export default useCart;

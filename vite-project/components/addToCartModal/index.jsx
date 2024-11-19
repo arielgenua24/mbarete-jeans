@@ -21,7 +21,9 @@ const Modal = () => {
   const {
     updateQuantity,
     deleteItem,
-    cart
+    cart,
+    newSizeList, 
+    setNewSizeList
   } = useCartContext(); 
 
   const item = service?.filterJeans(productIdInt)[0] //ya poseo el jean
@@ -31,7 +33,7 @@ const Modal = () => {
   const updatedSizesList = cart[sizeIndex]?.sizes; 
  
   const [showWarning, setShowWarning] = useState(false);
-  const [newSizeList, setNewSizeList] = useState([]);
+  //const [newSizeList, setNewSizeList] = useState([]);
 
   let sizesList = combineSizeList(originalSizesList, updatedSizesList)
     useEffect(() => {
@@ -55,6 +57,7 @@ const Modal = () => {
   })
 
   const totalQuantity = newSizeList.reduce((acc, item) => acc + item.quantity, 0);
+  //let totalQuantity = 0;
 
   //const totalQuantity = Object.values(newSizeList).reduce((total, qty) => total + qty, 0);
 
@@ -91,6 +94,7 @@ const Modal = () => {
         </div>
        
         {sizesList.map((item, index) => {
+           //totalQuantity += item.quantity 
           return (
               <SizeQuantityControl 
                 key={index} 
