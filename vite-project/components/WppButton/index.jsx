@@ -21,9 +21,22 @@ const WhatsAppButton = ({cart}) => {
 
     let message = '\n Hola MBARETE JEANS! \n he visitado su web,\n quiero comprar los siguientes items:\n\n';
     cart.forEach((item, index) => {
-      message += `${index + 1}. ${item?.product.name} - Cantidad: ${item?.quantity} 
-      - Precio: $${item?.product.price} 
-      - Precio Total: ${(item?.product.price * item?.quantity)}\n `;
+      let sizesAndQuantStr = ""
+      console.log(item, index)
+      console.log('Precio Total:', (item.totalPrice)) 
+      const sizesList = item.sizes;
+      sizesList.forEach((item) => {
+        if (item.quantity !== 0) {
+          sizesAndQuantStr += `Talle: ${item.size}, Cantidad: ${item.quantity}\n`;
+       }
+      })
+
+      message += `${index + 1}. ${item?.product.name} 
+      - ${sizesAndQuantStr}
+      - Precio Unitario: $${item?.product.price} 
+      - Precio Total: ${(item.totalPrice)}\n `;
+
+
     });
 
     const total = cart.reduce((acc, item) => acc + item.product.price * item.quantity, 0);

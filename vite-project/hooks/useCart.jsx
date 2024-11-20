@@ -40,7 +40,7 @@ function useCart(initialList = [{}]) {
     }
   }
 
-  function updateQuantity(item, sizesList) {
+  function updateQuantity(item, sizesList, totalQuantity) {
     console.log('ejecutando la funcion updateQuantity')
     //console.log(item, newQuantity) //hasta aca yo se que me llego el item, y la cantidad
 
@@ -52,7 +52,9 @@ function useCart(initialList = [{}]) {
       const newCart = [...cart];
       const updatedItem = {
         ...foundItem.jean,  // Incrementa la cantidad
-        sizes: sizesList
+        sizes: sizesList,
+        totalQuantity,
+        totalPrice: totalQuantity*(foundItem.jean.product.price)
       };
       
       newCart[foundItem.index] = updatedItem; //esto funciona, pero primero se inicializan y luego se hace el console.log

@@ -46,7 +46,7 @@ const Modal = () => {
       alert('para agregar un item, debes agregar al menos 1 jean')
       return false
     }
-    updateQuantity(item, newSizeList)
+    updateQuantity(item, newSizeList, totalQuantity)
     console.log('cantidad agregada')
     navigate('/jeans')
     })

@@ -13,7 +13,8 @@ function CartUi({item}) {
     const { 
       deleteItem, 
       newSizeList, 
-      setNewSizeList } = useCartContext()
+      setNewSizeList, 
+      } = useCartContext()
 
 
     let sizesList = item?.sizes;
