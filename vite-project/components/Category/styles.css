@@ -61,7 +61,6 @@
     flex-direction: column;
 }
 .carousel-slides img {
-    width: 90%;
     max-height: 200px;
     max-width: 150px;
     object-fit: cover;
@@ -96,7 +95,7 @@
         max-height: 350px;
     }
 
-    .carousel-slides img {
+    .div-jean-img {
         min-height: 300px;
         min-width: 200px;
     }

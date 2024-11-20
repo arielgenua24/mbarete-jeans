@@ -1,9 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import CartPortal from "../../portals/CartPortal";
 import useCartContext from "../../hooks/useCart";
 import Jeans from "../../services/jeans.services";
 import CartActionButton from "../CartActionBtn";
-import Modal from "../addToCartModal";
+import JeanImage from "../JeanImage";
 import JeanSizes from "../JeanSizes";
 import './styles.css'
 
@@ -12,12 +12,13 @@ function Category({ filter}){
     const service = new Jeans();
     
     const {
-        openModal,
         setOpenModal,
-        selectedItem,
         setSelectedItem,
-        cart,
     } = useCartContext(); 
+
+    
+
+   
 
 
     const filteredJeans = service?.filterJeans(filter)
@@ -36,7 +37,12 @@ function Category({ filter}){
                         key={jean.id}
                         >
                             
-                            <img src={jean.images.img1} alt={jean.name} loading="lazy"/>
+                            
+                            <JeanImage>
+                                <img className="div-jean-img" src={jean.images.img1} alt={jean.name} loading="lazy" />
+                            </JeanImage>
+                          
+                            
                             <div className="carousel-jean-data">
                                 <span>{jean.name}</span>
                                 <span>${jean.price.toLocaleString('es-AR')}</span>

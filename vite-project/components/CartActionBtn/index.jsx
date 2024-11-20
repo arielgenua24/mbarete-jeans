@@ -68,7 +68,7 @@ const CartActionButton = ({ item, onAddToCart}) => {
                 setButtonState({ text: 'ver el carrito', action: viewCart, class: 'jeanInCart' });
             } else {
                 //console.log('add to cart')
-                setButtonState({ text: 'añadir al carrito', action: addToCart, class: 'btn-add-cart' });
+                setButtonState({ text: 'ver producto', action: addToCart, class: 'btn-add-cart' });
             }
         };
 

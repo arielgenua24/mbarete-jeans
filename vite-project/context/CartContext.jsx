@@ -23,7 +23,7 @@ function CartProvider({children}) {
                 selectedItem, 
                 setSelectedItem,
                 newSizeList, 
-                setNewSizeList
+                setNewSizeList,
                 }}>
                 {children}
          </CartContext.Provider>

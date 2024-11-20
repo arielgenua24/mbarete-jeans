@@ -15,7 +15,7 @@ const WhatsAppButton = ({cart}) => {
 
   const generateMessage = () => {
     if (cart.length === 0) {
-      return 'Tu carrito está vacío.';
+      return (<span>Tu carrito está vacío.</span> );
     }
     console.log(cart)
 

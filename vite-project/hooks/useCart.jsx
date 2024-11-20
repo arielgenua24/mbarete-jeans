@@ -78,7 +78,7 @@ function useCart(initialList = [{}]) {
     }
   }
 
-  return { cart, addItem, updateQuantity, findItem, deleteItem, openModal, setOpenModal, selectedItem, setSelectedItem, newSizeList, setNewSizeList };
+  return { cart, addItem, updateQuantity, findItem, deleteItem, openModal, setOpenModal, selectedItem, setSelectedItem, newSizeList, setNewSizeList};
 }
 
 export default useCart;
