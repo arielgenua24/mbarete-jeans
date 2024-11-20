@@ -11,7 +11,8 @@ const WhatsAppButton = ({cart}) => {
     window.open(whatsappURL, '_blank');
   };
 
-
+  // eslint-disable-next-line no-unused-vars
+  let finalPrice = 0;
 
   const generateMessage = () => {
     if (cart.length === 0) {
@@ -19,7 +20,7 @@ const WhatsAppButton = ({cart}) => {
     }
     console.log(cart)
 
-    let message = '\n Hola MBARETE JEANS! \n he visitado su web,\n quiero comprar los siguientes items:\n\n';
+    let message = config.versionMessage + '\n Hola MBARETE JEANS! \n he visitado su web,\n quiero comprar los siguientes items:\n\n';
     cart.forEach((item, index) => {
       let sizesAndQuantStr = ""
       console.log(item, index)
@@ -27,23 +28,23 @@ const WhatsAppButton = ({cart}) => {
       const sizesList = item.sizes;
       sizesList.forEach((item) => {
         if (item.quantity !== 0) {
-          sizesAndQuantStr += `Talle: ${item.size}, Cantidad: ${item.quantity}\n`;
+          sizesAndQuantStr += `- Talle: ${item.size}, *Cantidad: ${item.quantity}*\n`;
        }
       })
-
-      message += `${index + 1}. ${item?.product.name} 
-      - ${sizesAndQuantStr}
-      - Precio Unitario: $${item?.product.price} 
-      - Precio Total: ${(item.totalPrice)}\n `;
+      finalPrice += item.totalPrice
+      message += `*${index + 1}. ${item?.product.name}* 
+      ${sizesAndQuantStr}
+      - Precio Unitario: *$${item?.product.price}*
+      - Precio Total: *${(item.totalPrice)}*\n `;
 
 
     });
 
-    const total = cart.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
-    message += `\nTotal a pagar: $${total}`;
-
     console.log(message)
-
+    message += `- 
+    
+    *Precio final de la compra: ${finalPrice}*`
+    console.log(message)
     //return message
 
     sendMessage(message)
