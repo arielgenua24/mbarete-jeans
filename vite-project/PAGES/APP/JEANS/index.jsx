@@ -1,10 +1,17 @@
 import CategoryJeanFactory from "../../../services/factories/categoryJeans.factory";
 import JeansNavbar from "../../../components/JeansNavBar";
 import useRefs from '../../../hooks/useRefs';
+import { useEffect } from "react";
 import './index.css'
 
 
 function Jeans() {
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [])
+
+
     const baggyCategory = new CategoryJeanFactory()
     const bermudaCategory = new CategoryJeanFactory()
     const jeanCategory = new CategoryJeanFactory()
