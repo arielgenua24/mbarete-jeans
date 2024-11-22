@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
 .zoom-div-span, .zoom-div-img {
@@ -29,4 +28,17 @@
 .touch-icon {
     width: 25px;
     height: 24px;
+}
+
+.jean-image-absolute {
+  position: absolute; /* Hace que ocupe todo el contenedor */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10; /* Asegura que esté encima de otros elementos */
+  background-color: rgba(0, 0, 0, 0.5); /* Opcional, si quieres un fondo semitransparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

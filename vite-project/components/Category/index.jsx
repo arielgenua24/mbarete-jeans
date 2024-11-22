@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import CartPortal from "../../portals/CartPortal";
 import useCartContext from "../../hooks/useCart";
 import Jeans from "../../services/jeans.services";
 import CartActionButton from "../CartActionBtn";

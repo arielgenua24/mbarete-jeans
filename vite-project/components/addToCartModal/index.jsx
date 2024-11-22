@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import { useEffect } from "react";
 import {useParams, useNavigate} from 'react-router-dom'
+import ZoomModal from "../ZoomModal";
 import combineSizeList from "../../utils/combineSizeLists";
 import useCartContext from "../../hooks/useCartContext";
-import JeanSizes from "../JeanSizes";
 import Jeans from "../../services/jeans.services";
 import SizeQuantityControl from "../SizeQuantityControl";
 
@@ -12,6 +12,9 @@ import "./index.css";
 
 // eslint-disable-next-line react/prop-types
 const Modal = () => {
+
+
+
   const navigate = useNavigate()
   const { id } = useParams()
   const productIdInt = parseInt(id, 10);
@@ -75,14 +78,24 @@ const Modal = () => {
 
         <div className="modal-images">
           <div className="div-modal-images div-modal-left">
-             <img className="modal-image-1" src={item.images.img1} alt={item.name} loading="lazy"/>
+              <ZoomModal>
+                   <img className="modal-image-1" src={item.images.img1} alt={item.name} loading="lazy"/>     
+              </ZoomModal>
           </div>
           <div className="div-modal-images div-modal-right">
             <div className="div-modal-right-up"> 
-              <img className="modal-image-2" src={item.images.img2} alt={item.name} loading="lazy"/>
+            <ZoomModal
+               
+              >
+                   <img className="modal-image-2" src={item.images.img2} alt={item.name} loading="lazy"/>     
+              </ZoomModal>
             </div>
             <div className="div-modal-right-down"> 
-              <img className="modal-image-3" src={item.images.img3} alt={item.name} loading="lazy"/>
+            <ZoomModal
+                
+              >
+                   <img className="modal-image-3" src={item.images.img3} alt={item.name} loading="lazy"/>     
+              </ZoomModal>
             </div>
            
             
