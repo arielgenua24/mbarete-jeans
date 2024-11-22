@@ -11,13 +11,14 @@ const sendMessage = (message) => {
 };
 
 // eslint-disable-next-line react/prop-types
-const WarningMessage = ({ onClose }) => {
+const WarningMessage = ({ onClose, jeansTotalQuantity }) => {
   return (
     <div className="showWarning">
       <div className="showWarning-content">
         <span className="showWarning-text showWarning-text-1">Hola, querido cliente.</span>
         <span className="showWarning-text">
           Queremos recordarte que el límite de compra mínima es de <b>15 unidades</b>.
+          Hasta ahora, haz comprado <b>{jeansTotalQuantity} unidades</b>.
         </span>
         <span className="showWarning-text">
           Si necesitas ayuda, <a onClick={() => sendMessage('')}>háblanos por WhatsApp</a>. Saludos.

@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import {useParams, useNavigate} from 'react-router-dom'
 import combineSizeList from "../../utils/combineSizeLists";
-import WarningMessage from "../WaningMessages/WarningItemQuantity";
 import useCartContext from "../../hooks/useCartContext";
 import JeanSizes from "../JeanSizes";
 import Jeans from "../../services/jeans.services";
@@ -32,9 +31,6 @@ const Modal = () => {
   const sizeIndex = cart.findIndex((item) => (item.product.id === productIdInt))
   const updatedSizesList = cart[sizeIndex]?.sizes; 
  
-  const [showWarning, setShowWarning] = useState(false);
-  //const [newSizeList, setNewSizeList] = useState([]);
-
   let sizesList = combineSizeList(originalSizesList, updatedSizesList)
     useEffect(() => {
     setNewSizeList(sizesList)
@@ -99,9 +95,8 @@ const Modal = () => {
               <SizeQuantityControl 
                 key={index} 
                 size={item.size} 
-                original_quantity={item.quantity}  
-                setShowWarning={setShowWarning}
                 setNewSizeList={setNewSizeList}
+                original_quantity={item.quantity}  
                 showButtonsState={true}
                 />
           );
@@ -116,7 +111,7 @@ const Modal = () => {
           <button className="modal-add" onClick={submit}>Añadir</button>
         </div>
         
-        {showWarning && <WarningMessage onClose={() => setShowWarning(false)} />}
+       
 
       </div>
     </div>

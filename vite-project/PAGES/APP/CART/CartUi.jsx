@@ -61,6 +61,9 @@ function CartUi({item}) {
             <div className="modal-total-price">
               Precio total - ${((item.product.price)*totalQuantity).toLocaleString('es-AR')}
             </div>
+            <div className='div-total-quantity'>
+              <span>Cantida total de <b>{item?.product?.name}</b>: <b>{item.totalQuantity}</b></span>
+            </div>
 
             <button className='delete-item' onClick={() => deleteItem(item?.product)}>ELIMINAR</button>
             <EditSizesBtn 
