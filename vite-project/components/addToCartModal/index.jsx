@@ -61,22 +61,33 @@ const Modal = () => {
     <div className="modal-container">
       <div className="modal-content">
         <div className="modal-jean-data">
-          <h2 className="modal-title">
+          <h2 className="category-title">
+              {item.category}
+            </h2>
+
+          <h1 className="modal-title">
             {item.name}
-          </h2>
-          <h3 className="category-title">
-            {item.category}
-          </h3>
+          </h1>
+          
         </div>
         
-        <span className="modal-container-sizes"> 
-            <JeanSizes item={item}/>
-        </span>
+       
 
         <div className="modal-images">
-          <img className="modal-image-1" src={item.images.img1} alt={item.name} loading="lazy"/>
-          <img className="modal-image-2" src={item.images.img2} alt={item.name} loading="lazy"/>
-          <img className="modal-image-3" src={item.images.img3} alt={item.name} loading="lazy"/>
+          <div className="div-modal-images div-modal-left">
+             <img className="modal-image-1" src={item.images.img1} alt={item.name} loading="lazy"/>
+          </div>
+          <div className="div-modal-images div-modal-right">
+            <div className="div-modal-right-up"> 
+              <img className="modal-image-2" src={item.images.img2} alt={item.name} loading="lazy"/>
+            </div>
+            <div className="div-modal-right-down"> 
+              <img className="modal-image-3" src={item.images.img3} alt={item.name} loading="lazy"/>
+            </div>
+           
+            
+          </div>
+           
         </div>
 
         <div className="modal-price">

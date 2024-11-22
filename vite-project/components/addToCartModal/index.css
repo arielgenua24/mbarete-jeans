@@ -34,7 +34,8 @@
   display: flex;
   flex-direction: column;
   height: 121px;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-container-sizes {
@@ -47,33 +48,78 @@
   font-size: 24px;
   margin-bottom: 20px;
   height: 15px;
+  font-weight: 400;
 }
   
 .modal-images {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   margin-bottom: 20px;
-  width: 99%;
-  height: 150px;
+  width: 356px;
+  height: 500px;
   margin: 23px 0px 0px 0px;
   background-color: #4a90e2;
-  padding: 23px 15px 6px 0px;
+  padding: 23px 15px 23px 15px;
   background-color: #d5e8ff;
   border: 1px solid #007bff;
   border-radius: 7px;
+  gap: 10px
+  ;
+}
+
+.div-modal-images {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    flex: 1;
+    position: relative; /* Necesario para controlar el contenido interno */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga del div */
 }
   
-  .modal-images img {
-    width: 97px;
-    height: 121px;
-    object-fit: cover;
-  }
+.div-modal-left{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.div-modal-left img{
+  width: auto;
+  height: 100%;
+}
+
+.div-modal-right{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.div-modal-right img{
+  width: auto;
+  height: calc(100%/2);
+}
+
+
+.modal-images img {
+  width: 100%;
+  height: 100%;
+}
   
-  .modal-price {
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
+.modal-image-1 {
+  object-fit: cover; /* Hacemos un "zoom out" simulando un ajuste */
+}
+
+.modal-image-2, .modal-image-3 {
+  object-fit: contain;
+}
+
+
+.modal-price {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
   
 .modal-span {
   text-align: center;
@@ -146,9 +192,11 @@
   }
 
 .category-title {
-    /* margin-top: 10px; */
-    height: 80px;
-    margin-top: 6px;
-    color: #979797;
+  /* margin-top: 10px; */
+  height: 70px;
+  margin-top: 12px;
+  margin-bottom: -35px;
+  color: #ACACAC;
+  font-family: 'Crimson Pro', serif;
+  font-weight: 200;
 }
-
