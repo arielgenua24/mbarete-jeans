@@ -11,8 +11,15 @@ function ZoomModal({ children }) {
             {isOpen ? (
             <div className="div-zoom-modal">
                 <div className="modal-overlay">
-                    <div className="modal-content">
-                        <button onClick={()=> setIsOpen(false)}>Cerrar</button>
+                    <div className="zoom-modal-content">
+                        <div className='modal-div-btn'>
+                            <div className='modal-div-close'>
+                                <div  className="modal-button-close button-close" onClick={()=> setIsOpen(false)}>   
+                                <img className="touch-icon" src="../../public/images/logos/icons8-close-24.png" alt="touch-icon"/>
+                                </div>
+                            </div>
+                           
+                        </div>
                         <div className="div-modal-img">
                             {children}
                         </div>
