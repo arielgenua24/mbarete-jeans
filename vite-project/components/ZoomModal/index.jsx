@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 function ZoomModal({ children }) {
     const [isOpen, setIsOpen] = useState(false);
 
-
     return (
         <>
             {isOpen ? (

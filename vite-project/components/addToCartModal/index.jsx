@@ -112,19 +112,22 @@ const Modal = () => {
           <span> Al agregar la cantidad, vera la actualizacion del precio</span>          
         </div>
        
-        {sizesList.map((item, index) => {
-           //totalQuantity += item.quantity 
-          return (
-              <SizeQuantityControl 
-                key={index} 
-                size={item.size} 
-                setNewSizeList={setNewSizeList}
-                original_quantity={item.quantity}  
-                showButtonsState={true}
-                />
-          );
-        })}
-
+       <div className="div-modal-size">
+          {sizesList.map((item, index) => {
+            //totalQuantity += item.quantity 
+            return (
+                <SizeQuantityControl 
+                  area={'Modal'}
+                  index={index}
+                  key={index} 
+                  size={item.size} 
+                  setNewSizeList={setNewSizeList}
+                  original_quantity={item.quantity}  
+                  showButtonsState={true}
+                  />
+            );
+          })}
+        </div>
         <div className="modal-total-price">
           Precio total - ${((item.price)*totalQuantity).toLocaleString('es-AR')}
         </div>

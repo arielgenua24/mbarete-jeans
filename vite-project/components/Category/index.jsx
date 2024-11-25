@@ -2,6 +2,7 @@ import useCartContext from "../../hooks/useCart";
 import Jeans from "../../services/jeans.services";
 import CartActionButton from "../CartActionBtn";
 import JeanImage from "../JeanImage";
+import ZoomModal from '../ZoomModal'
 import JeanSizes from "../JeanSizes";
 import './styles.css'
 

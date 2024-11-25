@@ -15,7 +15,7 @@ function JeanImage({modal, children}) {
         height: isZoomed ? "500px" :"100%",
         objectFit: "cover",
         zIndex: 300,
-        transform: isZoomed ? "scale(2.2) translateY(10px)": "scale(1)",
+        transform: isZoomed ? "scale(3.2) translateY(45px)": "scale(1)",
         transition: "transform 0.2s ease-in-out",
       };
 

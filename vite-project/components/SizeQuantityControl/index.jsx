@@ -4,11 +4,20 @@ import './styles.css'
 
 
 // eslint-disable-next-line react/prop-types
-function SizeQuantityControl({size, original_quantity, setNewSizeList, showButtonsState}) {
+function SizeQuantityControl({area, index, size, original_quantity, setNewSizeList, showButtonsState}) {
     const [quantity, setQuantity] = useState(original_quantity);
     const [showButtons, setShowButtons] = useState(showButtonsState)
     const location = useLocation().pathname;
+
+
+    let containerClass = index === 0 || index % 2 === 0 ? "modal-quantity bckg-gray" : "modal-quantity bckg-white";
     console.log(location)
+
+
+
+    if (quantity === 0 && !area) {
+      containerClass += " border-red";
+    } 
 
 
     const increment = () => {
@@ -43,19 +52,19 @@ function SizeQuantityControl({size, original_quantity, setNewSizeList, showButto
 
 
     return(
-        <div className="modal-quantity">
+        <div className={containerClass}>
             <div className="size-info">
                 <span>TALLE: {size}</span>
             </div>
             <div className="quantity-controls">
-              <span> CANTIDAD:  {quantity}</span>
-              {showButtons && (
+             
+              {showButtons ? (
                 <>
                   <button className="modal-btn" onClick={decrement}>-</button>
+                    <span> CANTIDAD:  {quantity}</span>
                   <button className="modal-btn" onClick={increment}>+</button>
-                </>
-               
-            )}
+                </> 
+            ) : (  <span> CANTIDAD:  {quantity}</span>)}
             </div> 
     </div>)
 }

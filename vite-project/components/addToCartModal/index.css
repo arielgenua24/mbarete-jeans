@@ -136,13 +136,14 @@
   font-weight: 600; 
 }
   
-  .modal-quantity {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
+.modal-quantity {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 45px;
+}
   .modal-btn {
     background-color: #007bff;
     color: white;
@@ -195,4 +196,12 @@
   color: #ACACAC;
   font-family: 'Crimson Pro', serif;
   font-weight: 200;
+}
+
+.div-modal-size {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+
 }

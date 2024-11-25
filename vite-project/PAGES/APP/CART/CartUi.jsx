@@ -46,7 +46,7 @@ function CartUi({item}) {
                 totalQuantity += item.quantity 
               
             return (
-                <SizeQuantityControl 
+                <SizeQuantityControl
                   key={index} 
                   size={item.size} 
                   original_quantity={item.quantity}  
