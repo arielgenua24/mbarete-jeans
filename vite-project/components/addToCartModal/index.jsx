@@ -79,22 +79,21 @@ const Modal = () => {
         <div className="modal-images">
           <div className="div-modal-images div-modal-left">
               <ZoomModal>
-                   <img className="modal-image-1" src={item.images.img1} alt={item.name} loading="lazy"/>     
+                   <img className="zoom-modal-img modal-image-1" src={item.images.img1} alt={item.name} loading="lazy"/>     
               </ZoomModal>
           </div>
           <div className="div-modal-images div-modal-right">
             <div className="div-modal-right-up"> 
             <ZoomModal
-               
               >
-                   <img className="modal-image-2" src={item.images.img2} alt={item.name} loading="lazy"/>     
+                   <img className="zoom-modal-img modal-image-2" src={item.images.img2} alt={item.name} loading="lazy"/>     
               </ZoomModal>
             </div>
             <div className="div-modal-right-down"> 
             <ZoomModal
                 
               >
-                   <img className="modal-image-3" src={item.images.img3} alt={item.name} loading="lazy"/>     
+                   <img className="zoom-modal-img modal-image-3" src={item.images.img3} alt={item.name} loading="lazy"/>     
               </ZoomModal>
             </div>
            

@@ -28,6 +28,7 @@
   stroke: 1px;
   border: 1px solid #0096ff;
   overflow-y: auto;
+  align-items: center;
 }
 
 .modal-jean-data {
@@ -83,7 +84,7 @@
   width: 100%;
 }
 
-.div-modal-left img{
+.modal-image-1{
   width: auto;
   height: 100%;
 }
@@ -95,13 +96,8 @@
   gap: 10px;
 }
 
-.div-modal-right img{
-  width: auto;
-  height: calc(100%/2);
-}
 
-
-.modal-images img {
+.zoom-modal-img {
   width: 100%;
   height: 100%;
 }
