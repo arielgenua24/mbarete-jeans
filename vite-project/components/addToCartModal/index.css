@@ -165,7 +165,7 @@
     padding-bottom: 30px;
   }
   
-  .modal-cancel, .modal-add {
+  .modal-delete, .modal-add {
     width: 48%;
     background-color: #ccc;
     border: none;
@@ -174,7 +174,13 @@
     font-size: 18px;
     cursor: pointer;
   }
-  
+
+  .modal-delete {
+    background-color: #ffffff;
+    border: 2px solid #dc1212;
+    border-radius: 14px;
+    color: red;
+}
   .modal-add {
     background-color: #28a745;
     color: white;
@@ -204,4 +210,25 @@
   width: 100%;
   align-items: center;
 
+}
+
+.div-modal-act-price {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  padding: 27px;
+  margin-top: 17px;
+  bottom: 0px;
+  border: 1px solid #cdcdd0;
+}
+
+.modal-total-price {
+  font-size: large;
+  height: 70px;
+  background-color: #f5f5f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
 }

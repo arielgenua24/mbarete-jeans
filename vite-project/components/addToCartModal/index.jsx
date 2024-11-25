@@ -128,13 +128,17 @@ const Modal = () => {
             );
           })}
         </div>
-        <div className="modal-total-price">
-          Precio total - ${((item.price)*totalQuantity).toLocaleString('es-AR')}
-        </div>
 
-        <div className="modal-actions">
-          <button className="modal-cancel" onClick={onDelete}>Cancelar</button>
-          <button className="modal-add" onClick={submit}>Añadir</button>
+        <div className="div-modal-act-price">
+          <div className="modal-total-price">
+            Precio total - ${((item.price)*totalQuantity).toLocaleString('es-AR')}
+          </div>
+
+          <div className="modal-actions">
+            <button className="modal-delete" onClick={onDelete}>Eliminar todo y salir</button>
+            <button className="modal-add" onClick={submit}>Guardar y salir</button>
+          </div>
+        
         </div>
         
        
