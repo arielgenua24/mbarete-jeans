@@ -136,7 +136,11 @@ const Modal = () => {
 
           <div className="modal-actions">
             <button className="modal-delete" onClick={onDelete}>Eliminar todo y salir</button>
-            <button className="modal-add" onClick={submit}>Guardar y salir</button>
+            <div  className="div-modal-add">
+              <img  className="div-modal-add-image" src="../../public/images/logos/icons8-download-24.png"></img>
+              <button className="modal-add" onClick={submit}>Guardar y salir</button>
+            </div>
+           
           </div>
         
         </div>
