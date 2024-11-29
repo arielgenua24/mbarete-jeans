@@ -36,7 +36,7 @@ const WhatsAppButton = ({cart}) => {
 
     console.log(cart)
 
-    let message = config.versionMessage + '\n Hola MBARETE JEANS! \n he visitado su web,\n quiero comprar los siguientes items:\n\n';
+    let message = '\n Hola MBARETE JEANS! \n he visitado su web,\n quiero comprar los siguientes items:\n\n';
     cart.forEach((item, index) => {
       let sizesAndQuantStr = ""
       const sizesList = item.sizes;
