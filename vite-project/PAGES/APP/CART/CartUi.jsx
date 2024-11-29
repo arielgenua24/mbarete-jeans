@@ -65,11 +65,15 @@ function CartUi({item}) {
               <span>Cantida total de <b>{item?.product?.name}</b>: <b>{item.totalQuantity}</b></span>
             </div>
 
-            <button className='delete-item' onClick={() => deleteItem(item?.product)}>ELIMINAR</button>
-            <EditSizesBtn 
-              url={url} 
-              text={'ver el carrito'}
-              />
+            <div className='div-button-cart-opts'>
+              <button className='delete-item' onClick={() => deleteItem(item?.product)}>ELIMINAR</button>
+              <EditSizesBtn 
+                url={url} 
+                text={'ver el carrito'}
+                />
+
+            </div>
+            
 
         </div>
       </div>

@@ -80,6 +80,20 @@
     background-color: #0056b3;
 }
 
+.carousel-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+.carousel-btns button {
+    width: 100px;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    font-weight: 800;
+}
 
 /* Media Query para pantallas menores a 600px */
 @media (max-width: 600px) {

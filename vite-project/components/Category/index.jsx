@@ -47,14 +47,18 @@ function Category({ filter}){
                                 <span>${jean.price.toLocaleString('es-AR')}</span>
                                 <JeanSizes item={jean}/>
                             </div>
-                            <CartActionButton   
-                                item={jean}
-                                onAddToCart={()=>{
-                                    setSelectedItem(jean)
-                                    //setOpenModal(true)
-                                }}
-                                onOpenModal={()=> setOpenModal(true)}
-                            />
+                            <div className="carousel-btns">
+                                <CartActionButton   
+                                    item={jean}
+                                    onAddToCart={()=>{
+                                        setSelectedItem(jean)
+                                        //setOpenModal(true)
+                                    }}
+                                    onOpenModal={()=> setOpenModal(true)}
+                                />
+
+                            </div>
+                            
 
                     </div>
                 ))} 

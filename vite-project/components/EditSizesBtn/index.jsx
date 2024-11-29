@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-
+import './styles.css'
 
 // eslint-disable-next-line react/prop-types
 function EditSizesBtn({text, url}) {
