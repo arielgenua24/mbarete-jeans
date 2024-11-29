@@ -3,6 +3,87 @@ import { Category } from "./jeans.categories";
 
 
 export const jeansData = [
+
+
+  {
+    id: 61,
+    name: "Pant Baggy Adids Gris",
+    category: Category.baggy,
+    specialTag: State.nuevo,
+    images: {
+      img1: "/public/images/Pant Baggy Adids Gris.jpg",
+      img2: "/public/images/Pant Baggy Adids Gris-1.jpg",
+      img3: "/public/images/PANT Baggy Adids Gris-2.jpg",
+    },
+    price: 23000,
+    state: '',
+    sizes: [
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 46, quantity: 0 },
+    ]
+  },
+  {
+    id: 61,
+    name: "Pant Baggy Cargo desmontable",
+    category: Category.baggy,
+    specialTag: State.nuevo,
+    images: {
+      img1: "/public/images/Pant Baggy Cargo desmontable.jpg",
+      img2: "/public/images/Pant Baggy Cargo desmontable-1.jpg",
+      img3: "/public/images/Pant Baggy Cargo desmontable-2.jpg",
+    },
+    price: 31000,
+    state: '',
+    sizes: [
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 46, quantity: 0 },
+    ]
+  },
+  {
+    id: 61,
+    name: "Pantalon Baggy Oxido",
+    category: Category.baggy,
+    specialTag: State.nuevo,
+    images: {
+      img1: "/public/images/Pantalón Baggy Oxido.jpg",
+      img2: "/public/images/Pantalón Baggy Oxido-2.jpg",
+      img3: "/public/images/Pantalón Baggy Oxido-3.jpg.jpg",
+    },
+    price: 31000,
+    state: '',
+    sizes: [
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 46, quantity: 0 },
+    ]
+  },
+  {
+    id: 62,
+    name: "Pantalon Baggy Militar",
+    category: Category.parachutte,
+    specialTag: 'Tela gabardina premiun gruesa antidesgarro🔥',
+    images: {
+      img1: "/public/images/Parachuutte Baggy militar.jpg",
+      img2: "/public/images/Parachuutte Baggy militar-2.jpg",
+      img3: "/public/images/Parachuutte Baggy-3.jpg",
+    },
+    price: 22000,
+    state: '',
+    sizes: [
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+    ]
+  },
   {
     id: 43,
     name: "pantalon baggy oxido",
@@ -14,16 +95,12 @@ export const jeansData = [
       img3: "/images/pantalon_baggy_oxido_3.JPG",
     },
     price: 19000,
-    state: '',
+    state: State.SoldOut,
     sizes: [
       { size: 38, quantity: 0 },
-      { size: 39, quantity: 0 },
       { size: 40, quantity: 0 },
-      { size: 41, quantity: 0 },
       { size: 42, quantity: 0 },
-      { size: 43, quantity: 0 },
       { size: 44, quantity: 0 },
-      { size: 45, quantity: 0 },
       { size: 46, quantity: 0 }
     ]
   },
@@ -104,22 +181,18 @@ export const jeansData = [
     category: Category.baggy,
     images: {
       img1: "",
-      img2: "url2.jpg",
-      img3: "url3.jpg",
+      img2: "/public/images/Pantalón Baggy Gris.jpg",
+      img3: "/public/images/Pantalón Baggy Gris-2.jpg",
     },
-    price: 19000,
-    state: State.SoldOut,
+    price: 20000,
+    state: "",
     sizes: [
-  { size: 38, quantity: 0 },
-  { size: 39, quantity: 0 },
-  { size: 40, quantity: 0 },
-  { size: 41, quantity: 0 },
-  { size: 42, quantity: 0 },
-  { size: 43, quantity: 0 },
-  { size: 44, quantity: 0 },
-  { size: 45, quantity: 0 },
-  { size: 46, quantity: 0 }
-]
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 46, quantity: 0 },
+    ]
   },
   {
     id: 3,
@@ -131,7 +204,7 @@ export const jeansData = [
       img3: "url3.jpg",
     },
     price: 12000,
-    state: State.nuevo,
+    state: State.SoldOut,
     sizes: [
   { size: 38, quantity: 0 },
   { size: 40, quantity: 0 },
@@ -148,7 +221,7 @@ export const jeansData = [
       img3: "../images/luma3.JPG",
     },
     price: 22500,
-    state: '',
+    state: State.SoldOut,
     sizes: [38, 40, 42, 46]
   },
   {
@@ -163,10 +236,9 @@ export const jeansData = [
     price: 21000,
     state: '',
     sizes: [
-  { size: 38, quantity: 0 },
   { size: 40, quantity: 0 },
   { size: 42, quantity: 0 },
-{ size: 44, quantity: 0 }
+  { size: 44, quantity: 0 }
 ]
   },
   {
@@ -182,16 +254,7 @@ export const jeansData = [
     price: 11000,
     state: State.ReIngreso,
     sizes: [
-  { size: 38, quantity: 0 },
-  { size: 39, quantity: 0 },
   { size: 40, quantity: 0 },
-  { size: 41, quantity: 0 },
-  { size: 42, quantity: 0 },
-  { size: 43, quantity: 0 },
-  { size: 44, quantity: 0 },
-  { size: 45, quantity: 0 },
-  { size: 46, quantity: 0 },
-  { size: 48, quantity: 0 }
 ]
   },
   {
@@ -205,7 +268,7 @@ export const jeansData = [
       img3: "/images/louis_super_baggy_3.JPG",
     },
     price: 19500,
-    state: '',
+    state: State.SoldOut,
     sizes: [{ size: 38, quantity: 0 },
       { size: 42, quantity: 0 },
     { size: 44, quantity: 0 }]
@@ -221,7 +284,7 @@ export const jeansData = [
       img3: "/images/BermudaBaggy_3.png",
     },
     price: 8000,
-    state: State.nuevo,
+    state: State.SoldOut,
     sizes: [{ size: 38, quantity: 0 },
       { size: 40, quantity: 0 },
     { size: 46, quantity: 0 },
@@ -242,14 +305,8 @@ export const jeansData = [
     state: '',
     sizes: [
   { size: 38, quantity: 0 },
-  { size: 39, quantity: 0 },
-  { size: 40, quantity: 0 },
-  { size: 41, quantity: 0 },
   { size: 42, quantity: 0 },
-  { size: 43, quantity: 0 },
   { size: 44, quantity: 0 },
-  { size: 45, quantity: 0 },
-  { size: 46, quantity: 0 }
 ]
   },
   {
@@ -268,7 +325,6 @@ export const jeansData = [
   { size: 38, quantity: 0 },
   { size: 40, quantity: 0 },
   { size: 42, quantity: 0 },
-{ size: 44, quantity: 0 }
 ]
   },
   {
@@ -281,23 +337,15 @@ export const jeansData = [
       img2: "url2.jpg",
       img3: "url3.jpg",
     },
-    price: 8000,
-    state: State.nuevo,
-    sizes: [40, 44, 46]
-  },
-  {
-    id: 16,
-    name: "bermuda Mom celeste roto laser",
-    category: Category.bermuda,
-    specialTag: 'celeste roto laser',
-    images: {
-      img1: "/images/bermuda_roto_celeste.png",
-      img2: "url2.jpg",
-      img3: "url3.jpg",
-    },
-    price: 8000,
-    state: State.nuevo,
-    sizes: [44, 46, 48]  
+    price: 12000,
+    state: "",
+    sizes: [
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 46, quantity: 0 },
+    ]
   },
   {
     id: 17,
@@ -331,15 +379,8 @@ export const jeansData = [
     price: 11000,
     state: '',
     sizes: [
-  { size: 38, quantity: 0 },
-  { size: 39, quantity: 0 },
   { size: 40, quantity: 0 },
-  { size: 41, quantity: 0 },
   { size: 42, quantity: 0 },
-  { size: 43, quantity: 0 },
-  { size: 44, quantity: 0 },
-  { size: 45, quantity: 0 },
-  { size: 46, quantity: 0 },
   { size: 48, quantity: 0 }
 ]   
   },
@@ -354,7 +395,7 @@ export const jeansData = [
       img3: "url3.jpg",
     },
     price: 8000,
-    state: '',
+    state: State.SoldOut,
     sizes: [38, 46]   
   },
   {
@@ -371,14 +412,8 @@ export const jeansData = [
     state: '',
     sizes: [
   { size: 38, quantity: 0 },
-  { size: 39, quantity: 0 },
-  { size: 40, quantity: 0 },
-  { size: 41, quantity: 0 },
   { size: 42, quantity: 0 },
-  { size: 43, quantity: 0 },
   { size: 44, quantity: 0 },
-  { size: 45, quantity: 0 },
-  { size: 46, quantity: 0 }
 ]   
   },
   {
@@ -412,16 +447,12 @@ export const jeansData = [
     price: 18000,
     state: '',
     sizes: [
-  { size: 38, quantity: 0 },
-  { size: 39, quantity: 0 },
-  { size: 40, quantity: 0 },
-  { size: 41, quantity: 0 },
-  { size: 42, quantity: 0 },
-  { size: 43, quantity: 0 },
-  { size: 44, quantity: 0 },
-  { size: 45, quantity: 0 },
-  { size: 46, quantity: 0 }
-]   
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 46, quantity: 0 },
+    ]
   },
   {
     id: 23,
@@ -454,16 +485,12 @@ export const jeansData = [
     price: 18000,
     state: '',
     sizes: [
-  { size: 38, quantity: 0 },
-  { size: 39, quantity: 0 },
-  { size: 40, quantity: 0 },
-  { size: 41, quantity: 0 },
-  { size: 42, quantity: 0 },
-  { size: 43, quantity: 0 },
-  { size: 44, quantity: 0 },
-  { size: 45, quantity: 0 },
-  { size: 46, quantity: 0 }
-]
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 46, quantity: 0 },
+    ]
   },
   {
     id: 25,
@@ -515,13 +542,9 @@ export const jeansData = [
     state: '',
     sizes: [
   { size: 38, quantity: 0 },
-  { size: 39, quantity: 0 },
   { size: 40, quantity: 0 },
-  { size: 41, quantity: 0 },
   { size: 42, quantity: 0 },
-  { size: 43, quantity: 0 },
   { size: 44, quantity: 0 },
-  { size: 45, quantity: 0 },
   { size: 46, quantity: 0 }
 ]
   },
@@ -540,8 +563,6 @@ export const jeansData = [
     sizes: [
   { size: 38, quantity: 0 },
   { size: 40, quantity: 0 },
-  { size: 42, quantity: 0 },
-{ size: 44, quantity: 0 }
 ]
   },
   {
@@ -574,16 +595,12 @@ export const jeansData = [
     price: 16500,
     state: '',
     sizes: [
-  { size: 38, quantity: 0 },
-  { size: 39, quantity: 0 },
-  { size: 40, quantity: 0 },
-  { size: 41, quantity: 0 },
-  { size: 42, quantity: 0 },
-  { size: 43, quantity: 0 },
-  { size: 44, quantity: 0 },
-  { size: 45, quantity: 0 },
-  { size: 46, quantity: 0 }
-]
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 46, quantity: 0 },
+    ]
   },
   {
     id: 31,
@@ -598,16 +615,12 @@ export const jeansData = [
     price: 11000,
     state: '',
     sizes: [
-  { size: 38, quantity: 0 },
-  { size: 39, quantity: 0 },
-  { size: 40, quantity: 0 },
-  { size: 41, quantity: 0 },
-  { size: 42, quantity: 0 },
-  { size: 43, quantity: 0 },
-  { size: 44, quantity: 0 },
-  { size: 45, quantity: 0 },
-  { size: 46, quantity: 0 }
-]
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 46, quantity: 0 },
+    ]
   },
   {
     id: 32,
@@ -623,8 +636,8 @@ export const jeansData = [
     state: State.pocoStock,
     sizes: [
   { size: 38, quantity: 0 },
-  { size: 40, quantity: 0 },
-  { size: 42, quantity: 0 }
+  { size: 42, quantity: 0 },
+  { size: 44, quantity: 0 }
 ]
   },
   {
@@ -640,16 +653,12 @@ export const jeansData = [
     price: 8000,
     state: State.pocoStock,
     sizes: [
-  { size: 38, quantity: 0 },
-  { size: 39, quantity: 0 },
-  { size: 40, quantity: 0 },
-  { size: 41, quantity: 0 },
-  { size: 42, quantity: 0 },
-  { size: 43, quantity: 0 },
-  { size: 44, quantity: 0 },
-  { size: 45, quantity: 0 },
-  { size: 46, quantity: 0 }
-]
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 46, quantity: 0 },
+    ]
   },
   {
     id: 50,
@@ -661,11 +670,10 @@ export const jeansData = [
       img2: "/images/bermudaBaggyOxido_2.png",
       img3: "url3.jpg",
     },
-    price: 8000,
+    price: 18000,
     state: State.pocoStock,
     sizes: [
       { size: 40, quantity: 0 },
-      { size: 42, quantity: 0 },
     ]
   },
   {
@@ -752,8 +760,8 @@ export const jeansData = [
     category: Category.baggy,
     specialTag: '',
     images: {
-      img1: "/images/ups_azul_baggy_1.JPG",
-      img2: "/images/ups_azul_baggy_2.JPG",
+      img1: "/public/images/Ups Azul(baggy recortes).jpg",
+      img2: "/images/Ups Azul(baggy recortes)-2.jpg",
       img3: "/images/ups_azul_baggy_3.JPG",
     },
     price: 19500,
@@ -761,7 +769,8 @@ export const jeansData = [
     sizes: [
   { size: 38, quantity: 0 },
   { size: 40, quantity: 0 },
-  { size: 42, quantity: 0 }
+  { size: 42, quantity: 0 },
+  { size: 44, quantity: 0 }
 ]
   },
   {
@@ -775,16 +784,12 @@ export const jeansData = [
       img3: "/images/oxido_1.JPG",
     },
     price: 17500,
-    state: State.nuevo,
+    state: State.pocoStock,
     sizes: [
   { size: 38, quantity: 0 },
-  { size: 39, quantity: 0 },
   { size: 40, quantity: 0 },
-  { size: 41, quantity: 0 },
   { size: 42, quantity: 0 },
-  { size: 43, quantity: 0 },
   { size: 44, quantity: 0 },
-  { size: 45, quantity: 0 },
   { size: 46, quantity: 0 }
 ]
   },
@@ -794,9 +799,9 @@ export const jeansData = [
     category: Category.baggy,
     specialTag: '',
     images: {
-      img1: "/images/ups_azul_baggy_1.JPG",
-      img2: "/images/ups_azul_baggy_2.JPG",
-      img3: "/images/ups_azul_baggy_3.JPG",
+      img1: "/images/Ups Gris.jpg",
+      img2: "/images/Ups Gris-2.jpg",
+      img3: "",
     },
     price: 22000,
     state: '',
@@ -819,16 +824,12 @@ export const jeansData = [
     price: 17000,
     state: '',
     sizes: [
-  { size: 38, quantity: 0 },
-  { size: 39, quantity: 0 },
-  { size: 40, quantity: 0 },
-  { size: 41, quantity: 0 },
-  { size: 42, quantity: 0 },
-  { size: 43, quantity: 0 },
-  { size: 44, quantity: 0 },
-  { size: 45, quantity: 0 },
-  { size: 46, quantity: 0 }
-]
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 46, quantity: 0 },
+    ]
   },
   {
     id: 42,
@@ -843,16 +844,12 @@ export const jeansData = [
     price: 12000,
     state: '',
     sizes: [
-  { size: 38, quantity: 0 },
-  { size: 39, quantity: 0 },
-  { size: 40, quantity: 0 },
-  { size: 41, quantity: 0 },
-  { size: 42, quantity: 0 },
-  { size: 43, quantity: 0 },
-  { size: 44, quantity: 0 },
-  { size: 45, quantity: 0 },
-  { size: 46, quantity: 0 }
-]
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 46, quantity: 0 },
+    ]
   },
   {
     id: 44,
@@ -902,8 +899,7 @@ export const jeansData = [
       { size: 42, quantity: 0 },
     ]
   },
-  ---- Aqui me quedo
-  {
+   {
     id: 47,
     name: "Bermuda Art Poker Azul(bordado real)",
     category: Category.bermuda,
@@ -914,16 +910,12 @@ export const jeansData = [
       img3: "/public/images/Art Poker Azul(bordado real)-3.jpg",
     },
     price: 22000,
-    state: '',
+    state: State.nuevo,
     sizes: [
       { size: 38, quantity: 0 },
-      { size: 39, quantity: 0 },
       { size: 40, quantity: 0 },
-      { size: 41, quantity: 0 },
       { size: 42, quantity: 0 },
-      { size: 43, quantity: 0 },
       { size: 44, quantity: 0 },
-      { size: 45, quantity: 0 },
       { size: 46, quantity: 0 },
     ]
   },
@@ -938,16 +930,12 @@ export const jeansData = [
       img3: "/public/images/Art Skull-3.jpg",
     },
     price: 22000,
-    state: '',
+    state: State.nuevo,
     sizes: [
       { size: 38, quantity: 0 },
-      { size: 39, quantity: 0 },
       { size: 40, quantity: 0 },
-      { size: 41, quantity: 0 },
       { size: 42, quantity: 0 },
-      { size: 43, quantity: 0 },
       { size: 44, quantity: 0 },
-      { size: 45, quantity: 0 },
       { size: 46, quantity: 0 },
     ]
   },
@@ -965,13 +953,9 @@ export const jeansData = [
     state: '',
     sizes: [
       { size: 38, quantity: 0 },
-      { size: 39, quantity: 0 },
       { size: 40, quantity: 0 },
-      { size: 41, quantity: 0 },
       { size: 42, quantity: 0 },
-      { size: 43, quantity: 0 },
       { size: 44, quantity: 0 },
-      { size: 45, quantity: 0 },
       { size: 46, quantity: 0 },
     ]
   },
@@ -986,16 +970,12 @@ export const jeansData = [
       img3: "/public/images/Baggy Desmontable Gris-3.jpg.jpg",
     },
     price: 31000,
-    state: '',
+    state: State.nuevo,
     sizes: [
       { size: 38, quantity: 0 },
-      { size: 39, quantity: 0 },
       { size: 40, quantity: 0 },
-      { size: 41, quantity: 0 },
       { size: 42, quantity: 0 },
-      { size: 43, quantity: 0 },
       { size: 44, quantity: 0 },
-      { size: 45, quantity: 0 },
       { size: 46, quantity: 0 },
     ]
   },
@@ -1010,16 +990,12 @@ export const jeansData = [
       img3: "/public/images/Berm Baggy C Tiras Celeste-3.jpg",
     },
     price: 22000,
-    state: '',
+    state: State.nuevo,
     sizes: [
       { size: 38, quantity: 0 },
-      { size: 39, quantity: 0 },
       { size: 40, quantity: 0 },
-      { size: 41, quantity: 0 },
       { size: 42, quantity: 0 },
-      { size: 43, quantity: 0 },
       { size: 44, quantity: 0 },
-      { size: 45, quantity: 0 },
       { size: 46, quantity: 0 },
     ]
   },
@@ -1034,16 +1010,12 @@ export const jeansData = [
       img3: "",
     },
     price: 19500,
-    state: '',
+    state: State.nuevo,
     sizes: [
       { size: 38, quantity: 0 },
-      { size: 39, quantity: 0 },
       { size: 40, quantity: 0 },
-      { size: 41, quantity: 0 },
       { size: 42, quantity: 0 },
-      { size: 43, quantity: 0 },
       { size: 44, quantity: 0 },
-      { size: 45, quantity: 0 },
       { size: 46, quantity: 0 },
     ]
   },
@@ -1079,13 +1051,9 @@ export const jeansData = [
     state: '',
     sizes: [
       { size: 38, quantity: 0 },
-      { size: 39, quantity: 0 },
       { size: 40, quantity: 0 },
-      { size: 41, quantity: 0 },
       { size: 42, quantity: 0 },
-      { size: 43, quantity: 0 },
       { size: 44, quantity: 0 },
-      { size: 45, quantity: 0 },
       { size: 46, quantity: 0 },
     ]
   },
@@ -1100,16 +1068,12 @@ export const jeansData = [
       img3: "/public/images/Bermuda Mom Azul-3.jpg",
     },
     price: 12000,
-    state: '',
+    state: State.nuevo,
     sizes: [
       { size: 38, quantity: 0 },
-      { size: 39, quantity: 0 },
       { size: 40, quantity: 0 },
-      { size: 41, quantity: 0 },
       { size: 42, quantity: 0 },
-      { size: 43, quantity: 0 },
       { size: 44, quantity: 0 },
-      { size: 45, quantity: 0 },
       { size: 46, quantity: 0 },
     ]
   },
@@ -1127,13 +1091,9 @@ export const jeansData = [
     state: '',
     sizes: [
       { size: 38, quantity: 0 },
-      { size: 39, quantity: 0 },
       { size: 40, quantity: 0 },
-      { size: 41, quantity: 0 },
       { size: 42, quantity: 0 },
-      { size: 43, quantity: 0 },
       { size: 44, quantity: 0 },
-      { size: 45, quantity: 0 },
       { size: 46, quantity: 0 },
     ]
   },
@@ -1141,7 +1101,7 @@ export const jeansData = [
     id: 57,
     name: "Louis gris pant",
     category: Category.jean,
-    specialTag: '',
+    specialTag: State.nuevo,
     images: {
       img1: "/public/images/Louis gris Pant.jpg",
       img2: "/public/images/Louis gris Pant-2.jpg",
@@ -1151,13 +1111,9 @@ export const jeansData = [
     state: '',
     sizes: [
       { size: 38, quantity: 0 },
-      { size: 39, quantity: 0 },
       { size: 40, quantity: 0 },
-      { size: 41, quantity: 0 },
       { size: 42, quantity: 0 },
-      { size: 43, quantity: 0 },
       { size: 44, quantity: 0 },
-      { size: 45, quantity: 0 },
       { size: 46, quantity: 0 },
     ]
   },
@@ -1165,7 +1121,7 @@ export const jeansData = [
     id: 58,
     name: "Louis Negro(super baggy)",
     category: Category.baggy,
-    specialTag: '',
+    specialTag: State.nuevo,
     images: {
       img1: "/public/images/Louis Negro(super baggy).jpg",
       img2: "/public/images/Louis Negro(super baggy)-2.jpg",
@@ -1182,7 +1138,7 @@ export const jeansData = [
     id: 58,
     name: "Luma celeste",
     category: Category.baggy,
-    specialTag: '',
+    specialTag: State.nuevo,
     images: {
       img1: "/public/images/Luma Celeste.jpg",
       img2: "/public/images/Luma Celeste-2.jpg",
@@ -1199,7 +1155,7 @@ export const jeansData = [
     id: 59,
     name: "NEGRO OXIDO Bermuda Baggy",
     category: Category.bermuda,
-    specialTag: '',
+    specialTag: State.nuevo,
     images: {
       img1: "/public/images/NEGRO OXIDO Bermuda Baggy.jpg",
       img2: "/public/images/NEGRO OXIDO Bermuda Baggy-2.jpg",
@@ -1209,13 +1165,9 @@ export const jeansData = [
     state: '',
     sizes: [
       { size: 38, quantity: 0 },
-      { size: 39, quantity: 0 },
       { size: 40, quantity: 0 },
-      { size: 41, quantity: 0 },
       { size: 42, quantity: 0 },
-      { size: 43, quantity: 0 },
       { size: 44, quantity: 0 },
-      { size: 45, quantity: 0 },
       { size: 46, quantity: 0 },
     ]
   },
@@ -1223,7 +1175,7 @@ export const jeansData = [
     id: 60,
     name: "PANT Baggy Adids celeste",
     category: Category.baggy,
-    specialTag: '',
+    specialTag: State.nuevo,
     images: {
       img1: "/public/images/PANT Baggy Adids celeste.jpg",
       img2: "/public/images/PANT Baggy Adids celeste-2.jpg",
@@ -1233,112 +1185,17 @@ export const jeansData = [
     state: '',
     sizes: [
       { size: 38, quantity: 0 },
-      { size: 39, quantity: 0 },
       { size: 40, quantity: 0 },
-      { size: 41, quantity: 0 },
       { size: 42, quantity: 0 },
-      { size: 43, quantity: 0 },
       { size: 44, quantity: 0 },
-      { size: 45, quantity: 0 },
       { size: 46, quantity: 0 },
-    ]
-  },
-  {
-    id: 61,
-    name: "Pant Baggy Adids Gris",
-    category: Category.baggy,
-    specialTag: '',
-    images: {
-      img1: "/public/images/Pant Baggy Adids Gris.jpg",
-      img2: "/public/images/Pant Baggy Adids Gris-1.jpg",
-      img3: "/public/images/PANT Baggy Adids Gris-2.jpg",
-    },
-    price: 23000,
-    state: '',
-    sizes: [
-      { size: 38, quantity: 0 },
-      { size: 39, quantity: 0 },
-      { size: 40, quantity: 0 },
-      { size: 41, quantity: 0 },
-      { size: 42, quantity: 0 },
-      { size: 43, quantity: 0 },
-      { size: 44, quantity: 0 },
-      { size: 45, quantity: 0 },
-      { size: 46, quantity: 0 },
-    ]
-  },
-  {
-    id: 61,
-    name: "Pant Baggy Cargo desmontable",
-    category: Category.baggy,
-    specialTag: '',
-    images: {
-      img1: "/public/images/Pant Baggy Cargo desmontable.jpg",
-      img2: "/public/images/Pant Baggy Cargo desmontable-1.jpg",
-      img3: "/public/images/Pant Baggy Cargo desmontable-2.jpg",
-    },
-    price: 31000,
-    state: '',
-    sizes: [
-      { size: 38, quantity: 0 },
-      { size: 39, quantity: 0 },
-      { size: 40, quantity: 0 },
-      { size: 41, quantity: 0 },
-      { size: 42, quantity: 0 },
-      { size: 43, quantity: 0 },
-      { size: 44, quantity: 0 },
-      { size: 45, quantity: 0 },
-      { size: 46, quantity: 0 },
-    ]
-  },
-  {
-    id: 61,
-    name: "Pantalon Baggy Oxido",
-    category: Category.baggy,
-    specialTag: '',
-    images: {
-      img1: "/public/images/Pantalón Baggy Oxido.jpg",
-      img2: "/public/images/Pantalón Baggy Oxido-2.jpg",
-      img3: "/public/images/Pantalón Baggy Oxido-3.jpg.jpg",
-    },
-    price: 31000,
-    state: '',
-    sizes: [
-      { size: 38, quantity: 0 },
-      { size: 39, quantity: 0 },
-      { size: 40, quantity: 0 },
-      { size: 41, quantity: 0 },
-      { size: 42, quantity: 0 },
-      { size: 43, quantity: 0 },
-      { size: 44, quantity: 0 },
-      { size: 45, quantity: 0 },
-      { size: 46, quantity: 0 },
-    ]
-  },
-  {
-    id: 62,
-    name: "Pantalon Baggy Militar",
-    category: Category.parachutte,
-    specialTag: 'Tela gabardina premiun gruesa antidesgarro🔥',
-    images: {
-      img1: "/public/images/Parachuutte Baggy militar.jpg",
-      img2: "/public/images/Parachuutte Baggy militar-2.jpg",
-      img3: "/public/images/Parachuutte Baggy-3.jpg",
-    },
-    price: 22000,
-    state: '',
-    sizes: [
-      { size: 38, quantity: 0 },
-      { size: 40, quantity: 0 },
-      { size: 42, quantity: 0 },
-      { size: 44, quantity: 0 },
     ]
   },
   {
     id: 63,
     name: "Bermuda Poker Azul Oxido",
     category: Category.bermuda,
-    specialTag: '',
+    specialTag: State.nuevo,
     images: {
       img1: "/public/images/Parachuutte Baggy militar.jpg",
       img2: "/public/images/Parachuutte Baggy militar-2.jpg",
@@ -1348,13 +1205,9 @@ export const jeansData = [
     state: '',
     sizes: [
       { size: 38, quantity: 0 },
-      { size: 39, quantity: 0 },
       { size: 40, quantity: 0 },
-      { size: 41, quantity: 0 },
       { size: 42, quantity: 0 },
-      { size: 43, quantity: 0 },
       { size: 44, quantity: 0 },
-      { size: 45, quantity: 0 },
       { size: 46, quantity: 0 },
     ]
   },
@@ -1362,23 +1215,19 @@ export const jeansData = [
     id: 64,
     name: "TRUENO Cargo negro(berm baggy)",
     category: Category.bermuda,
-    specialTag: '',
+    specialTag: "",
     images: {
       img1: "",
       img2: "/public/images/Rayado Baggy-2.jpg",
       img3: "",
     },
     price: 22000,
-    state: '',
+    state: State.SoldOut,
     sizes: [
       { size: 38, quantity: 0 },
-      { size: 39, quantity: 0 },
       { size: 40, quantity: 0 },
-      { size: 41, quantity: 0 },
       { size: 42, quantity: 0 },
-      { size: 43, quantity: 0 },
       { size: 44, quantity: 0 },
-      { size: 45, quantity: 0 },
       { size: 46, quantity: 0 },
     ]
   },
@@ -1393,16 +1242,12 @@ export const jeansData = [
       img3: "/public/images/ups_gris_3.JPG",
     },
     price: 24000,
-    state: '',
+    state: State.nuevo,
     sizes: [
       { size: 38, quantity: 0 },
-      { size: 39, quantity: 0 },
       { size: 40, quantity: 0 },
-      { size: 41, quantity: 0 },
       { size: 42, quantity: 0 },
-      { size: 43, quantity: 0 },
       { size: 44, quantity: 0 },
-      { size: 45, quantity: 0 },
       { size: 46, quantity: 0 },
     ]
   },
