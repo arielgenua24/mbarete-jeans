@@ -7,7 +7,6 @@ import './index.css'
 const WhatsAppButton = ({cart}) => {
   const [showWarning, setShowWarning] = useState(false);
   const [jeansTotalQuantity, setJeansTotalQuantity] = useState(0)
-  const [RfinalPrice, setFinalPrice] = useState(0);
 
 
   useEffect(() => {
@@ -67,7 +66,6 @@ const WhatsAppButton = ({cart}) => {
     message += `- 
     
     *Precio final de la compra: ${finalPrice}*`
-    setFinalPrice(finalPrice)
     setJeansTotalQuantity(totalQuantity)
     console.log(message)
     //return message
@@ -86,19 +84,22 @@ const WhatsAppButton = ({cart}) => {
   };
 
   return (
+    <>
     <div className="buy-item-container">
       <br />
       <button  className="buy-item" onClick={generateMessage}>
         Finalizar compra por WhatsApp
       </button>
-      {showWarning && (
+    </div>
+    {showWarning && (
         <WarningMessage 
           onClose={() => {
             setShowWarning(false)
           }} 
           jeansTotalQuantity={jeansTotalQuantity}  
           />)}
-    </div>
+    </>
+    
   );
 };
 
