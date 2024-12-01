@@ -19,17 +19,29 @@ function JeanImage({modal, children}) {
         transition: "transform 0.2s ease-in-out",
       };
 
+    const zoomOptsStyle = {
+        zIndex: "300",
+        position: isZoomed? "absolute" : null,
+        top: isZoomed ? "170px" : null,
+        height: "20px",
+        width: "91px",
+        transform: isZoomed ? "scale(0.45)": "scale(1)",
+    }
+
     return ( 
         <div className="container-default-styles" style={containerStyle} onClick={toggleZoom} >
           <div className={`jean-image-container ${modal ? "jean-image-absolute" : ""}`}>
             {children}
           </div> 
            
-           {!isZoomed && 
+           {!isZoomed ? 
            ( <div className="zoom-div">
                 <img className="touch-icon" src="../../images/logos/icons8-touch-24.png" alt="touch-icon"/>
                 <span className="zoom-div-span">AMPLIAR</span>
-             </div>)}
+             </div>): (( <div  style={zoomOptsStyle} className="zoom-div">
+                <img className="touch-icon" src="../../images/logos/icons8-touch-24.png" alt="touch-icon"/>
+                <span   className="zoom-div-span">ACHICAR</span>
+             </div>))}
         </div>
     )
 }
