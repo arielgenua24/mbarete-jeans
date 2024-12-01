@@ -7,7 +7,7 @@ const WelcomeModal = ({ onClose }) => {
         {/* Imagen ilustrativa */}
         <div style={styles.imageContainer}>
           <img
-            src="../../public/images/home-photos/WelcomeImage.jpg" // Cambia por una URL real
+            src="../../images/home-photos/WelcomeImage.jpg" // Cambia por una URL real
             alt="Bienvenido"
             style={styles.image}
           />

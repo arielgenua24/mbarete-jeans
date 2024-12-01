@@ -30,7 +30,7 @@ function Navbar() {
         <div className='navbar-container navbar-hidden'> 
              <nav className='navbar'>
             <ul className=''>
-            <li>
+            {/*<li>
                 <NavLink 
                     className={({ isActive }) => 
                         isActive ? activeStyle : undefined
@@ -38,7 +38,7 @@ function Navbar() {
                     to='/home'> 
                     HOME 
                 </NavLink>
-                </li>
+                </li>*/}
                 <li>
                     <NavLink 
                         className={({ isActive }) => 

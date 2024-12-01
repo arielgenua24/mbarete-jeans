@@ -14,7 +14,7 @@ function ZoomModal({ children }) {
                         <div className='modal-div-btn'>
                             <div className='modal-div-close'>
                                 <div  className="modal-button-close button-close" onClick={()=> setIsOpen(false)}>   
-                                <img className="touch-icon" src="../../public/images/logos/icons8-close-24.png" alt="touch-icon"/>
+                                <img className="touch-icon" src="../../images/logos/icons8-close-24.png" alt="touch-icon"/>
                                 </div>
                             </div>
                            
@@ -34,7 +34,7 @@ function ZoomModal({ children }) {
                          style={{ position: 'sticky' }}
                         onClick={() => setIsOpen(true)}
                     >
-                        <img className="touch-icon" src="../../public/images/logos/icons8-touch-24.png" alt="touch-icon"/>
+                        <img className="touch-icon" src="../../images/logos/icons8-touch-24.png" alt="touch-icon"/>
                         <span className="zoom-div-span">AMPLIAR</span>
                     </div>
                 </div>

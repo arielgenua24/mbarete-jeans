@@ -27,7 +27,7 @@ function JeanImage({modal, children}) {
            
            {!isZoomed && 
            ( <div className="zoom-div">
-                <img className="touch-icon" src="../../public/images/logos/icons8-touch-24.png" alt="touch-icon"/>
+                <img className="touch-icon" src="../../images/logos/icons8-touch-24.png" alt="touch-icon"/>
                 <span className="zoom-div-span">AMPLIAR</span>
              </div>)}
         </div>
