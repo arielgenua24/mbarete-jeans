@@ -19,7 +19,7 @@ function EditSizesBtn({text, url}) {
                 <button className="edit-sizes_btn"
                     onClick={openSizesPage}
                 > 
-                    Editar talles
+                    Modificar
                 </button>
             </>
         )
