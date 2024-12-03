@@ -41,8 +41,6 @@ export const jeansData = [
       { size: 38, quantity: 0 },
       { size: 40, quantity: 0 },
       { size: 42, quantity: 0 },
-      { size: 44, quantity: 0 },
-      { size: 46, quantity: 0 },
     ]
   },
   {
@@ -168,7 +166,7 @@ export const jeansData = [
       img3: "url3.jpg",
     },
     price: 20500,
-    state: State.nuevo,
+    state: State.SoldOut,
     sizes: [
       { size: 38, quantity: 0 },
       { size: 44, quantity: 0 },
@@ -252,7 +250,7 @@ export const jeansData = [
       img3: "url3.jpg",
     },
     price: 11000,
-    state: State.ReIngreso,
+    state: State.SoldOut,
     sizes: [
   { size: 40, quantity: 0 },
 ]
@@ -357,46 +355,15 @@ export const jeansData = [
       img2: "/images/bermuda_baggy_gris.png",
       img3: "url3.jpg",
     },
-    price: 1850,
+    price: 19500,
     state: '',
     sizes: [
   { size: 38, quantity: 0 },
   { size: 40, quantity: 0 },
   { size: 42, quantity: 0 },
-{ size: 44, quantity: 0 }
+  { size: 44, quantity: 0 },
+  { size: 46, quantity: 0 }
 ]   
-  },
-  {
-    id: 18,
-    name: "bermuda mom cargo celeste roto",
-    category: Category.bermuda,
-    specialTag: 'mas anchos',
-    images: {
-      img1: "/images/bermuda_mom_cargo_celeste_roto.png",
-      img2: "url2.jpg",
-      img3: "url3.jpg",
-    },
-    price: 11000,
-    state: '',
-    sizes: [
-  { size: 40, quantity: 0 },
-  { size: 42, quantity: 0 },
-  { size: 48, quantity: 0 }
-]   
-  },
-  {
-    id: 19,
-    name: "bermuda mom gris liso",
-    category: Category.bermuda,
-    specialTag: '',
-    images: {
-      img1: "/images/BERMUDA_MOM_GRIS_LISO.png",
-      img2: "/images/BERMUDA_MOM_GRIS_LISO_2.png",
-      img3: "url3.jpg",
-    },
-    price: 8000,
-    state: State.SoldOut,
-    sizes: [38, 46]   
   },
   {
     id: 20,
@@ -566,43 +533,6 @@ export const jeansData = [
 ]
   },
   {
-    id: 29,
-    name: "arrayanes baggy cargo oxido",
-    category: Category.baggy,
-    specialTag: '',
-    images: {
-      img1: "none",
-      img2: "url2.jpg",
-      img3: "url3.jpg",
-    },
-    price: 18500,
-    state: '',
-    sizes: [
-      { size: 44, quantity: 0 },
-      { size: 46, quantity: 0 }
-    ]
-  },
-  {
-    id: 30,
-    name: "wider baggy celeste",
-    category: Category.baggy,
-    specialTag: '',
-    images: {
-      img1: "/images/wider_baggy_celeste_1.JPG",
-      img2: "/images/wider_baggy_celeste_2.JPG",
-      img3: "/images/wider_baggy_celeste_3.JPG",
-    },
-    price: 16500,
-    state: '',
-    sizes: [
-      { size: 38, quantity: 0 },
-      { size: 40, quantity: 0 },
-      { size: 42, quantity: 0 },
-      { size: 44, quantity: 0 },
-      { size: 46, quantity: 0 },
-    ]
-  },
-  {
     id: 31,
     name: "bermuda baggy carp",
     category: Category.bermuda,
@@ -612,7 +542,7 @@ export const jeansData = [
       img2: "/images/bermuda_baggy_carp_2.png",
       img3: "url3.jpg",
     },
-    price: 11000,
+    price: 19500,
     state: '',
     sizes: [
       { size: 38, quantity: 0 },
@@ -639,26 +569,6 @@ export const jeansData = [
   { size: 42, quantity: 0 },
   { size: 44, quantity: 0 }
 ]
-  },
-  {
-    id: 33,
-    name: "Bermuda Baggy Louis Gris",
-    category: Category.bermuda,
-    specialTag: 'roto',
-    images: {
-      img1: "/images/bermuda_louis_gris.png",
-      img2: "/images/bermuda_louis_gris_2.png",
-      img3: "url3.jpg",
-    },
-    price: 8000,
-    state: State.pocoStock,
-    sizes: [
-      { size: 38, quantity: 0 },
-      { size: 40, quantity: 0 },
-      { size: 42, quantity: 0 },
-      { size: 44, quantity: 0 },
-      { size: 46, quantity: 0 },
-    ]
   },
   {
     id: 50,
@@ -784,7 +694,7 @@ export const jeansData = [
       img3: "/images/oxido_1.JPG",
     },
     price: 17500,
-    state: State.pocoStock,
+    state: State.SoldOut,
     sizes: [
   { size: 38, quantity: 0 },
   { size: 40, quantity: 0 },
@@ -822,81 +732,33 @@ export const jeansData = [
       img3: "/imagoxide_3.JPG",
     },
     price: 17000,
-    state: '',
+    state: State.SoldOut,
     sizes: [
       { size: 38, quantity: 0 },
       { size: 40, quantity: 0 },
       { size: 42, quantity: 0 },
       { size: 44, quantity: 0 },
       { size: 46, quantity: 0 },
-    ]
-  },
-  {
-    id: 42,
-    name: "bermuda baggy carp negro",
-    category: Category.bermuda,
-    specialTag: '',
-    images: {
-      img1: "",
-      img2: "/images/bermudaBaggyCarpNegro.png",
-      img3: "/images/bermudaBaggyCarpNegro_2.png",
-    },
-    price: 12000,
-    state: '',
-    sizes: [
-      { size: 38, quantity: 0 },
-      { size: 40, quantity: 0 },
-      { size: 42, quantity: 0 },
-      { size: 44, quantity: 0 },
-      { size: 46, quantity: 0 },
-    ]
-  },
-  {
-    id: 44,
-    name: "super baggy west",
-    category: Category.baggy,
-    specialTag: '',
-    images: {
-      img1: "/images/west_claro_1.JPG",
-      img2: "/images/west_claro_2.JPG",
-      img3: "/images/west_claro_3.JPG",
-    },
-    price: 18500,
-    state: '',
-    sizes: [{ size: 40, quantity: 0 },]
-  },
-  {
-    id: 45,
-    name: "West Claro",
-    category: Category.baggy,
-    specialTag: '',
-    images: {
-      img1: "/images/west_claro_1.JPG",
-      img2: "/images/west_claro_2.JPG",
-      img3: "/images/west_claro_3.JPG",
-    },
-    price: 16500,
-    state: '',
-    sizes: [
-      { size: 40, quantity: 0 },
-      { size: 42, quantity: 0 },
     ]
   },
   {
     id: 46,
     name: "Bermuda mom cargo trueno celeste",
-    category: Category.baggy,
+    category: Category.bermuda,
     specialTag: '',
     images: {
       img1: "/images/BermudaMomCargoTrueno.png",
       img2: "/images/BermudaMomCargoTrueno2.png",
-      img3: "/images/west_claro_3.JPG",
+      img3: "",
     },
-    price: 16500,
+    price: 15500,
     state: '',
     sizes: [
+      { size: 38, quantity: 0 },
       { size: 40, quantity: 0 },
       { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 46, quantity: 0 },
     ]
   },
    {
@@ -909,7 +771,7 @@ export const jeansData = [
       img2: "images/Art Poker Azul(bordado real)-2.jpg",
       img3: "images/Art Poker Azul(bordado real)-3.jpg",
     },
-    price: 22000,
+    price: 20000,
     state: State.nuevo,
     sizes: [
       { size: 38, quantity: 0 },
@@ -955,8 +817,6 @@ export const jeansData = [
       { size: 38, quantity: 0 },
       { size: 40, quantity: 0 },
       { size: 42, quantity: 0 },
-      { size: 44, quantity: 0 },
-      { size: 46, quantity: 0 },
     ]
   },
   {
@@ -975,8 +835,6 @@ export const jeansData = [
       { size: 38, quantity: 0 },
       { size: 40, quantity: 0 },
       { size: 42, quantity: 0 },
-      { size: 44, quantity: 0 },
-      { size: 46, quantity: 0 },
     ]
   },
   {
@@ -1025,12 +883,12 @@ export const jeansData = [
     category: Category.bermuda,
     specialTag: '',
     images: {
-      img1: "/images/Berm Baggy Celeste Oxido.jpg",
-      img2: "/images/Berm Baggy Celeste Oxido-2.jpg",
-      img3: "",
+      img1: "/images/Berm Baggy gris c: Tiras-1.jpg",
+      img2: "/images/Berm Baggy gris c: Tiras.jpg",
+      img3: "/images/Berm Baggy gris c: Tiras-3.jpg",
     },
     price: 22000,
-    state: '',
+    state: State.nuevo,
     sizes: [
       { size: 38, quantity: 0 },
       { size: 40, quantity: 0 },
@@ -1048,7 +906,7 @@ export const jeansData = [
       img3: "/images/Bermuda Color Ceniza-3.jpg",
     },
     price: 19500,
-    state: '',
+    state: State.nuevo,
     sizes: [
       { size: 38, quantity: 0 },
       { size: 40, quantity: 0 },
@@ -1162,7 +1020,7 @@ export const jeansData = [
       img3: "/images/NEGRO OXIDO Bermuda Baggy-3.jpg",
     },
     price: 22000,
-    state: '',
+    state: State.nuevo,
     sizes: [
       { size: 38, quantity: 0 },
       { size: 40, quantity: 0 },
@@ -1197,12 +1055,12 @@ export const jeansData = [
     category: Category.bermuda,
     specialTag: State.nuevo,
     images: {
-      img1: "/images/Parachuutte Baggy militar.jpg",
-      img2: "/images/Parachuutte Baggy militar-2.jpg",
-      img3: "/images/Parachuutte Baggy-3.jpg",
+      img1: "/images/Poker Azul Oxido.jpg",
+      img2: "/images/Poker Azul Oxido-2.jpg",
+      img3: "/images/Poker Azul Oxido-3.jpg",
     },
-    price: 24000,
-    state: '',
+    price: 20000,
+    state: State.nuevo,
     sizes: [
       { size: 38, quantity: 0 },
       { size: 40, quantity: 0 },
@@ -1217,12 +1075,12 @@ export const jeansData = [
     category: Category.bermuda,
     specialTag: "",
     images: {
-      img1: "",
-      img2: "/images/Rayado Baggy-2.jpg",
+      img1: "/images/TRUENO Cargo negro(berm baggy).jpg",
+      img2: "/images/TRUENO Cargo negro(berm baggy)-2.jpg",
       img3: "",
     },
     price: 22000,
-    state: State.SoldOut,
+    state: State.nuevo,
     sizes: [
       { size: 38, quantity: 0 },
       { size: 40, quantity: 0 },
@@ -1249,6 +1107,164 @@ export const jeansData = [
       { size: 42, quantity: 0 },
       { size: 44, quantity: 0 },
       { size: 46, quantity: 0 },
+    ]
+  },
+  {
+    id: 65,
+    name: "Bermuda Blanco Liso",
+    category: Category.bermuda,
+    specialTag: '',
+    images: {
+      img1: "/images/Bermuda Blanco Liso.jpg",
+      img2: "/images/Bermuda Blanco Liso.jpg-2.JPG",
+      img3: "",
+    },
+    price: 18500,
+    state: State.nuevo,
+    sizes: [
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 46, quantity: 0 },
+    ]
+  },
+  {
+    id: 66,
+    name: "Berm Baggy gris c/ Tiras",
+    category: Category.bermuda,
+    specialTag: '',
+    images: {
+      img1: "/images/Bermuda Blanco Liso.jpg",
+      img2: "/images/Bermuda Blanco Liso.jpg-2.JPG",
+      img3: "",
+    },
+    price: 22000,
+    state: State.nuevo,
+    sizes: [
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 46, quantity: 0 },
+    ]
+  },
+  {
+    id: 67,
+    name: "Bermuda Baggy Negro Liso",
+    category: Category.bermuda,
+    specialTag: '',
+    images: {
+      img1: "/images/Bermuda Baggy Negro Liso.jpg",
+      img2: "",
+      img3: "",
+    },
+    price: 18500,
+    state: State.pocoStock,
+    sizes: [
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 46, quantity: 0 },
+    ]
+  },
+  {
+    id: 68,
+    name: "Bermudas Baggy Louis Azul",
+    category: Category.bermuda,
+    specialTag: '',
+    images: {
+      img1: "/images/Bermudas Baggy Louis Azul.jpg",
+      img2: "/images/Bermudas Baggy Louis Azul-2.jpg",
+      img3: "/images/Bermudas Baggy Louis Azul-3.jpg",
+    },
+    price: 21000,
+    state: '',
+    sizes: [
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+    ]
+  },
+  {
+    id: 69,
+    name: "Rayado Baggy",
+    category: Category.bermuda,
+    specialTag: '',
+    images: {
+      img1: "/images/Rayado Baggy.jpg",
+      img2: "/images/Rayado Baggy-2.jpg",
+      img3: "",
+    },
+    price: 19500,
+    state: '',
+    sizes: [
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 46, quantity: 0 },
+    ]
+  },
+  {
+    id: 70,
+    name: "Berm Baggy Azul Oxido Nuevo",
+    category: Category.bermuda,
+    specialTag: '',
+    images: {
+      img1: "/images/Berm Baggy Azul Oxido Nuevo-1.jpg",
+      img2: "/images/Berm Baggy Azul Oxido Nuevo.jpg",
+      img3: "/images/Berm Baggy Azul Oxido Nuevo-2.jpg",
+    },
+    price: 19500,
+    state: State.nuevo,
+    sizes: [
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 46, quantity: 0 },
+    ]
+  },
+  {
+    id: 70,
+    name: "BERMUDA baggy Gris Claro Reingreso🔥",
+    category: Category.bermuda,
+    specialTag: '',
+    images: {
+      img1: "/images/BERMUDA baggy Gris Claro Reingreso🔥.jpg",
+      img2: "",
+      img3: "",
+    },
+    price: 19500,
+    state: State.nuevo,
+    sizes: [
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
+      { size: 46, quantity: 0 },
+    ]
+  },
+  {
+    id: 71,
+    name: "Bermuda Baggy Louis Gris",
+    category: Category.bermuda,
+    specialTag: '',
+    images: {
+      img1: "/images/Bermuda Baggy Louis Gris.jpg",
+      img2: "/images/Bermuda Baggy Louis Gris-2.jpg",
+      img3: "",
+    },
+    price: 21000,
+    state: State.nuevo,
+    sizes: [
+      { size: 38, quantity: 0 },
+      { size: 40, quantity: 0 },
+      { size: 42, quantity: 0 },
+      { size: 44, quantity: 0 },
     ]
   },
 ];

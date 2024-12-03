@@ -58,7 +58,7 @@ const CartActionButton = ({ item, onAddToCart}) => {
 
             // eslint-disable-next-line react/prop-types
             if (item.state === "SoldOut") {
-                setButtonState({ text: 'registrarme para preventa', action: reservation, class: 'soldOut' });
+                setButtonState({ text: 'agotado', action: reservation, class: 'soldOut' });
             } else if (item?.id === jeanInCart?.jean?.product?.id) {
               console.log(item.id) // ya esta
               //&& 
