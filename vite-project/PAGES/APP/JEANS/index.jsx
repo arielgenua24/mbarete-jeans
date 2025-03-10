@@ -4,60 +4,15 @@ import useRefs from '../../../hooks/useRefs';
 import useFirestore from "../../../hooks/useFirestore";
 import { useEffect, useMemo } from "react";
 import './index.css'
-import { Category } from "../../../data/jeans.categories";
 
 
 
 function Jeans() {
-  const { getProducts, products } = useFirestore();
 
-
-
-  const jeansData = useMemo(() => {
-    if (!products || products.length === 0) return [];
-
-    // Agrupar productos por nombre
-    const groupedProducts = products.reduce((acc, product) => {
-      const key = product.name;
-      if (!acc[key]) acc[key] = [];
-      acc[key].push(product);
-      return acc;
-    }, {});
-
-    return Object.entries(groupedProducts).map(([name, group]) => {
-      // Reordenar: productos con image1 primero
-      const prioritizedGroup = [...group].sort((a) => a.image1 ? -1 : 1);
-      const mainProduct = prioritizedGroup[0] || {};
-
-      // Extraer tallas únicas
-      const uniqueSizes = [...new Set(group.map(p => parseInt(p.size)))];
-      
-      return {
-        id: mainProduct.id, // Mantener ID original
-        name,
-        category: Category[mainProduct.category] || Category.other,
-        specialTag: '',
-        images: {
-          img1: mainProduct.image1 || '',
-          img2: mainProduct.image2 || '',
-          img3: mainProduct.image3 || ''
-        },
-        price: parseInt(mainProduct.price) || 0,
-        state: '',
-        sizes: uniqueSizes
-          .filter(size => !isNaN(size))
-          .sort((a, b) => a - b)
-          .map(size => ({ size, quantity: 0 }))
-      };
-    });
-  }, [products]);
-  
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    console.log('products', products);
-    console.log('jeansData', jeansData);
 
-  }, [products]);
+  }, []);
   
 
   

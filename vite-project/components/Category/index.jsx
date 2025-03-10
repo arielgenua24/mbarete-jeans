@@ -4,10 +4,12 @@ import CartActionButton from "../CartActionBtn";
 import JeanImage from "../JeanImage";
 import ZoomModal from '../ZoomModal'
 import JeanSizes from "../JeanSizes";
+import useFirestore from "../../hooks/useFirestore";
 import './styles.css'
 
 // eslint-disable-next-line react/prop-types
 function Category({ filter}){
+    const {products } = useFirestore();
     const service = new Jeans();
     
     const {
@@ -19,8 +21,9 @@ function Category({ filter}){
 
    
 
-
-    const filteredJeans = service?.filterJeans(filter)
+    console.log(filter)
+    const filteredJeans = service?.filterJeans(filter, products)
+    console.log(filteredJeans)
     // la aplicacion no funnciona porque jean.nombre y demas no existe, chequea la estructura de datos!
     return (
      <> 
