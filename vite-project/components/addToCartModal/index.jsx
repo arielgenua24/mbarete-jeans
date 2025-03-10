@@ -28,12 +28,24 @@ const Modal = () => {
     setNewSizeList
   } = useCartContext(); 
 
+  console.log(id)
+  //console.log(productIdInt)
+
   const item = service?.filterJeans(productIdInt)[0] //ya poseo el jean
+  const item2 = service?.filterJeans(id)
+  console.log(item)
+  console.log(item2)
+
   const originalSizesList = item.sizes;
  
   const sizeIndex = cart.findIndex((item) => (item.product.id === productIdInt))
-  const updatedSizesList = cart[sizeIndex]?.sizes; 
- 
+  const updatedSizesList = cart[sizeIndex]?.product?.sizes; 
+  
+  console.log(originalSizesList)
+  console.log(updatedSizesList)
+  console.log(sizeIndex)
+  console.log(item)
+
   let sizesList = combineSizeList(originalSizesList, updatedSizesList)
     useEffect(() => {
     setNewSizeList(sizesList)
