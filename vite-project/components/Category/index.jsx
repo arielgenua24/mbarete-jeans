@@ -26,48 +26,43 @@ function Category({ filter}){
     console.log(filteredJeans)
     // la aplicacion no funnciona porque jean.nombre y demas no existe, chequea la estructura de datos!
     return (
-     <> 
-
-      <div className="section-title">
-            <h2>{filter}</h2>
-        </div>
-        <div className="carousel-container">
-            <div className="carousel-slides">
-            {filteredJeans.map((jean) => (
-                    <div
-                        className="carousel-jean"
-                        key={jean.id}
-                        >
-                            
-                            
+     <>
+        {filteredJeans.length > 0 ? (
+        <>
+            <div className="section-title">
+                <h2>{filter}</h2>
+            </div>
+            <div className="carousel-container">
+                <div className="carousel-slides">
+                    {filteredJeans.map((jean) => (
+                        <div className="carousel-jean" key={jean.id}>
                             <JeanImage>
                                 <img className="div-jean-img" src={jean.images.img1} alt={jean.name} loading="lazy" />
                             </JeanImage>
-                          
-                            
                             <div className="carousel-jean-data">
                                 <span>{jean.name}</span>
                                 <span>${jean.price.toLocaleString('es-AR')}</span>
-                                <JeanSizes item={jean}/>
+                                <JeanSizes item={jean} />
                             </div>
                             <div className="carousel-btns">
                                 <CartActionButton   
                                     item={jean}
-                                    onAddToCart={()=>{
-                                        setSelectedItem(jean)
-                                        //setOpenModal(true)
+                                    onAddToCart={() => {
+                                        setSelectedItem(jean);
                                     }}
-                                    onOpenModal={()=> setOpenModal(true)}
+                                    onOpenModal={() => setOpenModal(true)}
                                 />
-
                             </div>
-                            
-
-                    </div>
-                ))} 
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
-     </>
+        </>
+    ) : null}
+     
+  
+ </>
+        
     );
 
 }
