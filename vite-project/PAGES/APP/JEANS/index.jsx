@@ -46,6 +46,10 @@ function Jeans() {
         {chalecosCategory.createCategoryComponent("Chalecos")}
       </div>
 
+      <div className='div-camperas' ref={camperasRef}>
+        {camperasCategory.createCategoryComponent("Camperas")}
+      </div>
+
       <div className='div-parachutte' ref={parachutteRef}>
         {parachutteCategory.createCategoryComponent("parachutte")}
       </div>
@@ -78,9 +82,6 @@ function Jeans() {
         {frisaCategory.createCategoryComponent("frisa")}
       </div>
 
-      <div className='div-camperas' ref={camperasRef}>
-        {camperasCategory.createCategoryComponent("Camperas")}
-      </div>
 
     </div>
   );

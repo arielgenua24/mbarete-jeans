@@ -4,7 +4,7 @@ import { Category } from '../data/jeans.categories'; // Asegúrate de tener la i
 export const processJeansData = (products) => {
   if (!products || products.length === 0) return [];
 
-  console.log(products)
+  console.log(products);
 
   // Agrupar productos por nombre
   const groupedProducts = products.reduce((acc, product) => {
@@ -22,8 +22,15 @@ export const processJeansData = (products) => {
     const codeWithoutHash = mainProduct.productCode.replace('#', '');
     const productCodeInt = parseInt(codeWithoutHash, 10);
     console.log(productCodeInt); // Ejemplo: 18
-    // Extraer tallas únicas
-    const uniqueSizes = [...new Set(group.map(p => parseInt(p.size)))];
+
+    // Extraer tallas únicas:
+    // Se intenta parsear la talla a número; si no es posible, se conserva el valor original (texto)
+    const uniqueSizes = [...new Set(
+      group.map(p => {
+        const parsed = parseInt(p.size, 10);
+        return isNaN(parsed) ? p.size : parsed;
+      })
+    )];
 
     return {
       id: productCodeInt, // Mantener ID original
@@ -38,8 +45,14 @@ export const processJeansData = (products) => {
       price: parseInt(mainProduct.price) || 0,
       state: '',
       sizes: uniqueSizes
-        .filter(size => !isNaN(size))
-        .sort((a, b) => a - b)
+        .sort((a, b) => {
+          // Si ambas son numéricas, ordena de forma ascendente
+          if (typeof a === "number" && typeof b === "number") return a - b;
+          // Si ambas son cadenas, ordena alfabéticamente
+          if (typeof a === "string" && typeof b === "string") return a.localeCompare(b);
+          // En caso de mezcla, se convierten a cadena para comparar
+          return a.toString().localeCompare(b.toString());
+        })
         .map(size => ({ size, quantity: 0 }))
     };
   });
