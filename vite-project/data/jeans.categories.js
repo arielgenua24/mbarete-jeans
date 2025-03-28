@@ -6,5 +6,10 @@ export const Category = {
     ReIngreso: "ReIngreso",
     joggers: "joggers",
     parachutte: "parachutte",
-    frisa: "frisa"
-};
+    frisa: "frisa",
+    Camperas: "Camperas",
+    Chalecos: "Chalecos",
+    Nuevos: "Nuevos",
+    PocoStock: "PocoStock"
+  };
+  

@@ -5,14 +5,15 @@ const useRefs = () => {
   const homeRef = useRef(null);
   const baggyRef = useRef(null);
   const bermudaRef = useRef(null);
-  const jeanRef = useRef(null)
-  const clasicoRef = useRef(null)
-  const joggersRef = useRef(null)
-  const parachutteRef = useRef(null)
-  const frisaRef = useRef(null)
-  const newRef = useRef(null)
+  const jeanRef = useRef(null);
+  const clasicoRef = useRef(null);
+  const joggersRef = useRef(null);
+  const parachutteRef = useRef(null);
+  const frisaRef = useRef(null);
+  const newRef = useRef(null);
   const latestRef = useRef(null);
-
+  const camperasRef = useRef(null);
+  const chalecosRef = useRef(null);
 
   return {
     homeRef,
@@ -25,6 +26,8 @@ const useRefs = () => {
     frisaRef,
     newRef,
     latestRef,
+    camperasRef,
+    chalecosRef,
   };
 };
 
