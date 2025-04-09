@@ -5,98 +5,71 @@
   right: 0;
   z-index: 1000;
   display: flex;
-  justify-content: center;
-  padding: 6px;
-  width: 100vw;
+  flex-direction: column;
+  width: 100%;
 }
 
 .navbar {
-  width: 80%;
-  padding: 0;
-  background-color: #d7e9ff;
-  border-radius: 18px;
-  border: 1px solid #0476ff;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0;
 }
 
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
 
-  /* Lista dentro del navbar */
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px; /* Separación entre los elementos del menú */
-    padding: 0;
-    margin: 0;
-    flex-direction: row;
-    /* align-items: center; */
-    justify-content: space-between;
-    gap: 3px;
-    width: 100%;
-  }
-  
-  /* Estilos generales para los enlaces */
-  nav a {
-    text-decoration: none;
-    color: #333; /* Color del texto de los enlaces */
-    padding: 10px 20px;
-    border-radius: 8px; /* Suavizamos los bordes de los enlaces */
-    transition: background-color 0.3s ease; /* Transición suave */
-    font-weight: 600;
-  }
-  
-  /* Efecto hover para los enlaces */
-  nav a:hover {
-    background-color: #ddd; /* Color de fondo al hacer hover */
-  }
-  
-  ul li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.brand-link {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-  /* Estilos para el enlace activo (underline) */
-  .underline {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-  
-  /* Icono del carrito 🛒 */
-  nav a.cart-icon {
-    font-size: 1.5rem; /* Hacemos el ícono del carrito más grande */
-  }
-  
- 
+.brand-link:hover {
+  color: #000000;
+}
 
+.navbar-cart {
+  display: flex;
+  align-items: center;
+}
 
 .cart-link {
   text-decoration: none;
   color: inherit;
 }
 
-.cart-link.active {
-  font-weight: bold;
-  color: #4a90e2;
-}
 
+
+/* Cart styles */
 .cart-container {
-  position: relative;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  padding: 8px;
-  border-radius: 4px;
-  background-color: #75b9e135;
-  color: #0a75c2;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  border-radius: 0;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
 }
 
 .cart-icon {
-  font-size: 1.2em;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
 }
 
 .cart-count {
   position: absolute;
   top: -8px;
   right: -8px;
-  background-color: #ff0000;
+  background-color: red;
   color: white;
   border-radius: 50%;
   width: 20px;
@@ -106,26 +79,31 @@
   justify-content: center;
   font-size: 0.75rem;
 }
+  
+ 
+
 
 .cart-text {
   margin-left: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
- /* Responsividad para dispositivos móviles */
- @media (max-width: 768px) {
+/* Responsividad para dispositivos móviles */
+@media (max-width: 768px) {
   .navbar {
-    width: 92%;
-    position: fixed;
+    padding: 0.5rem 1rem;
   }
-  .navbar-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    padding: 6px;
-    width: 100vw;
+  
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  
+  .cart-text {
+    font-size: 0.8rem;
+  }
+  
+  .promo-banner {
+    height: 200px;
   }
 }

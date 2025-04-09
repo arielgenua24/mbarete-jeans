@@ -36,10 +36,10 @@ function JeanImage({modal, children}) {
            
            {!isZoomed ? 
            ( <div className="zoom-div">
-                <img className="touch-icon" src="../../images/logos/icons8-touch-24.png" alt="touch-icon"/>
+                <img className="touch-icon" src="../../images/logos/icons8-touch-24.png" alt="touch-icon" style={{height: "20px", width: "20px"}}/>
                 <span className="zoom-div-span">AMPLIAR</span>
              </div>): (( <div  style={zoomOptsStyle} className="zoom-div">
-                <img className="touch-icon" src="../../images/logos/icons8-touch-24.png" alt="touch-icon"/>
+                <img className="touch-icon" src="../../images/logos/icons8-touch-24.png" alt="touch-icon" style={{height: "20px", width: "20px"}}/>
                 <span   className="zoom-div-span">ACHICAR</span>
              </div>))}
         </div>

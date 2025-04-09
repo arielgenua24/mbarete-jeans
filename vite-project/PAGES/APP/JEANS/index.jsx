@@ -1,8 +1,7 @@
 import CategoryJeanFactory from "../../../services/factories/categoryJeans.factory";
 import JeansNavbar from "../../../components/JeansNavBar";
 import useRefs from '../../../hooks/useRefs';
-import useFirestore from "../../../hooks/useFirestore";
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import './index.css';
 
 function Jeans() {
@@ -14,7 +13,6 @@ function Jeans() {
   const baggyCategory = new CategoryJeanFactory();
   const bermudaCategory = new CategoryJeanFactory();
   const jeanCategory = new CategoryJeanFactory();
-  const clasicoCategory = new CategoryJeanFactory();
   const joggersCategory = new CategoryJeanFactory();
   const parachutteCategory = new CategoryJeanFactory();
   const frisaCategory = new CategoryJeanFactory();
@@ -30,7 +28,6 @@ function Jeans() {
     newRef,
     bermudaRef,
     jeanRef,
-    clasicoRef,
     joggersRef,
     parachutteRef,
     frisaRef,
@@ -39,8 +36,9 @@ function Jeans() {
   } = useRefs();
 
   return (
-    <div className="jeans-home">
-      <JeansNavbar/>
+    <>
+      <div className="jeans-home">
+        <JeansNavbar/>
 
       <div className='div-chalecos' ref={chalecosRef}>
         {chalecosCategory.createCategoryComponent("Chalecos")}
@@ -82,8 +80,8 @@ function Jeans() {
         {frisaCategory.createCategoryComponent("frisa")}
       </div>
 
-
-    </div>
+      </div>
+    </>
   );
 }
 

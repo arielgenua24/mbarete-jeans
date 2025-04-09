@@ -1,31 +1,105 @@
-.jean_nav_bar {
-  border: 1px solid #dfe4eb;
-  border-radius: 14px;
-  padding: 0px 10px 0px 10px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  max-width: 100%;
+.jean-nav-container {
+  width: 100%;
+  background-color: transparent;
   display: flex;
-  flex-direction: row;
-  box-shadow: 0px 14px 16px rgb(7 59 175 / 15%);
-  font-size: 16px;
-  /* border: 0.5px solid #cbcfe1; */
-  justify-content: end;
-  max-height: 78px;
+  flex-direction: column;
+}
+
+
+
+.jean_nav_bar {
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 55px;
+  left: 0;
+  height: 30px;
+  border-bottom: 0.2vh solid #333;
+  z-index: 900;
+  /* margin-top: 37px; */
+  padding: 21px;
+}
+
+.jean_nav_bar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-start;
+  width: 100%;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  height: 30px;
+  align-items: center;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.jean_nav_bar ul::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.jean_nav_bar li {
+  margin: 0;
+  padding: 0;
 }
 
 .jean-nav-a {
   display: flex;
-  flex-direction: column;
-  width: 45px;
-  justify-content: end;
   align-items: center;
-  height: 100%;
-  gap: 3px;
-  margin-bottom: 6px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  padding: 0.5rem 0;
 }
 
-  /* Para los elementos dentro del navbar */
+.jean-nav-a:hover {
+  color: #ff4500;
+}
+
+.jean-nav-a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff4500;
+  transition: width 0.3s ease;
+}
+
+.jean-nav-a:hover:after {
+  width: 100%;
+}
+
 @media (max-width: 768px) {
+  .jean_nav_bar {
+    overflow-x: auto;
+  }
+  
+  .jean_nav_bar ul {
+    gap: 1.2rem;
+    justify-content: flex-start;
+    padding: 0 1rem;
+    white-space: nowrap;
+  }
+  
+  .jean-nav-a {
+    font-size: 0.8rem;
+    padding: 0 0.3rem;
+  }
 }

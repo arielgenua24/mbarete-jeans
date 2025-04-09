@@ -1,32 +1,64 @@
 import onNavigate from "../../utils/navigation.utils";
 import './index.css'
 
-// eslint-disable-next-line react/prop-types
 const JeansNavbar = () => {
-  
     return (
-      <nav className="jean_nav_bar">
+      <div className="jean-nav-container">
+        <nav className="jean_nav_bar">
           <ul>
-          <li>
-        <a className="jean-nav-a" onClick={() => onNavigate('div-baggy')}>
-          <img src="/images/logos/baggy.png" alt="Icono Baggy" style={{ width: '23px', marginRight: '8px' }} />
-          Baggys
-        </a>
-      </li>
-      <li>
-        <nav  className="jean-nav-a"  onClick={() => onNavigate('div-bermuda')}>
-          <img src="/images/logos/baggy (1).png" alt="Icono Bermuda" style={{ width: '29px', marginRight: '8px' }} />
-          Bermudas
-        </nav>
-      </li>
-      <li>
-        <a className="jean-nav-a"  onClick={() => onNavigate('div-latest')}>
-          <img src="/images/logos/jogger icon.png" alt="Icono Stock" style={{ width: '18px', marginRight: '8px' }} />
-          🔥Últimos en stock
-        </a>
-      </li>
+            <li>
+              <a className="jean-nav-a" onClick={() => onNavigate('div-baggy')}>
+                BAGGY
+              </a>
+            </li>
+            <li>
+              <a className="jean-nav-a" onClick={() => onNavigate('div-bermuda')}>
+                BERMUDAS
+              </a>
+            </li>
+            <li>
+              <a className="jean-nav-a" onClick={() => onNavigate('div-camperas')}>
+                CAMPERAS
+              </a>
+            </li>
+            <li>
+              <a className="jean-nav-a" onClick={() => onNavigate('div-chalecos')}>
+                CHALECOS
+              </a>
+            </li>
+            <li>
+              <a className="jean-nav-a" onClick={() => onNavigate('div-jean')}>
+                JEANS
+              </a>
+            </li>
+            <li>
+              <a className="jean-nav-a" onClick={() => onNavigate('div-joggers')}>
+                JOGGERS
+              </a>
+            </li>
+            <li>
+              <a className="jean-nav-a" onClick={() => onNavigate('div-parachutte')}>
+                PARACHUTTE
+              </a>
+            </li>
+            <li>
+              <a className="jean-nav-a" onClick={() => onNavigate('div-latest')}>
+                ÚLTIMOS EN STOCK
+              </a>
+            </li>
+            <li>
+              <a className="jean-nav-a" onClick={() => onNavigate('div-new')}>
+                NUEVOS
+              </a>
+            </li>
+            <li>
+              <a className="jean-nav-a" onClick={() => onNavigate('div-frisa')}>
+                FRISA
+              </a>
+            </li>
           </ul>
         </nav>
+      </div>
     );
 };
 

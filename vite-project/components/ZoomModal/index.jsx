@@ -1,7 +1,7 @@
 import './styles.css'
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import PropTypes from 'prop-types';
 
-// eslint-disable-next-line react/prop-types
 function ZoomModal({ children }) {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -42,5 +42,9 @@ function ZoomModal({ children }) {
         </>
     );
 }
+
+ZoomModal.propTypes = {
+    children: PropTypes.node.isRequired
+};
 
 export default ZoomModal;
