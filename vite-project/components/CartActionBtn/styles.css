@@ -6,7 +6,9 @@
 }
 
 .btn-add-cart {
-    background-color: #0056b3;
+    background-color: #fff9c4; /* Light pastel yellow */
+    color: #000; /* Black text */
+    border: 1px solid black;
 }
 
 .soldOut {
