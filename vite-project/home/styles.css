@@ -22,17 +22,6 @@ nav {
 
 }
 
-.navbar {
-    margin: 6px;
-    padding: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background-color: #d7e9ff;
-    border-radius: 18px;
-    border: 1px solid #0476ff;
-}
 
 /* Lista dentro del navbar */
 

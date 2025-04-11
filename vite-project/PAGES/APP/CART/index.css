@@ -40,10 +40,11 @@
 
 .cart-item {
   display: flex;
-  flex-direction: column; /* En mobile, todo será una columna */
+  flex-direction: column;
   gap: 1rem;
   padding: 1rem;
   border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 140px;
 }
 
 .cart-item-row {

@@ -18,7 +18,17 @@ function Navbar() {
     }, [cart]);
 
     return ( 
-        <div className='navbar-container'> 
+        <div className='navbar-container' style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            zIndex: 9000,
+            display: 'flex',
+            flexDirection: 'column',
+            width: '100%',
+            backgroundColor: '#ffffff'
+          }}> 
             <nav className='navbar'>
                 <div className='navbar-brand'>
                     <NavLink to='/jeans' className='brand-link'>MBARETE</NavLink>

@@ -1,7 +1,7 @@
 .section-title {
     position: relative;
     margin: 0 0 20px 0;
-    padding: 0;
+    padding: 31px 24px 17px 9px;
     text-align: left;
 }
 
@@ -140,7 +140,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 500;
+    /* font-size: 29px; */
+    font-weight: 800;
+    background-color: #dcedff;
+    color: #0667ee;
+    border-radius: 1px;
+    border: 2px solid #007bff;
 }
 
 /* Media Query para pantallas menores a 768px */
@@ -174,6 +179,6 @@
     
     .carousel-btns button {
         padding: 10px;
-        font-size: 11px;
+        font-size: 14px;
     }
 }
