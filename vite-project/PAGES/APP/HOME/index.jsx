@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import config from '../../../config/config';
 import './styles.css'; // Asegúrate de que el CSS esté correctamente vinculado
 import { Link, useNavigate } from 'react-router-dom';
@@ -7,6 +8,16 @@ import CategoryJeanFactory from "../../../services/factories/categoryJeans.facto
 
 function Home() {
   const navigate = useNavigate();
+  const images = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg', 'image5.jpg', 'image6.jpg'];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 400);
+
+    return () => clearInterval(intervalId); // Cleanup interval on component unmount
+  }, [images.length]);
   const enviarMensaje = () => {
     const phoneNumber = config.phoneNumber;
     const message = "Hola MBARETE JEANS. He visitado su web y quiero hablar con un asesor.";
@@ -29,7 +40,7 @@ function Home() {
       <main className='home-main-content'>
         <section className='hero-section'> 
           <div className='hero-image-container'>
-            {/* La imagen de fondo se manejará con CSS */}
+            <img src={`/images-for-home/${images[currentImageIndex]}`} alt="Hero background" />
           </div>
           <div className='hero-text-content'>
             <h1>MBARETE</h1>
@@ -60,7 +71,7 @@ function Home() {
         </section>
 
         <section className='productos-section'>
-          <h2>ALGUNOS DE NUESTROS PRODUCTOS</h2>
+          <h2>TOP PRODUCTOS</h2>
           <div className='productos-grid'>
             <div className='producto-item'>
               {jeanCategory.createCategoryComponent("jean", true)}

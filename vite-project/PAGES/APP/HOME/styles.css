@@ -200,6 +200,55 @@ nav {
     /* position: relative; */
 }
 
+/* Hero Section Styles for Image Slideshow */
+.hero-section {
+  position: relative; /* Establishes a positioning context for absolute children */
+  overflow: hidden; /* Ensures content of absolute children doesn't spill out */
+  /* Ensure it has a defined height, e.g., from existing styles or add one like: */
+  /* min-height: 70vh; or specific pixel value */
+  /* background-color: #333; Fallback color if images are slow to load */
+}
+
+.hero-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Behind the text content */
+}
+
+.hero-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Covers the container, might crop image. Use 'contain' to see full image. */
+  display: block; /* Removes extra space below inline images */
+  /* Optional: Add a subtle transition if you want a fade effect later, though instant was requested */
+  /* transition: opacity 0.2s ease-in-out; */ 
+}
+
+.hero-text-content {
+  position: relative; /* To ensure z-index works correctly */
+  z-index: 2; /* In front of the image container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Ensure it takes up the full height of .hero-section if needed */
+  text-align: center;
+  padding: 20px; /* Add some padding so text isn't at the very edge */
+  /* Ensure text colors are visible over potentially varied image backgrounds. */
+  /* Example: if h1/h2 are dark, they might need to be white or have text-shadow */
+}
+
+/* Example to ensure text is visible - adjust as per your design */
+.hero-text-content h1,
+.hero-text-content h2 {
+  color: #fff; /* Assuming white text is desired over images */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* Enhances readability */
+}
+
+
 /* Contenedor del carrusel */
 .carousel-home-container {
     height: 600px;
