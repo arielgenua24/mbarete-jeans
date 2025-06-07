@@ -34,31 +34,31 @@ const WelcomeModal = ({ onClose }) => {
       setCurrentSlide((prevSlide) => prevSlide + 1);
     }
   };
-
+  {/*  */}
   return (
     <div style={styles.overlay}>
-      <div style={styles.modal}>
-        <div style={styles.imageContainer}>
-          <img
-            src={slides[currentSlide].image}
-            alt={slides[currentSlide].title}
-            style={styles.image}
-          />
-        </div>
+    <div style={styles.modal}>
+      <div style={styles.imageContainer}>
+        <img
+          src={slides[currentSlide].image}
+          alt={slides[currentSlide].title}
+          style={styles.image}
+        />
+      </div>
 
-        <div style={styles.textContainer}>
-          <h1 style={styles.title}>{slides[currentSlide].title}</h1>
-          <p style={styles.text}>{slides[currentSlide].description}</p>
-          {slides[currentSlide].sizes && <p style={styles.sizes}>Talles disponibles: {slides[currentSlide].sizes}</p>}
-        </div>
+      <div style={styles.textContainer}>
+        <h1 style={styles.title}>{slides[currentSlide].title}</h1>
+        <p style={styles.text}>{slides[currentSlide].description}</p>
+        {slides[currentSlide].sizes && <p style={styles.sizes}>Talles disponibles: {slides[currentSlide].sizes}</p>}
+      </div>
 
-        <div style={styles.buttonContainer}>
-          <button onClick={nextSlide} style={styles.button}>
-            {currentSlide === slides.length - 1 ? "Listo!" : "Siguiente"}
-          </button>
-        </div>
+      <div style={styles.buttonContainer}>
+        <button onClick={nextSlide} style={styles.button}>
+          {currentSlide === slides.length - 1 ? "Listo!" : "Siguiente"}
+        </button>
       </div>
     </div>
+  </div>
   );
 };
 

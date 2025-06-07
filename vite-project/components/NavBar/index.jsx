@@ -16,7 +16,7 @@ function Navbar() {
           return () => clearTimeout(timer);
         }
     }, [cart]);
-
+    {/*  */} 
     return ( 
         <div className='navbar-container' style={{
             position: 'fixed',

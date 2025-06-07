@@ -12,8 +12,8 @@ import './App.css'
 
 function AppRouter() {
   let router = useRoutes([
-    { path: '/', element: <Jeans />},
-    { path: '/home', element: <Jeans />},
+    { path: '/', element: <Home />},
+    { path: '/home', element: <Home />},
     { path:'/jeans' , element: <Jeans /> },
     { path:'/product/:id' , element: <Modal /> }, 
     { path:'/cart' , element: <Cart /> }, 

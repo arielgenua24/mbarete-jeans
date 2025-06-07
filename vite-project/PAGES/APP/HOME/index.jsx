@@ -1,113 +1,83 @@
-import config from '../../../config/config'
+import config from '../../../config/config';
 import './styles.css'; // Asegúrate de que el CSS esté correctamente vinculado
-import { Link } from 'react-router-dom'
-
+import { Link, useNavigate } from 'react-router-dom';
+import NavBar from '../../../components/NavBar'; // Assuming NavBar component is here
+import Footer from '../../../components/Footer';   // Assuming Footer component is here
+import CategoryJeanFactory from "../../../services/factories/categoryJeans.factory";
 
 function Home() {
+  const navigate = useNavigate();
   const enviarMensaje = () => {
     const phoneNumber = config.phoneNumber;
     const message = "Hola MBARETE JEANS. He visitado su web y quiero hablar con un asesor.";
     const encodedMessage = encodeURIComponent(message);
-    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;    
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
     window.open(whatsappURL, '_blank');
   };
 
+  const jeanCategory = new CategoryJeanFactory();
+  const parachutteCategory = new CategoryJeanFactory();
+  const baggyCategory = new CategoryJeanFactory();
+
+  const handleNavigateToJeans = () => {
+    navigate('/jeans');
+  };
+
   return (
-    <div className='home'>
-      {/* Botón de WhatsApp */}
-      <section id="wpp-btn" className="wpp-btn">
-        <div className="whatsapp">
-          <button  className="wtp-icon-btn" onClick={enviarMensaje}>
-            <img  className="whatsapp-icon" src="/images/logos/social.png" alt="whatsapp icon"></img>
-          </button>
-        </div>
-      </section>
-
-      {/* Carrusel de imágenes */}
-      <section className="carousel">
-        <div className="carousel-item">
-          <img className="main-photo" src="../images/home-photos/home-photo.png" alt="Foto principal" />
-          <div className="buttons main-photo-btn">
-          <a className="button jeans-button"> 
-            <Link  className='button jeans-button' to="/jeans">VER JEANS</Link>
-          </a>
+    <div className='home-page-container home-page'>
+      <NavBar />
+      <main className='home-main-content'>
+        <section className='hero-section'> 
+          <div className='hero-image-container'>
+            {/* La imagen de fondo se manejará con CSS */}
           </div>
-        </div>
-      </section>
-
-      <section className="carousel quality-section">
-        <h2>Envíos a todo el país 🇦🇷, siempre disponibles, siempre puntuales.</h2>
-        <span>Tu éxito es nuestra prioridad: Stock constante y entregas a tiempo.</span>
-        <div className="carousel-home-container">
-          <div className="carousel-track">
-            <img className="quality-section-photo" src="../images/home-photos/stock-image-4.jpg" alt="Stock 1" />
-            <img className="quality-section-photo" src="../images/home-photos/stock-image-5.jpg" alt="Stock 2" />
-            <img className="quality-section-photo" src="../images/home-photos/stock-image-6.jpg" alt="Stock 3" />
+          <div className='hero-text-content'>
+            <h1>MBARETE</h1>
+            <h2>VENTA DE JEANS MAYORISTA</h2>
+            <div className='hero-buttons'>
+              <button onClick={handleNavigateToJeans} className='hero-btn comprar-ahora-btn'>COMPRAR AHORA</button>
+              <button onClick={enviarMensaje} className='hero-btn hablemos-btn'>HABLEMOS</button>
+            </div>
           </div>
-          <a className="button jeans-button"> 
-            <Link className='button jeans-button' to="/jeans">VER JEANS</Link>
-          </a>
-        </div>
-      </section>
+        </section>
 
-      {/* Sección de calidad */}
-      <section className="carousel quality-section">
-        <h2>Moda que multiplica tus ganancias.</h2>
-        <span>Jeans seductores, sensitivos y exclusivos. Precios que aseguran un retorno excelente.</span>
-        <div className="text-description">
-          <img src="/images/home-photos/formato-de-texto.png" alt="Logo" className="logo" />
-          <p>
-            Con nuestros jeans, cada cliente encuentra su estilo y tú encuentras tu rentabilidad.
-            Inspirados en las últimas modas y con un desarrollo exclusivo, nuestros productos aseguran márgenes de ganancia atractivos,
-            mientras que la claridad en descripciones y colores te permite destacar en el mercado.
-          </p>
-        </div>
-        <div className="carousel-home-container jean-carousel">
-          <div className="carousel-track">
-            <img className="quality-section-photo" src="../images/home-photos/earning_1.png" alt="Jeans de calidad" />
-            <img className="quality-section-photo" src="../images/home-photos/earning_3.png" alt="Jeans de calidad" />
-            <img className="quality-section-photo" src="../images/home-photos/earning_2.png" alt="Jeans de calidad" />
+        <section className='info-text-section'>
+          <p>Fabricantes de jeans mayoristas que marcan tendencia.</p>
+          <p>Envíos a todo el país.</p>
+          <p>Conéctate con nosotros y eleva tu stock.</p>
+        </section>
+
+        <section className='tienda-section'>
+          <div className='tienda-image-placeholder'>
+            {/* Placeholder para la imagen, se puede añadir <img /> si hay una específica */}
+            <span>IMAGEN</span> 
           </div>
-        </div>
-        <div className="buttons quality-section-btn">
-          <a className="button jeans-button"> 
-            <Link className='button jeans-button' to="/jeans">VER JEANS</Link>
-          </a>
-        </div>
-      </section>
-
-      {/* Otras secciones */}
-      <section className="carousel quality-section">
-        <h2>Calidad garantizada, sin riesgos, sin excepciones.</h2>
-        <span>Cambios fáciles, reembolsos del 100% y un control de calidad inigualable.</span>
-        <div className="carousel-home-container">
-          <div className="carousel-track">
-            <img className="quality-section-photo" src="../images/home-photos/quality-photo-1.jpg" alt="Calidad 1" />
-            <img className="quality-section-photo" src="../images/home-photos/quality-photo-2.jpg" alt="Calidad 2" />
+          <div className='tienda-text-content'>
+            <p>VISITA NUESTRA TIENDA Y COMPRA ONLINE.</p>
+            <p>TE LO LLEVAMOS A TU CASA.</p>
+            <button onClick={handleNavigateToJeans} className='tienda-btn'>IR A LA TIENDA</button>
           </div>
-          <a className="button jeans-button"> 
-            <Link className='button jeans-button'  to="/jeans">VER JEANS</Link>
-          </a>
-        </div>
-      </section>
+        </section>
 
-
-      <section className="carousel quality-section">
-        <h2>Compra fácil, entrega segura.</h2>
-        <span>Siempre tenemos lo que necesitas, cuando lo necesitas, donde lo necesitas.</span>
-        <div className="carousel-home-container">
-          <div className="carousel-track">
-            <img className="quality-section-photo" src="../images/home-photos/delivery.png" alt="Delivery" />
+        <section className='productos-section'>
+          <h2>ALGUNOS DE NUESTROS PRODUCTOS</h2>
+          <div className='productos-grid'>
+            <div className='producto-item'>
+              {jeanCategory.createCategoryComponent("jean", true)}
+            </div>
+            <div className='producto-item'>
+              {parachutteCategory.createCategoryComponent("parachutte", true)}
+            </div>
+            <div className='producto-item'>
+              {baggyCategory.createCategoryComponent("baggy", true)}
+            </div>
+            <div className='producto-item placeholder-producto'>
+              {/* Empty placeholder that will be hidden */}
+            </div>
           </div>
-          <a className="button jeans-button"> 
-            <Link className='button jeans-button' to="/jeans">VER JEANS</Link>
-          </a>
-        </div>
-      </section>
-
-      <section className="coming-soon">
-        <h2>Próximamente</h2>
-      </section>
+        </section>
+      </main>
+      <Footer />
     </div>
   );
 }
