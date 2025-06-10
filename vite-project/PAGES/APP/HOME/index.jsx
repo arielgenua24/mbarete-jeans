@@ -14,7 +14,7 @@ function Home() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 400);
+    }, 800);
 
     return () => clearInterval(intervalId); // Cleanup interval on component unmount
   }, [images.length]);
@@ -43,8 +43,10 @@ function Home() {
             <img src={`/images-for-home/${images[currentImageIndex]}`} alt="Hero background" />
           </div>
           <div className='hero-text-content'>
-            <h1>MBARETE</h1>
-            <h2>VENTA DE JEANS MAYORISTA</h2>
+            <div style={{  marginBottom: '20px', padding: '10px' }}>
+              <h1>MBARETE</h1>
+              <h2>VENTA DE JEANS MAYORISTA</h2>
+            </div>
             <div className='hero-buttons'>
               <button onClick={handleNavigateToJeans} className='hero-btn comprar-ahora-btn'>COMPRAR AHORA</button>
               <button onClick={enviarMensaje} className='hero-btn hablemos-btn'>HABLEMOS</button>
@@ -60,8 +62,7 @@ function Home() {
 
         <section className='tienda-section'>
           <div className='tienda-image-placeholder'>
-            {/* Placeholder para la imagen, se puede añadir <img /> si hay una específica */}
-            <span>IMAGEN</span> 
+            <img src="images/milo.jpg" alt="jean milo" style={{width: '100%', height: 'auto', maxHeight: '450px', objectFit: 'contain'}}/>
           </div>
           <div className='tienda-text-content'>
             <p>VISITA NUESTRA TIENDA Y COMPRA ONLINE.</p>
@@ -82,13 +83,10 @@ function Home() {
             <div className='producto-item'>
               {baggyCategory.createCategoryComponent("baggy", true)}
             </div>
-            <div className='producto-item placeholder-producto'>
-              {/* Empty placeholder that will be hidden */}
-            </div>
           </div>
         </section>
       </main>
-      <Footer />
+
     </div>
   );
 }

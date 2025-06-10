@@ -336,7 +336,7 @@ nav {
 .hero-text-content {
   position: relative; /* To ensure it's above the background image container if needed, but buttons are main focus */
   z-index: 2;
-  background-color: rgba(255, 255, 255, 0); /* Transparent background for text block itself */
+  background-color: rgba(173, 161, 161, 0); /* Transparent background for text block itself */
   padding: 20px;
   border-radius: 8px;
   margin-top: auto; /* Pushes text and buttons towards the bottom part of the image */
@@ -346,15 +346,15 @@ nav {
   font-size: 2.8em;
   font-weight: bold;
   margin-bottom: 5px;
-  color: #000; /* Black text */
+  color: #ffffff;
   text-transform: uppercase;
 }
 
 .hero-text-content h2 {
-  font-size: 1.2em;
-  font-weight: normal;
+  font-size: 1.5em;
+  font-weight: bold;
   margin-bottom: 25px;
-  color: #000; /* Black text */
+  color: #ffffff;
 }
 
 .hero-buttons {
@@ -366,28 +366,29 @@ nav {
 
 .hero-btn {
   padding: 12px 30px;
-  font-size: 1em;
+  font-size: 1.4em;
   font-weight: bold;
-  color: #000;
-  background-color: #fff;
-  border: 2px solid #000;
-  border-radius: 0; /* Sharp corners */
+  color: #ffffff;
+  background-color: #00000020;
+  border: 2px solid #00000000;
+  border-radius: 0;
   cursor: pointer;
   text-transform: uppercase;
-  min-width: 220px; /* Ensure buttons have a good width */
-  transition: background-color 0.3s, color 0.3s;
+  min-width: 220px;
+  /* transition: background-color 0.3s, color 0.3s; */
+  backdrop-filter: blur(15px);
 }
 
 .hero-btn:hover {
-  background-color: #000;
+  background-color: #000 ;
   color: #fff;
 }
 
 /* Info Text Section */
 .info-text-section {
-  padding: 40px 20px;
+  padding: 0px 20px;
   text-align: center;
-  background-color: #f8f8f8; /* Light grey background, adjust if needed */
+  font-size: 1.2em;
 }
 
 .info-text-section p {
@@ -399,24 +400,24 @@ nav {
 
 /* Tienda Section */
 .tienda-section {
-  display: flex;
-  flex-direction: column; /* Stack image and text on small screens */
+  display: flex
+;
+  flex-direction: column;
   align-items: center;
   padding: 50px 20px;
   gap: 30px;
   background-color: #fff;
+  margin-bottom: 87px;
 }
 
 .tienda-image-placeholder {
   width: 100%;
   max-width: 350px; /* Control max size of placeholder */
   height: 350px; /* Square placeholder */
-  background-color: #e0e0e0; /* Light grey for placeholder */
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5em;
-  color: #757575;
 }
 
 .tienda-text-content {
@@ -456,7 +457,7 @@ nav {
   padding: 60px 0;
   background-color: #f7f7f7;
   text-align: center;
-  height: 2722px;
+  height: 2422px;
 }
 
 .productos-section h3 {
@@ -496,20 +497,18 @@ nav {
 }
 
 .home-page .productos-grid {
-  display: grid;
+  display: grid
+;
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
   padding: 0 20px;
   margin: 0 auto;
-  width: 100%;
+  width: 95%;
 }
 
 .home-page .producto-item {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   aspect-ratio: 1 / 1;
   background: #fff;
   display: flex
@@ -517,7 +516,7 @@ nav {
   align-items: center;
   justify-content: center;
   width: 95%;
-  height: 850px;
+  height: 750px;
   flex-direction: column;
 }
 
