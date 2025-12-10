@@ -77,8 +77,8 @@
   justify-content: center;
   font-size: 0.75rem;
 }
-  
- 
+
+
 
 
 .cart-text {
@@ -92,15 +92,15 @@
   .navbar {
     padding: 0.5rem 1rem;
   }
-  
+
   .navbar-brand {
     font-size: 1.2rem;
   }
-  
+
   .cart-text {
     font-size: 0.8rem;
   }
-  
+
   .promo-banner {
     height: 200px;
   }

@@ -11,13 +11,13 @@ function Navbar() {
 
     useEffect(() => {
         if (cart.length > 0) {
-          setIsAnimating(true);
-          const timer = setTimeout(() => setIsAnimating(false), 500);
-          return () => clearTimeout(timer);
+            setIsAnimating(true);
+            const timer = setTimeout(() => setIsAnimating(false), 500);
+            return () => clearTimeout(timer);
         }
     }, [cart]);
-    {/*  */} 
-    return ( 
+    {/*  */ }
+    return (
         <div className='navbar-container' style={{
             position: 'fixed',
             top: 0,
@@ -28,14 +28,14 @@ function Navbar() {
             flexDirection: 'column',
             width: '100%',
             backgroundColor: '#ffffff'
-          }}> 
+        }}>
             <nav className='navbar'>
                 <div className='navbar-brand'>
                     <NavLink to='/jeans' className='brand-link'>MBARETE</NavLink>
                 </div>
                 <div className='navbar-cart'>
-                    <NavLink to='/cart' className='cart-link'> 
-                        <motion.div 
+                    <NavLink to='/cart' className='cart-link'>
+                        <motion.div
                             className="cart-container"
                             style={{ backgroundColor }}
                             animate={isAnimating ? { scale: 1.2 } : {}}

@@ -1,0 +1,36 @@
+.secondary-navbar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 16px;
+    background-color: transparent;
+    /* Or whatever background is needed, transparent usually works well if main bg is white */
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.secondary-navbar::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-pill {
+    flex: 0 0 auto;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    /* Pill shape */
+    padding: 5px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+}
+
+.nav-pill:hover {
+    background-color: #f0f0f0;
+}

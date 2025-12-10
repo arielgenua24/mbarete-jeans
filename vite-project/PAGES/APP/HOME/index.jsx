@@ -1,94 +1,115 @@
-import { useState, useEffect } from 'react';
-import config from '../../../config/config';
-import './styles.css'; // Asegúrate de que el CSS esté correctamente vinculado
-import { Link, useNavigate } from 'react-router-dom';
-import NavBar from '../../../components/NavBar'; // Assuming NavBar component is here
-import Footer from '../../../components/Footer';   // Assuming Footer component is here
-import CategoryJeanFactory from "../../../services/factories/categoryJeans.factory";
+import React, { useCallback, useEffect, useState } from 'react';
+import SecondaryNavbar from '../../../components/SecondaryNavbar';
+import HeroProductCard from './HeroProductCard';
+import './index.css';
+
+const demoProducts = [
+    {
+        id: 'baggy-aranita',
+        name: 'BAGGY ARAÑITA',
+        isTop: true,
+        statusLabel: 'RECIÉN AGREGADO',
+        buyPrice: 15000,
+        sellPrice: 30000,
+        imageUrl:
+            'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+        id: 'cargo-stone',
+        name: 'CARGO STONE',
+        isTop: false,
+        statusLabel: 'EXCLUSIVO',
+        buyPrice: 17000,
+        sellPrice: 34000,
+        imageUrl:
+            'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+        id: 'slim-indigo',
+        name: 'SLIM INDIGO',
+        isTop: true,
+        statusLabel: 'TOP VENTA',
+        buyPrice: 16000,
+        sellPrice: 32000,
+        imageUrl:
+            'https://images.unsplash.com/photo-1489980557514-251d61e3eeb6?auto=format&fit=crop&w=800&q=80'
+    }
+];
 
 function Home() {
-  const navigate = useNavigate();
-  const images = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg', 'image5.jpg', 'image6.jpg'];
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [bgCurrentIndex, setBgCurrentIndex] = useState(0);
+    const [bgTransitionIndex, setBgTransitionIndex] = useState(null);
+    const [bgIsFading, setBgIsFading] = useState(false);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 800);
+    const handleViewCatalog = useCallback(() => {
+        window.location.hash = '#/jeans';
+    }, []);
 
-    return () => clearInterval(intervalId); // Cleanup interval on component unmount
-  }, [images.length]);
-  const enviarMensaje = () => {
-    const phoneNumber = config.phoneNumber;
-    const message = "Hola MBARETE JEANS. He visitado su web y quiero hablar con un asesor.";
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
-    window.open(whatsappURL, '_blank');
-  };
+    useEffect(() => {
+        if (activeIndex === bgCurrentIndex) return;
 
-  const jeanCategory = new CategoryJeanFactory();
-  const parachutteCategory = new CategoryJeanFactory();
-  const baggyCategory = new CategoryJeanFactory();
+        setBgTransitionIndex(activeIndex);
 
-  const handleNavigateToJeans = () => {
-    navigate('/jeans');
-  };
+        const frame = requestAnimationFrame(() =>
+            requestAnimationFrame(() => setBgIsFading(true))
+        );
 
-  return (
-    <div className='home-page-container home-page'>
-      <NavBar />
-      <main className='home-main-content'>
-        <section className='hero-section'> 
-          <div className='hero-image-container'>
-            <img src={`/images-for-home/${images[currentImageIndex]}`} alt="Hero background" />
-          </div>
-          <div className='hero-text-content'>
-            <div style={{  marginBottom: '20px', padding: '10px' }}>
-              <h1>MBARETE</h1>
-              <h2>VENTA DE JEANS MAYORISTA</h2>
+        const timeout = setTimeout(() => {
+            setBgCurrentIndex(activeIndex);
+            setBgTransitionIndex(null);
+            setBgIsFading(false);
+        }, 500);
+
+        return () => {
+            cancelAnimationFrame(frame);
+            clearTimeout(timeout);
+            setBgIsFading(false);
+        };
+    }, [activeIndex, bgCurrentIndex]);
+
+    const renderBgLayer = (product, stateClass) => (
+        <div className={`home-hero-bg-layer ${stateClass}`} key={`${product.id}-${stateClass}`}>
+            <img src={product.imageUrl} alt="" />
+        </div>
+    );
+
+    const bgBaseProduct = demoProducts[bgCurrentIndex];
+    const bgTransitionProduct =
+        bgTransitionIndex !== null ? demoProducts[bgTransitionIndex] : null;
+
+    return (
+        <div className="home-page">
+            <div className="home-hero-bg">
+                {renderBgLayer(bgBaseProduct, bgIsFading ? 'fade-out' : 'visible')}
+                {bgTransitionProduct
+                    ? renderBgLayer(bgTransitionProduct, bgIsFading ? 'fade-in' : '')
+                    : null}
             </div>
-            <div className='hero-buttons'>
-              <button onClick={handleNavigateToJeans} className='hero-btn comprar-ahora-btn'>COMPRAR AHORA</button>
-              <button onClick={enviarMensaje} className='hero-btn hablemos-btn'>HABLEMOS</button>
-            </div>
-          </div>
-        </section>
 
-        <section className='info-text-section'>
-          <p>Fabricantes de jeans mayoristas que marcan tendencia.</p>
-          <p>Envíos a todo el país.</p>
-          <p>Conéctate con nosotros y eleva tu stock.</p>
-        </section>
+            <div className="home-content">
+                <SecondaryNavbar />
+                <HeroProductCard
+                    products={demoProducts}
+                    activeIndex={activeIndex}
+                    onViewCatalog={handleViewCatalog}
+                    catalogIconSrc="https://img.icons8.com/ios-filled/50/000000/shopping-bag.png"
+                />
 
-        <section className='tienda-section'>
-          <div className='tienda-image-placeholder'>
-            <img src="images/milo.jpg" alt="jean milo" style={{width: '100%', height: 'auto', maxHeight: '450px', objectFit: 'contain'}}/>
-          </div>
-          <div className='tienda-text-content'>
-            <p>VISITA NUESTRA TIENDA Y COMPRA ONLINE.</p>
-            <p>TE LO LLEVAMOS A TU CASA.</p>
-            <button onClick={handleNavigateToJeans} className='tienda-btn'>IR A LA TIENDA</button>
-          </div>
-        </section>
-
-        <section className='productos-section'>
-          <h2>TOP PRODUCTOS</h2>
-          <div className='productos-grid'>
-            <div className='producto-item'>
-              {jeanCategory.createCategoryComponent("jean", true)}
+                <div className="home-dots">
+                    {demoProducts.map((_, idx) => (
+                        <button
+                            type="button"
+                            key={idx}
+                            className={`dot ${idx === activeIndex ? 'active' : ''}`}
+                            onClick={() => setActiveIndex(idx)}
+                            aria-label={`Mostrar producto ${idx + 1}`}
+                        />
+                    ))}
+                </div>
             </div>
-            <div className='producto-item'>
-              {parachutteCategory.createCategoryComponent("parachutte", true)}
-            </div>
-            <div className='producto-item'>
-              {baggyCategory.createCategoryComponent("baggy", true)}
-            </div>
-          </div>
-        </section>
-      </main>
-
-    </div>
-  );
+        </div>
+    );
 }
 
 export default Home;
