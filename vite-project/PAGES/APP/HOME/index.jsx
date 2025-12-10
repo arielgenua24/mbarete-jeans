@@ -12,7 +12,7 @@ const demoProducts = [
         buyPrice: 15000,
         sellPrice: 30000,
         imageUrl:
-            'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80'
+            'https://i.ibb.co/qL2V158M/37ddab29-6095-43dc-a1b2-ddce7b671b5b.jpg'
     },
     {
         id: 'cargo-stone',

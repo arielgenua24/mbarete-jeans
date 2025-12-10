@@ -1,5 +1,5 @@
 .home-page {
-    margin-top: 56px;
+    margin-top: 36px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -12,29 +12,26 @@
 .home-hero-bg {
     position: absolute;
     inset: 0;
-    height: 560px;
+    height: 590px;
     overflow: hidden;
     z-index: 0;
     pointer-events: none;
+    opacity: 0.9;
 }
 
 .home-hero-bg-layer {
     position: absolute;
     inset: -12%;
     opacity: 0;
-    transition: opacity 0.45s ease;
 }
 
 .home-hero-bg-layer img {
-    width: 90%;
-    height: 50%;
-    margin-top: 180px;
+    width: 52%;
+    height: 52%;
+    margin-top: 173px;
     object-fit: cover;
-    filter: blur(95px);
-    transform: scale(1.25);
-    opacity: .9;
-    mask-image: radial-gradient(65% 65% at center, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 90%);
-    -webkit-mask-image: radial-gradient(65% 65% at center, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 90%);
+    filter: blur(15px);
+    transform: scale(1.30);
     border-radius: 30px;
 }
 
