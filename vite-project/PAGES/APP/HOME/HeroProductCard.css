@@ -19,6 +19,18 @@
     isolation: isolate;
 }
 
+.hero-overlay-info {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    z-index: 4;
+}
+
 .hero-layer {
     position: absolute;
     inset: 0;
@@ -49,41 +61,33 @@
 }
 
 .hero-badges {
-    position: absolute;
-    top: 16px;
-    left: 16px;
     display: flex;
     align-items: center;
     gap: 8px;
-    z-index: 4;
 }
 
 .hero-badge {
-    background: #ffe600;
+    background: #E50914;
     padding: 4px 10px;
     border-radius: 999px;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 1200;
     text-transform: uppercase;
-    color: #1b1b1b;
+    color: #ffffff;
     letter-spacing: 0.2px;
     line-height: 1.2;
 }
 
 .hero-info {
-    position: absolute;
-    left: 16px;
-    top: 64px;
     display: flex;
     flex-direction: column;
     gap: 6px;
     padding: 10px 14px;
-    background: rgba(0, 0, 0, 0.35);
+    background: #cecece59;
     border-radius: 7px;
     color: #ffffff;
-    z-index: 4;
-    max-width: 80%;
-    backdrop-filter: blur(2px);
+    max-width: 85%;
+    backdrop-filter: blur(18px);
 }
 
 .hero-product-name {
@@ -119,15 +123,15 @@
     background: #ffffff;
     color: #0f1111;
     padding: 14px 24px;
-    border-radius: 999px;
+    border-radius: 8px;
     display: inline-flex;
     align-items: center;
     gap: 8px;
     font-weight: 700;
     text-transform: uppercase;
-    z-index: 4;
     cursor: pointer;
     box-shadow: none;
+    z-index: 5;
 }
 
 .hero-catalog-btn:active {

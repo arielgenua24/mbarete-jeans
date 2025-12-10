@@ -61,25 +61,33 @@ function HeroProductCard({
                 {renderLayer(baseProduct, isFading ? 'fade-out' : 'visible')}
                 {transitionProduct ? renderLayer(transitionProduct, isFading ? 'fade-in' : '') : null}
 
-                <div className="hero-badges">
-                    {activeProduct.isTop ? <span className="hero-badge">TOP</span> : null}
-                    <span className="hero-badge">{activeProduct.statusLabel}</span>
-                </div>
-
-                <div className="hero-info">
-                    <div className="hero-product-name">{activeProduct.name}</div>
-                    <div className="hero-price-line">
-                        <span className="hero-price-label">Compralo a:</span>
-                        <span className="hero-price-value">${formatPrice(activeProduct.buyPrice)}</span>
+                <div className="hero-overlay-info">
+                    <div className="hero-badges">
+                        {activeProduct.isTop ? <span className="hero-badge">TOP</span> : null}
+                        <span className="hero-badge">{activeProduct.statusLabel}</span>
                     </div>
-                    <div className="hero-price-line">
-                        <span className="hero-price-label">Se vende a:</span>
-                        <span className="hero-price-value">${formatPrice(activeProduct.sellPrice)}</span>
+
+                    <div className="hero-info">
+                        <div className="hero-product-name">{activeProduct.name}</div>
+                        <div className="hero-price-line">
+                            <span className="hero-price-label">Compralo a:</span>
+                            <span className="hero-price-value">
+                                ${formatPrice(activeProduct.buyPrice)}
+                            </span>
+                        </div>
+                        <div className="hero-price-line">
+                            <span className="hero-price-label">Se vende a:</span>
+                            <span className="hero-price-value">
+                                ${formatPrice(activeProduct.sellPrice)}
+                            </span>
+                        </div>
                     </div>
                 </div>
 
                 <button type="button" className="hero-catalog-btn" onClick={onViewCatalog}>
-                    {catalogIconSrc ? <img src={catalogIconSrc} alt="" className="hero-catalog-icon" /> : null}
+                    {catalogIconSrc ? (
+                        <img src={catalogIconSrc} alt="" className="hero-catalog-icon" />
+                    ) : null}
                     <span>VER CATALOGO</span>
                 </button>
             </div>
