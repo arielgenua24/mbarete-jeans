@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './HeroProductCard.css';
 
 const formatPrice = (value) =>
@@ -48,9 +48,14 @@ function HeroProductCard({
 
     const activeProduct = products[safeActiveIndex];
     const baseProduct = products[currentIndex];
+    const buyPrice = activeProduct.buyPrice ?? activeProduct.price ?? 0;
+    const sellPrice =
+        activeProduct.sellPrice ??
+        activeProduct.sell ??
+        Math.round(buyPrice * 2);
 
     const renderLayer = (product, stateClass) => (
-        <div className={`hero-layer ${stateClass}`} key={`${product.id}-${stateClass}`}>
+        <div className={`hero-layer ${stateClass}`} key={`${product.heroId ?? product.id}-${stateClass}`}>
             <img className="hero-main-img" src={product.imageUrl} alt={product.name} />
         </div>
     );
@@ -64,7 +69,9 @@ function HeroProductCard({
                 <div className="hero-overlay-info">
                     <div className="hero-badges">
                         {activeProduct.isTop ? <span className="hero-badge">TOP</span> : null}
-                        <span className="hero-badge">{activeProduct.statusLabel}</span>
+                        {activeProduct.statusLabel ? (
+                            <span className="hero-badge">{activeProduct.statusLabel}</span>
+                        ) : null}
                     </div>
 
                     <div className="hero-info">
@@ -72,13 +79,13 @@ function HeroProductCard({
                         <div className="hero-price-line">
                             <span className="hero-price-label">Compralo a:</span>
                             <span className="hero-price-value">
-                                ${formatPrice(activeProduct.buyPrice)}
+                                ${formatPrice(buyPrice)}
                             </span>
                         </div>
                         <div className="hero-price-line">
                             <span className="hero-price-label">Se vende a:</span>
                             <span className="hero-price-value">
-                                ${formatPrice(activeProduct.sellPrice)}
+                                ${formatPrice(sellPrice)}
                             </span>
                         </div>
                     </div>

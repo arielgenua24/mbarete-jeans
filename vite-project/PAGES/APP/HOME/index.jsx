@@ -1,46 +1,26 @@
-import React, { useCallback, useEffect, useState, useMemo } from 'react';
+import { useCallback, useEffect, useState, useMemo } from 'react';
 import SecondaryNavbar from '../../../components/SecondaryNavbar';
 import HeroProductCard from './HeroProductCard';
 import OfferSection from '../../../components/OfferSection/OfferSection';
 import useFirestore from '../../../hooks/useFirestore';
 import { processJeansData } from '../../../services/processJeansData';
 import { OFFERS, getOfferProducts } from '../../../data/offers.data';
+import { jeansData } from '../../../data/jeans.data';
 import './index.css';
 
-const demoProducts = [
-    {
-        id: 'baggy-aranita',
-        name: 'BAGGY ARAÑITA',
-        isTop: true,
-        statusLabel: 'RECIÉN AGREGADO',
-        buyPrice: 15000,
-        sellPrice: 30000,
-        imageUrl:
-            'https://i.ibb.co/qL2V158M/37ddab29-6095-43dc-a1b2-ddce7b671b5b.jpg'
-    },
-    {
-        id: 'cargo-stone',
-        name: 'CARGO STONE',
-        isTop: false,
-        statusLabel: 'EXCLUSIVO',
-        buyPrice: 17000,
-        sellPrice: 34000,
-        imageUrl:
-            'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80'
-    },
-    {
-        id: 'slim-indigo',
-        name: 'SLIM INDIGO',
-        isTop: true,
-        statusLabel: 'TOP VENTA',
-        buyPrice: 16000,
-        sellPrice: 32000,
-        imageUrl:
-            'https://images.unsplash.com/photo-1489980557514-251d61e3eeb6?auto=format&fit=crop&w=800&q=80'
-    }
-];
-
 function Home() {
+    const heroProducts = useMemo(() => (
+        (jeansData ?? []).slice(0, 10).map((item, index) => ({
+            id: item.id,
+            heroId: `${item.id}-${index}`,
+            name: item.name,
+            statusLabel: item.specialTag || item.state || 'DESTACADO',
+            isTop: index < 2,
+            buyPrice: item.price ?? 0,
+            imageUrl: item.images?.img1 || item.images?.img2 || item.images?.img3 || ''
+        }))
+    ), []);
+
     const [activeIndex, setActiveIndex] = useState(0);
     const [bgCurrentIndex, setBgCurrentIndex] = useState(0);
     const [bgTransitionIndex, setBgTransitionIndex] = useState(null);
@@ -73,6 +53,16 @@ function Home() {
     }, [processedProducts]);
 
     useEffect(() => {
+        if (heroProducts.length <= 1) return;
+
+        const interval = setInterval(() => {
+            setActiveIndex(prev => (prev + 1) % heroProducts.length);
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, [heroProducts.length]);
+
+    useEffect(() => {
         if (activeIndex === bgCurrentIndex) return;
 
         setBgTransitionIndex(activeIndex);
@@ -95,19 +85,19 @@ function Home() {
     }, [activeIndex, bgCurrentIndex]);
 
     const renderBgLayer = (product, stateClass) => (
-        <div className={`home-hero-bg-layer ${stateClass}`} key={`${product.id}-${stateClass}`}>
+        <div className={`home-hero-bg-layer ${stateClass}`} key={`${product.heroId ?? product.id}-${stateClass}`}>
             <img src={product.imageUrl} alt="" />
         </div>
     );
 
-    const bgBaseProduct = demoProducts[bgCurrentIndex];
+    const bgBaseProduct = heroProducts[bgCurrentIndex] || heroProducts[0];
     const bgTransitionProduct =
-        bgTransitionIndex !== null ? demoProducts[bgTransitionIndex] : null;
+        bgTransitionIndex !== null ? heroProducts[bgTransitionIndex] : null;
 
     return (
         <div className="home-page">
             <div className="home-hero-bg">
-                {renderBgLayer(bgBaseProduct, bgIsFading ? 'fade-out' : 'visible')}
+                {bgBaseProduct ? renderBgLayer(bgBaseProduct, bgIsFading ? 'fade-out' : 'visible') : null}
                 {bgTransitionProduct
                     ? renderBgLayer(bgTransitionProduct, bgIsFading ? 'fade-in' : '')
                     : null}
@@ -116,23 +106,11 @@ function Home() {
             <div className="home-content">
                 <SecondaryNavbar />
                 <HeroProductCard
-                    products={demoProducts}
+                    products={heroProducts}
                     activeIndex={activeIndex}
                     onViewCatalog={handleViewCatalog}
                     catalogIconSrc="https://img.icons8.com/ios-filled/50/000000/shopping-bag.png"
                 />
-
-                <div className="home-dots">
-                    {demoProducts.map((_, idx) => (
-                        <button
-                            type="button"
-                            key={idx}
-                            className={`dot ${idx === activeIndex ? 'active' : ''}`}
-                            onClick={() => setActiveIndex(idx)}
-                            aria-label={`Mostrar producto ${idx + 1}`}
-                        />
-                    ))}
-                </div>
 
                 <a
                     href={`https://wa.me/${import.meta.env.VITE_PHONE_NUMBER}`}
@@ -152,18 +130,35 @@ function Home() {
                     <span className="whatsapp-text">Consultar ofertas del dia</span>
                 </a>
 
-                <div className="home-horizontal-scroll">
-                    <div className="scroll-card gradient-yellow">
-                        <img
-                            src="https://i.ibb.co/HTJ9dV4t/Alianza-MBARETE-y-Mercado-Libre.png"
-                            alt="Alianza MBARETE y Mercado Libre"
-                        />
+                <div className="home-hero-section">
+                    <div className="home-hero-copy">
+                        <div className="home-hero-brand">MBARETE</div>
+                        <h1 className="home-hero-title">Selección destacada para cerrar el año</h1>
+                        <p className="home-hero-description">
+                            Tres piezas clave para inspirar a tus clientes. Deslizá en móvil o mirá la
+                            selección completa en escritorio.
+                        </p>
                     </div>
-                    <div className="scroll-card gradient-blue">
-                        <img
-                            src="https://i.ibb.co/GvBq6SCJ/MBARETE-y-Mercado-Pago-en-accio-n.png"
-                            alt="MBARETE y Mercado Pago en acción"
-                        />
+
+                    <div className="home-horizontal-scroll">
+                        <div className="scroll-card gradient-yellow">
+                            <img
+                                src="https://i.ibb.co/HTJ9dV4t/Alianza-MBARETE-y-Mercado-Libre.png"
+                                alt="Alianza MBARETE y Mercado Libre"
+                            />
+                        </div>
+                        <div className="scroll-card gradient-blue">
+                            <img
+                                src="https://i.ibb.co/GvBq6SCJ/MBARETE-y-Mercado-Pago-en-accio-n.png"
+                                alt="MBARETE y Mercado Pago en acción"
+                            />
+                        </div>
+                        <div className="scroll-card gradient-yellow">
+                            <img
+                                src="/images-for-home/image3.jpg"
+                                alt="Nuevos beneficios exclusivos"
+                            />
+                        </div>
                     </div>
                 </div>
 
@@ -183,4 +178,3 @@ function Home() {
 }
 
 export default Home;
-
