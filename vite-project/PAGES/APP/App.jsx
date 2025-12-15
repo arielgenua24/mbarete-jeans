@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Jeans from '../../PAGES/APP/JEANS'
 import Cart from './CART';
 import Home from './HOME'
+import OfferDetail from './OFERTAS/OfferDetail';
 import Navbar from '../../components/NavBar';
 import Modal from '../../components/addToCartModal';
 import WelcomeModal from '../../components/WelcomeModal';
@@ -15,6 +16,7 @@ function AppRouter() {
     { path: '/', element: <Home /> },
     { path: '/home', element: <Home /> },
     { path: '/jeans', element: <Jeans /> },
+    { path: '/ofertas/:slug', element: <OfferDetail /> },
     { path: '/product/:id', element: <Modal /> },
     { path: '/cart', element: <Cart /> },
   ])

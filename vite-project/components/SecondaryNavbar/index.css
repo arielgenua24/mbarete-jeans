@@ -2,10 +2,12 @@
     display: flex;
     justify-content: center;
     gap: 15px;
-    padding: 10px 16px;
+    padding: 10px 12px;
     background-color: transparent;
     /* Or whatever background is needed, transparent usually works well if main bg is white */
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;

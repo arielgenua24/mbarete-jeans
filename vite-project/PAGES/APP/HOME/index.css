@@ -62,7 +62,7 @@
     gap: 8px;
     justify-content: center;
     align-items: center;
-    padding-bottom: 20px;
+    padding-bottom: 1px;
 }
 
 .home-dots .dot {
@@ -78,4 +78,141 @@
 .home-dots .dot.active {
     background: #111;
     transform: scale(1.15);
+}
+
+.whatsapp-contact-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 24px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.whatsapp-contact-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: left 0.5s;
+}
+
+.whatsapp-contact-button:hover::before {
+    left: 100%;
+}
+
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.whatsapp-text {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-contact-button {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+
+    .whatsapp-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+.home-horizontal-scroll {
+    margin-top: 14px;
+    height: unset;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.home-horizontal-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.home-horizontal-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.home-horizontal-scroll::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.home-horizontal-scroll::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.scroll-card {
+    min-width: 88%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    scroll-snap-align: center;
+}
+
+.scroll-card.gradient-yellow {
+    background: linear-gradient(to top, #FFF1A1, #fcf8e4, #FFFFFF);
+}
+
+.scroll-card.gradient-blue {
+    background: linear-gradient(to top, #34BEFC, #FFFFFF);
+}
+
+.scroll-card img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 7px;
+    transform: scale(0.9);
+}
+
+.home-offers-container {
+    width: 100%;
+    margin-top: 40px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .home-offers-container {
+        padding: 0 10px;
+        gap: 20px;
+    }
 }

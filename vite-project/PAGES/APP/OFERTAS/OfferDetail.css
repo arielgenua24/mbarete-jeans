@@ -1,0 +1,420 @@
+/* ============================================
+   OFFER DETAIL PAGE - LUXURY MINIMALIST DESIGN
+   Inspired by: Mercado Libre, Dior, Gucci, Versace
+   ============================================ */
+
+.offer-detail-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #FAFAFA;
+}
+
+/* Error State */
+.offer-detail-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    gap: var(--luxury-spacing-md);
+    padding: var(--luxury-spacing-xl) var(--luxury-spacing-md);
+}
+
+.offer-detail-error h2 {
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--luxury-text-primary);
+}
+
+.offer-detail-error button {
+    background: var(--luxury-text-primary);
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    border-radius: var(--luxury-radius);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.offer-detail-error button:hover {
+    background: #000000;
+    transform: translateY(-1px);
+}
+
+/* Hero Section */
+.offer-detail-hero {
+    padding: var(--luxury-spacing-xl) var(--luxury-spacing-md);
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.offer-back-button {
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--luxury-radius);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-bottom: var(--luxury-spacing-lg);
+    box-shadow: var(--luxury-shadow-sm);
+    color: var(--luxury-text-primary);
+}
+
+.offer-back-button:hover {
+    background: #FFFFFF;
+    transform: translateX(-3px);
+    box-shadow: var(--luxury-shadow-md);
+}
+
+.offer-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.offer-hero-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--luxury-text-secondary);
+    margin-bottom: var(--luxury-spacing-sm);
+}
+
+.offer-hero-title {
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--luxury-text-primary);
+    margin: 0 0 var(--luxury-spacing-sm) 0;
+    letter-spacing: -1px;
+}
+
+.offer-hero-description {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--luxury-text-secondary);
+    margin: 0 0 var(--luxury-spacing-lg) 0;
+}
+
+.offer-hero-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--luxury-spacing-lg);
+    margin-top: var(--luxury-spacing-md);
+}
+
+.offer-stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--luxury-text-primary);
+    letter-spacing: -1px;
+}
+
+.stat-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--luxury-text-secondary);
+    margin-top: 4px;
+}
+
+.offer-stat-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Content Section */
+.offer-detail-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--luxury-spacing-xl) var(--luxury-spacing-md);
+}
+
+.offer-content-header {
+    text-align: center;
+    margin-bottom: var(--luxury-spacing-xl);
+    padding-bottom: var(--luxury-spacing-md);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.offer-content-header h2 {
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--luxury-text-primary);
+    margin: 0 0 8px 0;
+    letter-spacing: -0.5px;
+}
+
+.offer-content-header p {
+    font-size: 14px;
+    color: var(--luxury-text-secondary);
+    margin: 0;
+}
+
+.offer-no-products {
+    text-align: center;
+    padding: var(--luxury-spacing-xl) var(--luxury-spacing-md);
+    color: var(--luxury-text-secondary);
+    font-size: 16px;
+}
+
+/* Products Grid */
+.offer-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--luxury-spacing-md);
+    margin-bottom: var(--luxury-spacing-xl);
+}
+
+.offer-product-item {
+    background: white;
+    border-radius: var(--luxury-radius);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: var(--luxury-shadow-sm);
+}
+
+.offer-product-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--luxury-shadow-md);
+}
+
+.offer-product-badge {
+    position: absolute;
+    top: var(--luxury-spacing-sm);
+    right: var(--luxury-spacing-sm);
+    color: rgb(0, 0, 0);
+    padding: 6px 12px;
+    border-radius: var(--luxury-radius);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    z-index: 10;
+    box-shadow: var(--luxury-shadow-sm);
+}
+
+.offer-product-image-container {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FAFAFA;
+    position: relative;
+    overflow: hidden;
+}
+
+.offer-product-image {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.offer-product-item:hover .offer-product-image {
+    transform: scale(1.05);
+}
+
+.offer-product-placeholder {
+    color: var(--luxury-text-secondary);
+    font-size: 14px;
+}
+
+.offer-product-info-section {
+    padding: var(--luxury-spacing-md);
+}
+
+.offer-product-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--luxury-text-primary);
+    margin: 0 0 var(--luxury-spacing-sm) 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.offer-product-sizes {
+    margin-bottom: var(--luxury-spacing-sm);
+    min-height: 24px;
+}
+
+.sizes-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.size-tag {
+    font-size: 10px;
+    color: var(--luxury-text-secondary);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: #FFFFFF;
+}
+
+.no-sizes {
+    font-size: 11px;
+    color: var(--luxury-text-secondary);
+    font-style: italic;
+}
+
+.offer-product-prices {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.offer-price-old {
+    font-size: 13px;
+    color: var(--luxury-text-secondary);
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.offer-price-new {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--luxury-text-primary);
+    letter-spacing: -0.5px;
+}
+
+/* CTA Section */
+.offer-cta-section {
+    text-align: center;
+    padding: var(--luxury-spacing-xl) var(--luxury-spacing-md);
+    background: white;
+    border-radius: var(--luxury-radius);
+    margin-top: var(--luxury-spacing-xl);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.offer-cta-section h3 {
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--luxury-text-primary);
+    margin: 0 0 8px 0;
+    letter-spacing: -0.5px;
+}
+
+.offer-cta-section p {
+    font-size: 14px;
+    color: var(--luxury-text-secondary);
+    margin: 0 0 var(--luxury-spacing-lg) 0;
+}
+
+.offer-whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: white;
+    padding: 14px 36px;
+    border-radius: var(--luxury-radius);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: var(--luxury-shadow-md);
+}
+
+.offer-whatsapp-button:hover {
+    background: #20BA5A;
+    transform: translateY(-2px);
+    box-shadow: var(--luxury-shadow-lg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .offer-detail-hero {
+        padding: var(--luxury-spacing-lg) var(--luxury-spacing-sm);
+        min-height: 320px;
+    }
+
+    .offer-hero-title {
+        font-size: 32px;
+    }
+
+    .offer-hero-description {
+        font-size: 16px;
+    }
+
+    .stat-value {
+        font-size: 28px;
+    }
+
+    .offer-content-header h2 {
+        font-size: 24px;
+    }
+
+    .offer-products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: var(--luxury-spacing-sm);
+    }
+
+    .offer-product-image-container {
+        height: 240px;
+    }
+
+    .offer-cta-section h3 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .offer-hero-title {
+        font-size: 28px;
+    }
+
+    .offer-hero-stats {
+        flex-direction: column;
+        gap: var(--luxury-spacing-md);
+    }
+
+    .offer-stat-divider {
+        display: none;
+    }
+
+    .offer-products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .offer-product-image-container {
+        height: 280px;
+    }
+
+    .offer-whatsapp-button {
+        padding: 12px 28px;
+        font-size: 12px;
+    }
+}
