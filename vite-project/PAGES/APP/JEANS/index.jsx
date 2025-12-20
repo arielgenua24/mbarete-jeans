@@ -3,12 +3,15 @@ import JeansNavbar from "../../../components/JeansNavBar";
 import Footer from "../../../components/Footer";
 import useRefs from '../../../hooks/useRefs';
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import './index.css';
 
 function Jeans() {
+  const location = useLocation();
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
+  }, [location.pathname]);
   
   // Instancias de factory para cada categoría
   const baggyCategory = new CategoryJeanFactory();

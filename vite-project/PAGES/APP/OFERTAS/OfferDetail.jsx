@@ -3,7 +3,6 @@ import { useParams, useNavigate } from 'react-router-dom';
 import useFirestore from '../../../hooks/useFirestore';
 import { processJeansData } from '../../../services/processJeansData';
 import { OFFERS, getOfferProducts, calculatePrices } from '../../../data/offers.data';
-import handleNavigate from '../../../utils/navigation.utils';
 import './OfferDetail.css';
 
 /**
@@ -16,6 +15,9 @@ const OfferDetail = () => {
     const navigate = useNavigate();
     const { products: rawProducts } = useFirestore();
     const [processedProducts, setProcessedProducts] = useState([]);
+    const handleNavigate = () => {
+        navigate('/jeans');
+    };
 
     // Find the offer by slug
     const offer = useMemo(() =>
@@ -102,7 +104,7 @@ const OfferDetail = () => {
                                 <div
                                     key={product.id}
                                     className="offer-product-item"
-                                    onClick={() => handleNavigate(product.id)}
+                                    onClick={handleNavigate}
                                 >
                                     <div className="offer-product-badge" style={{ background: offer.accentColor }}>
                                         -{offer.discountPercentage}%

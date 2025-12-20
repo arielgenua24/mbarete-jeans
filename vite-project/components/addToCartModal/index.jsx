@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {useParams, useNavigate} from 'react-router-dom'
 import ZoomModal from "../ZoomModal";
 import combineSizeList from "../../utils/combineSizeLists";
 import useCartContext from "../../hooks/useCartContext";
 import Jeans from "../../services/jeans.services";
 import SizeQuantityControl from "../SizeQuantityControl";
+import useFirestore from "../../hooks/useFirestore";
 
 import "./index.css";
 
@@ -18,7 +19,9 @@ const Modal = () => {
   const navigate = useNavigate()
   const { id } = useParams()
   const productIdInt = parseInt(id, 10);
-  const service = new Jeans();
+  const service = useMemo(() => new Jeans(), []);
+  const { products: rawProducts } = useFirestore();
+  const [item, setItem] = useState(null);
 
   const {
     updateQuantity,
@@ -31,25 +34,48 @@ const Modal = () => {
   console.log(id)
   //console.log(productIdInt)
 
-  const item = service?.filterJeans(productIdInt)[0] //ya poseo el jean
-  const item2 = service?.filterJeans(id)
-  console.log(item)
-  console.log(item2)
+  useEffect(() => {
+    if (rawProducts && rawProducts.length > 0) {
+      const [found] = service.filterJeans(productIdInt, rawProducts);
+      setItem(found ?? null);
+      return;
+    }
 
-  const originalSizesList = item.sizes;
+    const [found] = service.filterJeans(productIdInt);
+    setItem(found ?? null);
+  }, [rawProducts, productIdInt, service]);
+
+  console.log(item)
+
+  if (!item) {
+    return (
+      <div className="modal-container">
+        <div className="modal-content">
+          <h2 className="modal-title">
+            {rawProducts.length > 0 ? 'Producto no encontrado' : 'Cargando producto...'}
+          </h2>
+          <button className="modal-delete" onClick={() => navigate('/jeans')}>
+            Volver
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  const originalSizesList = item.sizes ?? [];
  
   const sizeIndex = cart.findIndex((item) => (item.product.id === productIdInt))
   const updatedSizesList = cart[sizeIndex]?.product?.sizes; 
+  const sizesList = combineSizeList(originalSizesList, updatedSizesList);
   
   console.log(originalSizesList)
   console.log(updatedSizesList)
   console.log(sizeIndex)
   console.log(item)
 
-  let sizesList = combineSizeList(originalSizesList, updatedSizesList)
-    useEffect(() => {
-    setNewSizeList(sizesList)
-  }, [])
+  useEffect(() => {
+    setNewSizeList(combineSizeList(originalSizesList, updatedSizesList))
+  }, [originalSizesList, updatedSizesList, setNewSizeList])
   
 
   const submit = (() => {

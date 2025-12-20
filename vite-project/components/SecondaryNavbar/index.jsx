@@ -11,7 +11,7 @@ const SecondaryNavbar = () => {
 
     return (
         <div className="secondary-navbar">
-            <button className="nav-pill" onClick={handleNavigation}>OFERTAS</button>
+            <button className="nav-pill" onClick={handleNavigation} style={{marginLeft: '14px'}}>OFERTAS</button>
             <button className="nav-pill" onClick={handleNavigation}>BERMUDAS</button>
             <button className="nav-pill" onClick={handleNavigation}>JEANS</button>
         </div>

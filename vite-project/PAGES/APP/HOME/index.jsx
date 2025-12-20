@@ -5,19 +5,19 @@ import OfferSection from '../../../components/OfferSection/OfferSection';
 import useFirestore from '../../../hooks/useFirestore';
 import { processJeansData } from '../../../services/processJeansData';
 import { OFFERS, getOfferProducts } from '../../../data/offers.data';
-import { jeansData } from '../../../data/jeans.data';
+import { heroJeans } from '../../../data/hero-jeans';
 import './index.css';
 
 function Home() {
     const heroProducts = useMemo(() => (
-        (jeansData ?? []).slice(0, 10).map((item, index) => ({
+        (heroJeans ?? []).map((item, index) => ({
             id: item.id,
             heroId: `${item.id}-${index}`,
             name: item.name,
-            statusLabel: item.specialTag || item.state || 'DESTACADO',
+            statusLabel: item.statusLabel || item.state || 'DESTACADO',
             isTop: index < 2,
             buyPrice: item.price ?? 0,
-            imageUrl: item.images?.img1 || item.images?.img2 || item.images?.img3 || ''
+            imageUrl: item.imageUrl || ''
         }))
     ), []);
 
@@ -133,10 +133,12 @@ function Home() {
                 <div className="home-hero-section">
                     <div className="home-hero-copy">
                         <div className="home-hero-brand">MBARETE</div>
-                        <h1 className="home-hero-title">Selección destacada para cerrar el año</h1>
+                        <h1 className="home-hero-title">Ahora trabaja con Mercado Libre & Mercado Pago</h1>
                         <p className="home-hero-description">
-                            Tres piezas clave para inspirar a tus clientes. Deslizá en móvil o mirá la
-                            selección completa en escritorio.
+                            Disfrutá de los beneficios exclusivos que te ofrecemos
+                            gracias a nuestra alianza estratégica con Mercado Libre y
+                            Mercado Pago. Comprá de manera segura y rápida, con
+                            múltiples opciones de pago y envíos a todo el país desde Mercado Libre
                         </p>
                     </div>
 

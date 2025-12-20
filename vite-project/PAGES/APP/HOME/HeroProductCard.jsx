@@ -33,7 +33,7 @@ function HeroProductCard({
             setCurrentIndex(safeActiveIndex);
             setTransitionProduct(null);
             setIsFading(false);
-        }, 500);
+        }, 250);
 
         return () => {
             cancelAnimationFrame(frame);
