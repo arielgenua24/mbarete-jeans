@@ -1,7 +1,7 @@
 .section-title {
     position: relative;
-    margin: 0 0 20px 0;
-    padding: 31px 24px 17px 9px;
+    margin: 0 0 26px 0;
+    padding: 22px 24px 14px 9px;
     text-align: left;
 }
 
@@ -12,9 +12,18 @@
     letter-spacing: 2px;
     margin: 0;
     padding: 0 0 10px 0;
-    border-bottom: 1px solid #e0e0e0;
-    color: #111;
+    border-bottom: 1px solid #d8d0c4;
+    color: #1a1a1a;
     font-family: 'Arial', sans-serif;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 72px;
+    height: 2px;
+    background-color: #b89b5e;
+    margin-top: 10px;
 }
 
 .section {
@@ -24,17 +33,20 @@
 .carousel-container {
     width: 100%;
     position: relative;
-    background-color: #fff;
+    background: linear-gradient(180deg, rgba(246, 242, 234, 0.7), #ffffff 55%);
     overflow: hidden;
-    padding: 20px 0;
+    padding: 26px 0 30px;
 }
 
 .carousel-slides {
     display: flex;
-    gap: 20px;
+    gap: 28px;
     width: 100%;
-    padding: 10px 0;
+    padding: 16px 6px 24px;
     overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 6px;
+    -webkit-overflow-scrolling: touch;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE and Edge */
 }
@@ -49,49 +61,66 @@
     align-items: flex-start;
     box-sizing: border-box;
     text-align: left;
-    min-height: 450px;
-    min-width: 280px;
-    max-width: 280px;
+    min-height: 470px;
+    min-width: 300px;
+    max-width: 300px;
     flex-direction: column;
     background-color: #fff;
-    border: none;
-    /* Removed box-shadow */
-    transition: transform 0.3s ease;
+    border: 1px solid #e3dbd0;
+    border-radius: 8px;
+    box-shadow: 0 18px 40px rgba(20, 16, 10, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     margin: 0;
+    overflow: hidden;
+    scroll-snap-align: start;
 }
 
 .carousel-slides > div:hover {
-    transform: translateY(-5px);
-    /* Removed box-shadow */
+    transform: translateY(-6px);
+    box-shadow: 0 26px 50px rgba(20, 16, 10, 0.12);
 }
 
 .carousel-jean-data {
     width: 100%;
-    padding: 15px;
+    padding: 16px 18px;
     font-size: 14px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
+    background-color: #fff;
+    border-top: 1px solid #efe6da;
 }
 
 .carousel-jean-data span:first-child {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: #111;
+    color: #1b1b1b;
 }
 
-.carousel-jean-data span:nth-child(2) {
-    font-weight: 600;
-    font-size: 16px;
-    margin-top: 5px;
-    color: #000;
+.price-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px 10px;
+    border: 1px solid #eee4d6;
+    border-radius: 6px;
+    background-color: #faf7f2;
+}
+
+.price-before {
+    color: #7a6a58;
+    text-decoration: line-through;
+}
+
+.price-now {
+    color: #1a1a1a;
 }
 
 .carousel-slides img {
     width: 100%;
-    height: 320px;
+    height: 330px;
     object-fit: cover;
     transition: transform 0.3s ease;
     display: block;
@@ -103,7 +132,7 @@
 
 .div-jean-img {
     width: 100%;
-    height: 320px;
+    height: 330px;
     overflow: hidden;
 }
 
@@ -130,22 +159,56 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    padding: 15px;
+    padding: 16px 18px 20px;
 }
 
-.carousel-btns button {
+.carousel-btns .btn-cart {
     width: 100%;
     height: 100%;
     padding: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* font-size: 29px; */
     font-weight: 800;
-    background-color: #dcedff;
-    color: #0667ee;
-    border-radius: 1px;
-    border: 2px solid #007bff;
+    background-color: #1a1a1a;
+    color: #f6f2ea;
+    border-radius: 2px;
+    border: 1px solid #1a1a1a;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.carousel-btns .btn-cart.btn-add-cart {
+    background-color: #f6f2ea;
+    color: #1a1a1a;
+    border-color: #1a1a1a;
+}
+
+.carousel-btns .btn-cart.soldOut {
+    background-color: #6f3b2b;
+    border-color: #6f3b2b;
+    color: #f6f2ea;
+}
+
+.carousel-btns .btn-cart.jeanInCart {
+    background-color: #1f5f3d;
+    border-color: #1f5f3d;
+    color: #f6f2ea;
+}
+
+.carousel-btns .btn-cart:hover {
+    background-color: #2b241c;
+    border-color: #2b241c;
+    color: #f6f2ea;
+}
+
+.carousel-btns .btn-cart.soldOut:hover {
+    background-color: #6f3b2b;
+    border-color: #6f3b2b;
+}
+
+.carousel-btns .btn-cart.jeanInCart:hover {
+    background-color: #1f5f3d;
+    border-color: #1f5f3d;
 }
 
 /* Media Query para pantallas menores a 768px */
@@ -155,26 +218,26 @@
     }
     
     .carousel-container {
-        padding: 10px 0;
+        padding: 14px 0 18px;
     }
 
     .carousel-slides > div {
-        min-width: 220px;
-        max-width: 220px;
-        min-height: 420px;
+        min-width: 240px;
+        max-width: 240px;
+        min-height: 440px;
     }
 
     .carousel-slides img,
     .div-jean-img {
-        height: 260px;
+        height: 270px;
     }
     
     .carousel-jean-data {
-        padding: 10px;
+        padding: 12px;
     }
     
     .carousel-btns {
-        padding: 10px;
+        padding: 12px;
     }
     
     .carousel-btns button {

@@ -2,16 +2,16 @@
 
 .jeans-home {
     width: 100%;
-    padding: 0;
+    padding: 24px 0 80px;
     font-family: 'Arial', sans-serif;
-    color: #333;
-    background-color: #fff;
+    color: #1a1a1a;
+    background-color: #f6f2ea;
     margin-top: 85px; /* Height of main navbar (55px) + JeansNavBar (30px) */
 }
 
 .jeans-home > div {
-    margin-bottom: 3rem;
-    padding: 0 1rem;
+    margin-bottom: 4.5rem;
+    padding: 0 2rem;
 }
 
 .div-baggy, .div-bermuda, .div-camperas,
@@ -28,7 +28,7 @@
     }
     
     .jeans-home > div {
-        padding: 0 0.5rem;
+        padding: 0 1rem;
     }
 }
 

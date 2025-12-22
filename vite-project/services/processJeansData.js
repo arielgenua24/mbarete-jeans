@@ -34,6 +34,11 @@ export const processJeansData = (products) => {
 
     return {
       id: productCodeInt, // Mantener ID original
+      variantIds: group.map(p => p.id), // Metadata: Todos los IDs de firestore que componen este producto
+      variantCodes: group.map(p => {
+        const code = p.productCode ? p.productCode.replace('#', '') : '0';
+        return parseInt(code, 10);
+      }),
       name,
       category: Category[mainProduct.category] || Category.other,
       specialTag: '',

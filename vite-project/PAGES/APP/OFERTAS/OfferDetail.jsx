@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import useFirestore from '../../../hooks/useFirestore';
-import { processJeansData } from '../../../services/processJeansData';
+import { useProducts } from '../../../context/ProductsContext';
 import { OFFERS, getOfferProducts, calculatePrices } from '../../../data/offers.data';
 import './OfferDetail.css';
 
@@ -13,11 +12,9 @@ import './OfferDetail.css';
 const OfferDetail = () => {
     const { slug } = useParams();
     const navigate = useNavigate();
-    const { products: rawProducts } = useFirestore();
-    const [processedProducts, setProcessedProducts] = useState([]);
-    const handleNavigate = () => {
-        navigate('/jeans');
-    };
+    const { products: processedProducts } = useProducts();
+
+
 
     // Find the offer by slug
     const offer = useMemo(() =>
@@ -25,13 +22,8 @@ const OfferDetail = () => {
         [slug]
     );
 
-    // Process products when raw products are loaded
-    useEffect(() => {
-        if (rawProducts && rawProducts.length > 0) {
-            const processed = processJeansData(rawProducts);
-            setProcessedProducts(processed);
-        }
-    }, [rawProducts]);
+    // No need to process locally anymore
+
 
     // Get products for this offer
     const offerProducts = useMemo(() => {
@@ -104,7 +96,7 @@ const OfferDetail = () => {
                                 <div
                                     key={product.id}
                                     className="offer-product-item"
-                                    onClick={handleNavigate}
+                                    onClick={() => navigate(`/product/${product.id}`)}
                                 >
                                     <div className="offer-product-badge" style={{ background: offer.accentColor }}>
                                         -{offer.discountPercentage}%
